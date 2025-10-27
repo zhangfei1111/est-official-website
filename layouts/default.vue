@@ -73,7 +73,7 @@ const list = ref([
     },
     {
         name: "Outlook",
-        path: "/"
+        path: "/outlook"
     },
     {
         name: "Case",
@@ -81,7 +81,7 @@ const list = ref([
     },
     {
         name: "About-us",
-        path: "/"
+        path: "/about"
     },
 ])
 const activeIndex = ref(-1)

@@ -1,6 +1,7 @@
 <template>
     <div class="case">
-        <div class="case-pc ">
+        <div class="case-pc only-desktop">
+            ddada
         </div>
     </div>
 </template>

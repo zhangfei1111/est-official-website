@@ -531,9 +531,9 @@ definePageMeta({ title: 'Home' })
       .home-0down-video {
         position: absolute;
         left: 0;
-        top: 0%;
+        top: -10%;
         width: 100%;
-        height: 100%;
+        height: 110%;
         object-fit: cover;
         /* 等比例，不变形 */
         object-position: center;
