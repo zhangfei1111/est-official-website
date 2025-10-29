@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="home-pc only-desktop">
-      <section class="home-introduce-section snap">
+      <section class="home-introduce-section">
         <video ref="homeIntroduceRef" class="home-introduce-video" autoplay muted playsinline loop preload="auto"
           controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
           src="../assets/video/home-introduce.mp4"></video>
@@ -97,12 +97,86 @@
         </div>
       </section>
     </div>
-    <div class="home-mobile only-mobile">手机端</div>
+    <div class="home-mobile only-mobile">
+      <section class="home-introduce-section">
+        <video ref="homeIntroduceRef" class="home-introduce-video" autoplay muted playsinline loop preload="auto"
+          controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
+          src="../assets/video/home-introduce-mobile.mp4"></video>
+        <div class="home-introduce-content">
+          <div class="home-introduce-text">
+            <span>0</span> Down · <span>0</span> Monthly · <span>0</span> Emission
+          </div>
+          <div class="home-introduce-more">
+            Learn More
+            <img class="home-introduce-more-icon" src="../assets/image/home-introduce-more.webp" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="home-select-section">
+        <div class="home-select-name">
+          Why Select SolarAI
+        </div>
+        <div class="home-select-desc">
+          With just one click, SolarAI effortlessly maximises savings. It intelligently minimises grid reliance by
+          optimising the use of solar energy and battery storage, offering you hassle-free, efficient energy management.
+        </div>
+      </section>
+      <section class="section-0down " ref="sec0Ref">
+        <video ref="home0downRef" class="home-0down-video" autoplay muted playsinline loop preload="auto"
+          controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
+          src="../assets/video/home-0down-mobile.mp4"></video>
+        <div class="home-0down-content">
+          <div class="home-0down-title">0 Down 0 Monthly 0 Emission</div>
+          <div class="home-0down-desc">
+            Switch to solar with 0 upfront cost and save immediately. Save up to 30%~80% on your current electricity
+            bill.
+            The solar panels are yours at the end of the payment period. No hidden fees, no extra costs
+            The energy revolution starts at home, and with the full power of sonnenHome you're all set for a clean
+            energy future.
+          </div>
+          <div class="home-0down-icon"></div>
+        </div>
+      </section>
+      <section class="section-smarter" ref="sec1Ref">
+        <img class="section-smarter-bg" src="../assets/image/home-smarter-bg-mobile.webp" alt="">
+        <div class="home-smarter-content">
+          <div class="home-smarter-title">Smarter AI, More
+            Revenue，<span class="home-smarter-title-remark">30%~80%+</span></div>
+          <div class="home-smarter-desc">
+            The verified residential iDER (intelligent Distributed Energy Resource) system, with its self-developed AI
+            model, increases additional revenue by over 30%~80%
+          </div>
+          <div class="home-smarter-icon"></div>
+        </div>
+      </section>
+      <section class="section-broad " ref="sec2Ref">
+        <img class="section-broad-bg" src="../assets/image/home-broad-bg-mobile.webp" alt="">
+        <div class="home-broad-content">
+          <div class="home-broad-title">Broad Connectivity</div>
+          <div class="home-broad-desc">
+            The most easy & diverse connection methods in the industry
+          </div>
+          <div class="home-broad-icon"></div>
+        </div>
+      </section>
+      <section class="section-seamless " ref="sec3Ref">
+        <img class="section-seamless-bg" src="../assets/image/home-seamless-bg-mobile.webp" alt="">
+        <div class="home-seamless-content">
+          <div class="home-seamless-title">Seamless Integration</div>
+          <div class="home-seamless-desc">
+            All sonnenHome solutions interconnect intelligently to optimize your energy use, without any additional
+            effort!
+          </div>
+          <div class="home-seamless-icon"></div>
+        </div>
+      </section>
+    </div>
   </div>
 </template>
   
 <script setup lang="ts">
 import { onMounted, ref, onUnmounted } from 'vue'
+
 
 // refs（保留你的）
 const homeIntroduceRef = ref<HTMLVideoElement | null>(null)
@@ -127,174 +201,180 @@ const setVh = () =>
   document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`)
 
 onMounted(() => {
-  // 100vh 修复
-  setVh()
-  window.addEventListener('resize', setVh)
-  // 视频播放兜底
-  homeIntroduceRef.value?.play().catch(() => {
-    document.addEventListener(
-      'visibilitychange',
-      () => {
-        if (!document.hidden) homeIntroduceRef.value?.play().catch(() => { })
-      },
-      { once: true }
-    )
-  })
+  const mq = window.matchMedia('(max-width: 1023.98px)')
 
-  // ---- Helper：进入视口只触发一次的入场动画 ----
-  function onceEnter(
-    targets: string | Element[] | NodeListOf<Element>,
-    opts: {
-      trigger?: string | Element
-      start?: string
-      from?: gsap.TweenVars
-      to?: gsap.TweenVars
-      duration?: number
-      ease?: string
-      stagger?: number
-      delay?: number
-    } = {}
-  ) {
-    const els =
-      typeof targets === 'string'
-        ? Array.from(document.querySelectorAll(targets))
-        : Array.from(targets)
-    els.forEach((el, i) => {
-      const from = opts.from || { y: 20, opacity: 0 }
-      gsap.set(el, from)
-      ScrollTrigger.create({
-        trigger: (opts.trigger as Element) || el,
-        start: opts.start || 'top 80%',
-        once: true,
-        onEnter: () =>
-          gsap.to(el, {
-            ...(opts.to || {}),
-            y: 0,
-            opacity: 1,
-            duration: opts.duration ?? 1,
-            ease: opts.ease || 'expo.out',
-            delay: opts.stagger ? i * (opts.stagger ?? 0) : opts.delay ?? 0,
-            overwrite: true
-          })
+  if (!mq.matches) {
+
+    // 100vh 修复
+    setVh()
+    window.addEventListener('resize', setVh)
+    // 视频播放兜底
+    homeIntroduceRef.value?.play().catch(() => {
+      document.addEventListener(
+        'visibilitychange',
+        () => {
+          if (!document.hidden) homeIntroduceRef.value?.play().catch(() => { })
+        },
+        { once: true }
+      )
+    })
+
+    // ---- Helper：进入视口只触发一次的入场动画 ----
+    function onceEnter(
+      targets: string | Element[] | NodeListOf<Element>,
+      opts: {
+        trigger?: string | Element
+        start?: string
+        from?: gsap.TweenVars
+        to?: gsap.TweenVars
+        duration?: number
+        ease?: string
+        stagger?: number
+        delay?: number
+      } = {}
+    ) {
+      const els =
+        typeof targets === 'string'
+          ? Array.from(document.querySelectorAll(targets))
+          : Array.from(targets)
+      els.forEach((el, i) => {
+        const from = opts.from || { y: 20, opacity: 0 }
+        gsap.set(el, from)
+        ScrollTrigger.create({
+          trigger: (opts.trigger as Element) || el,
+          start: opts.start || 'top 80%',
+          once: true,
+          onEnter: () =>
+            gsap.to(el, {
+              ...(opts.to || {}),
+              y: 0,
+              opacity: 1,
+              duration: opts.duration ?? 1,
+              ease: opts.ease || 'expo.out',
+              delay: opts.stagger ? i * (opts.stagger ?? 0) : opts.delay ?? 0,
+              overwrite: true
+            })
+        })
       })
+    }
+
+    // HERO 入场
+    onceEnter('.home-introduce-video', {
+      trigger: '.home-introduce-section',
+      from: { scale: 1.12 },
+      duration: 1.2
     })
+    onceEnter('.home-introduce-content', {
+      trigger: '.home-introduce-section',
+      from: { y: 40, opacity: 0, scale: 1.06 },
+      duration: 1.0
+    })
+
+    // 标题入场
+    const bigTitles = [
+      '.home-0down-title',
+      '.home-smarter-title',
+      '.home-broad-title',
+      '.home-seamless-title',
+      '.home-select-name'
+    ]
+    onceEnter(bigTitles.join(','), {
+      from: { y: 80, opacity: 0, scale: 1.08, skewY: 4 },
+      to: { scale: 1, skewY: 0 },
+      duration: 1.05,
+      ease: 'expo.out'
+    })
+
+    // 描述入场
+    const descs = [
+      '.home-0down-desc',
+      '.home-smarter-desc',
+      '.home-broad-desc',
+      '.home-seamless-desc',
+      '.home-select-desc'
+    ]
+    onceEnter(descs.join(','), { from: { y: 44, opacity: 0 }, duration: 0.95 })
+
+    // Why Select 卡片
+    onceEnter('.home-select-tab-item', {
+      trigger: '.home-select-section',
+      from: { y: 40, opacity: 0, scale: 1.06 },
+      to: { scale: 1 },
+      duration: 0.9,
+      stagger: 0.12
+    })
+
+    // // 背景缩放回落
+    // onceEnter('.section-smarter .section-smarter-bg', {
+    //   trigger: '.section-smarter',
+    //   from: { scale: 1.12, y: 20 },
+    //   to: { y: 0 },
+    //   duration: 1.2
+    // })
+    // onceEnter('.section-broad .section-broad-bg', {
+    //   trigger: '.section-broad',
+    //   from: { scale: 1.12, y: 24 },
+    //   to: { y: 0 },
+    //   duration: 1.2
+    // })
+    // onceEnter('.section-seamless .section-seamless-bg', {
+    //   trigger: '.section-seamless',
+    //   from: { scale: 1.1, y: 16 },
+    //   to: { y: 0 },
+    //   duration: 1.1
+    // })
+
+    // // 轻视差
+    // gsap.to('.section-smarter .section-smarter-bg', {
+    //   scrollTrigger: { trigger: '.section-smarter', start: 'top bottom', end: 'bottom top', scrub: true },
+    //   yPercent: -14
+    // })
+    // gsap.to('.section-broad .section-broad-bg', {
+    //   scrollTrigger: { trigger: '.section-broad', start: 'top bottom', end: 'bottom top', scrub: true },
+    //   yPercent: -16
+    // })
+    // gsap.to('.section-seamless .section-seamless-bg', {
+    //   scrollTrigger: { trigger: '.section-seamless', start: 'top bottom', end: 'bottom top', scrub: true },
+    //   yPercent: -12
+    // })
+
+    // 可访问性：尊重减少动效
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)')
+    if (media.matches) {
+      gsap.globalTimeline.timeScale(0)
+      document.querySelectorAll<HTMLElement>('*').forEach((el) => {
+        el.style.animation = 'none'
+        el.style.transition = 'none'
+      })
+    }
+
+    // 数字递增：解析 "30%~80%+"
+    const remarkEl = document.querySelector('.home-smarter-title-remark') as HTMLElement | null
+    if (remarkEl) {
+      const m = remarkEl.textContent?.match(/(\d+)\s*%?\s*[~\-～]\s*(\d+)\s*%?/)
+      const minTo = m ? parseInt(m[1], 10) : 30
+      const maxTo = m ? parseInt(m[2], 10) : 80
+      const a = { v: 0 }, b = { v: 0 }
+      remarkEl.textContent = `0%~0%+`
+
+      ScrollTrigger.create({
+        trigger: '.section-smarter',
+        start: 'top 78%',
+        once: true,
+        onEnter: () => {
+          gsap.to(a, {
+            v: minTo, duration: 0.9, ease: 'power3.out',
+            onUpdate: () => (remarkEl.textContent = `${Math.round(a.v)}%~${Math.round(b.v)}%+`)
+          })
+          gsap.to(b, {
+            v: maxTo, duration: 1.2, delay: 0.1, ease: 'power3.out',
+            onUpdate: () => (remarkEl.textContent = `${Math.round(a.v)}%~${Math.round(b.v)}%+`)
+          })
+        }
+      })
+    }
   }
 
-  // HERO 入场
-  onceEnter('.home-introduce-video', {
-    trigger: '.home-introduce-section',
-    from: { scale: 1.12 },
-    duration: 1.2
-  })
-  onceEnter('.home-introduce-content', {
-    trigger: '.home-introduce-section',
-    from: { y: 40, opacity: 0, scale: 1.06 },
-    duration: 1.0
-  })
-
-  // 标题入场
-  const bigTitles = [
-    '.home-0down-title',
-    '.home-smarter-title',
-    '.home-broad-title',
-    '.home-seamless-title',
-    '.home-select-name'
-  ]
-  onceEnter(bigTitles.join(','), {
-    from: { y: 80, opacity: 0, scale: 1.08, skewY: 4 },
-    to: { scale: 1, skewY: 0 },
-    duration: 1.05,
-    ease: 'expo.out'
-  })
-
-  // 描述入场
-  const descs = [
-    '.home-0down-desc',
-    '.home-smarter-desc',
-    '.home-broad-desc',
-    '.home-seamless-desc',
-    '.home-select-desc'
-  ]
-  onceEnter(descs.join(','), { from: { y: 44, opacity: 0 }, duration: 0.95 })
-
-  // Why Select 卡片
-  onceEnter('.home-select-tab-item', {
-    trigger: '.home-select-section',
-    from: { y: 40, opacity: 0, scale: 1.06 },
-    to: { scale: 1 },
-    duration: 0.9,
-    stagger: 0.12
-  })
-
-  // // 背景缩放回落
-  // onceEnter('.section-smarter .section-smarter-bg', {
-  //   trigger: '.section-smarter',
-  //   from: { scale: 1.12, y: 20 },
-  //   to: { y: 0 },
-  //   duration: 1.2
-  // })
-  // onceEnter('.section-broad .section-broad-bg', {
-  //   trigger: '.section-broad',
-  //   from: { scale: 1.12, y: 24 },
-  //   to: { y: 0 },
-  //   duration: 1.2
-  // })
-  // onceEnter('.section-seamless .section-seamless-bg', {
-  //   trigger: '.section-seamless',
-  //   from: { scale: 1.1, y: 16 },
-  //   to: { y: 0 },
-  //   duration: 1.1
-  // })
-
-  // // 轻视差
-  // gsap.to('.section-smarter .section-smarter-bg', {
-  //   scrollTrigger: { trigger: '.section-smarter', start: 'top bottom', end: 'bottom top', scrub: true },
-  //   yPercent: -14
-  // })
-  // gsap.to('.section-broad .section-broad-bg', {
-  //   scrollTrigger: { trigger: '.section-broad', start: 'top bottom', end: 'bottom top', scrub: true },
-  //   yPercent: -16
-  // })
-  // gsap.to('.section-seamless .section-seamless-bg', {
-  //   scrollTrigger: { trigger: '.section-seamless', start: 'top bottom', end: 'bottom top', scrub: true },
-  //   yPercent: -12
-  // })
-
-  // 可访问性：尊重减少动效
-  const media = window.matchMedia('(prefers-reduced-motion: reduce)')
-  if (media.matches) {
-    gsap.globalTimeline.timeScale(0)
-    document.querySelectorAll<HTMLElement>('*').forEach((el) => {
-      el.style.animation = 'none'
-      el.style.transition = 'none'
-    })
-  }
-
-  // 数字递增：解析 "30%~80%+"
-  const remarkEl = document.querySelector('.home-smarter-title-remark') as HTMLElement | null
-  if (remarkEl) {
-    const m = remarkEl.textContent?.match(/(\d+)\s*%?\s*[~\-～]\s*(\d+)\s*%?/)
-    const minTo = m ? parseInt(m[1], 10) : 30
-    const maxTo = m ? parseInt(m[2], 10) : 80
-    const a = { v: 0 }, b = { v: 0 }
-    remarkEl.textContent = `0%~0%+`
-
-    ScrollTrigger.create({
-      trigger: '.section-smarter',
-      start: 'top 78%',
-      once: true,
-      onEnter: () => {
-        gsap.to(a, {
-          v: minTo, duration: 0.9, ease: 'power3.out',
-          onUpdate: () => (remarkEl.textContent = `${Math.round(a.v)}%~${Math.round(b.v)}%+`)
-        })
-        gsap.to(b, {
-          v: maxTo, duration: 1.2, delay: 0.1, ease: 'power3.out',
-          onUpdate: () => (remarkEl.textContent = `${Math.round(a.v)}%~${Math.round(b.v)}%+`)
-        })
-      }
-    })
-  }
 })
 
 // —— 卸载清理（移到 setup 顶层来注册）
@@ -724,6 +804,282 @@ definePageMeta({ title: 'Home' })
       }
     }
 
+  }
+
+  .home-mobile {
+    .home-introduce-section {
+      position: relative;
+      width: 100%;
+
+      .home-introduce-video {
+        width: 100%;
+        display: block;
+      }
+
+      .home-introduce-content {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        left: 0;
+        top: 3rem;
+        text-align: center;
+        font-size: 0.2rem;
+        color: #fff;
+        font-weight: 500;
+        font-family: PingFangSC, PingFang SC;
+        font-style: normal;
+
+        span {
+          font-weight: 600;
+          font-size: 0.26rem;
+          color: #02B5B1;
+        }
+
+        .home-introduce-text {
+          margin-bottom: 0.24rem;
+
+        }
+
+        .home-introduce-more {
+          width: 1.3rem;
+          height: 0.32rem;
+          margin: 0 auto;
+          background: #FFFFFF;
+          border-radius: 0.24rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 300;
+          font-size: 0.13rem;
+          font-family: PingFangSC, PingFang SC;
+          color: #222222;
+          font-style: normal;
+          cursor: pointer;
+
+          .home-introduce-more-icon {
+            width: 0.2rem;
+            margin-left: 0.06rem;
+          }
+        }
+      }
+    }
+
+    .home-select-section {
+      width: 100%;
+      background: #222;
+      box-sizing: border-box;
+      padding-top: 0.16rem;
+      padding-bottom: 0.36rem;
+
+      .home-select-name {
+        font-family: PingFangSC, PingFang SC;
+        font-weight: 600;
+        font-size: 0.22rem;
+        color: #FFFFFF;
+        line-height: 0.3rem;
+        text-align: center;
+        font-style: normal;
+      }
+
+      .home-select-desc {
+        font-family: PingFangSC, PingFang SC;
+        margin-top: 0.16rem;
+        font-weight: 400;
+        font-size: 0.14rem;
+        color: #969696;
+        line-height: 0.2rem;
+        font-style: normal;
+        padding: 0 0.23rem;
+      }
+    }
+
+    .section-0down {
+      position: relative;
+      width: 100%;
+      font-size: 0;
+
+      .home-0down-video {
+        width: 100%;
+      }
+
+      .home-0down-content {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0 0.23rem;
+
+        .home-0down-title {
+          font-family: FZLTZHK--GBK1, FZLTZHK--GBK1;
+          font-weight: normal;
+          font-size: 0.2rem;
+          color: #FFFFFF;
+          text-align: center;
+          line-height: 0.28rem;
+          font-style: normal;
+        }
+
+        .home-0down-desc {
+          font-family: PingFangSC, PingFang SC;
+          text-align: justify;
+          /* 两端对齐 */
+          font-weight: 300;
+          font-size: 0.14rem;
+          color: #FFFFFF;
+          line-height: 0.2rem;
+          font-style: normal;
+        }
+
+        .home-0down-icon {
+          width: 0.72rem;
+          height: 0.04rem;
+          margin-top: 0.16rem;
+          background: #10C6C2;
+        }
+      }
+    }
+
+    .section-smarter {
+      width: 100%;
+      position: relative;
+      font-size: 0;
+
+      .section-smarter-bg {
+        width: 100%;
+      }
+
+      .home-smarter-content {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0.16rem;
+
+        .home-smarter-title {
+          font-family: FZLTZHK--GBK1, FZLTZHK--GBK1;
+          font-weight: normal;
+          font-size: 0.2rem;
+          color: #FFFFFF;
+          line-height: 0.28rem;
+          text-align: center;
+          font-style: normal;
+
+          .home-smarter-title-remark {
+            color: #FFA12B;
+          }
+        }
+
+        .home-smarter-desc {
+          font-family: PingFangSC, PingFang SC;
+          font-weight: 300;
+          font-size: 0.14rem;
+          color: #FFFFFF;
+          line-height: 0.2rem;
+          font-style: normal;
+          text-align: left;
+        }
+
+        .home-smarter-icon {
+          width: 0.72rem;
+          height: 0.04rem;
+          margin-top: 0.16rem;
+          background: #10C6C2;
+        }
+      }
+    }
+
+    .section-broad {
+      width: 100%;
+      position: relative;
+      font-size: 0;
+
+      .section-broad-bg {
+        width: 100%;
+
+      }
+
+      .home-broad-content {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0.16rem;
+
+        .home-broad-title {
+          font-family: FZLTZHK--GBK1, FZLTZHK--GBK1;
+          text-align: center;
+          font-weight: normal;
+          font-size: 0.2rem;
+          color: #FFFFFF;
+          line-height: 0.28rem;
+          font-style: normal;
+        }
+
+        .home-broad-desc {
+          font-family: PingFangSC, PingFang SC;
+          font-weight: 300;
+          font-size: 0.14rem;
+          color: #FFFFFF;
+          line-height: 0.2rem;
+          font-style: normal;
+        }
+
+        .home-broad-icon {
+          width: 0.72rem;
+          height: 0.04rem;
+          margin-top: 0.16rem;
+          background: #10C6C2;
+        }
+      }
+    }
+
+    .section-seamless {
+      width: 100%;
+      position: relative;
+      font-size: 0;
+
+      .section-seamless-bg {
+        width: 100%;
+      }
+
+      .home-seamless-content {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0.16rem;
+
+        .home-seamless-title {
+          font-family: FZLTZHK--GBK1, FZLTZHK--GBK1;
+          font-weight: normal;
+          font-size: 0.2rem;
+          text-align: center;
+          color: #FFFFFF;
+          line-height: 0.28rem;
+          font-style: normal;
+        }
+
+        .home-seamless-desc {
+          font-family: PingFangSC, PingFang SC;
+          font-weight: 300;
+          font-size: 0.14rem;
+          color: #FFFFFF;
+          line-height: 0.2rem;
+          font-style: normal;
+        }
+
+        .home-seamless-icon {
+          width: 0.72rem;
+          height: 0.04rem;
+          margin-top: 0.16rem;
+          background: #10C6C2;
+        }
+      }
+    }
   }
 }
 </style>

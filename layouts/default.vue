@@ -14,7 +14,10 @@
             </div>
         </div>
         <div class="defatul-mobile only-mobile">
-            <!-- 手机端 -->
+            <div class="nav-header">
+                <img class="logo" @click="handleToHome('/')" src="../assets/image/logo-mobile.webp" alt="">
+                <img class="menu-mobile" @click="handleToHome('/')" src="../assets/image/menu-mobile.webp" alt="">
+            </div>
         </div>
         <!--  |
         <NuxtLink to="/about">关于我们</NuxtLink> -->
@@ -47,7 +50,31 @@
             </div>
 
         </div>
-        <!-- © 2025 中兴羽绒 -->
+        <div class="footer-mobile only-mobile">
+            <div class="footer-container">
+                <div class="footer-nav">
+                    <div class="footer-nav-item" v-for="(item, index) in list" :key="index">
+                        <div @click="handleToPage(item, index)">{{ item.name }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="store">
+                <div class="app-store app-store-ios">
+                    <img class="app-store-code" src="../assets/image/ios-code.webp" alt="">
+                    <img class="app-store-icon" src="../assets/image/ios-store.webp" alt="">
+                </div>
+                <div class="app-store">
+                    <img class="app-store-code" src="../assets/image/android-code.webp" alt="">
+                    <img class="app-store-icon" src="../assets/image/android-store.webp" alt="">
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-copyright">Copyright©2024 SolarAI Technologies LLC</div>
+                <span class="footer-links-a" @click="handleToPrivacy('/privacy')">Privacy Policy</span> | <span
+                    class="footer-links-a" @click="handleToPrivacy('/conditions')">Terms of Use</span>
+            </div>
+
+        </div>
     </footer>
 </template>
   
@@ -266,6 +293,117 @@ const handleToPrivacy = async (path: string) => {
             color: #10C6C2;
             text-decoration: underline;
             text-underline-offset: 4px;
+            /* 与文字的距离 */
+            text-decoration-thickness: 1px;
+            /* 线条粗细 */
+            text-decoration-color: currentColor;
+        }
+    }
+}
+
+.defatul-mobile {
+    .nav-header {
+        height: 0.6rem;
+        background: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0.12rem;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+
+        .logo {
+            width: 1.7rem;
+        }
+
+        .menu-mobile {
+            width: 0.32rem;
+            height: 0.32rem;
+        }
+    }
+}
+
+.footer-mobile {
+    background: #000000;
+    padding: 0.14rem 0.2rem 0.28rem;
+
+    .footer-container {
+        .footer-nav {
+
+
+            .footer-nav-item {
+                padding: 0.09rem 0 0.06rem;
+                border-bottom: 1px solid #3a3a3a;
+                font-family: PingFangSC, PingFang SC;
+                font-weight: 600;
+                font-size: 0.14rem;
+                color: #FFFFFF;
+                line-height: 0.2rem;
+                text-align: left;
+                font-style: normal;
+            }
+        }
+    }
+
+    .store {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0.2rem 0;
+
+        .app-store {
+            .app-store-code {
+                width: 0.68rem;
+                height: 0.68rem;
+                display: block;
+            }
+
+            .app-store-icon {
+                margin: 0 auto;
+                margin-top: 0.09rem;
+                display: block;
+                width: 0.615rem;
+                height: 0.186rem;
+            }
+
+        }
+
+        .app-store-ios {
+            margin-right: 0.25rem;
+        }
+    }
+
+
+    .footer-links {
+        border-top: 1px solid #3a3a3a;
+        padding-top: 0.16rem;
+        font-family: PingFangSC, PingFang SC;
+        font-weight: 300;
+        font-size: 0.12rem;
+        color: #FFFFFF;
+        line-height: 0.17rem;
+        text-align: center;
+        font-style: normal;
+
+        .footer-copyright {
+            font-family: PingFangSC, PingFang SC;
+            font-weight: 300;
+            font-size: 0.12rem;
+            color: #FFFFFF;
+            line-height: 0.17rem;
+            text-align: center;
+            font-style: normal;
+            margin-bottom: 0.06rem;
+        }
+
+        .footer-links-a:hover {
+            color: #10C6C2;
+            text-decoration: underline;
+            text-underline-offset: 0.04rem;
             /* 与文字的距离 */
             text-decoration-thickness: 1px;
             /* 线条粗细 */
