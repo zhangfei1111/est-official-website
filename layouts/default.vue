@@ -82,13 +82,13 @@
 import { onMounted, ref } from 'vue'
 const route = useRoute()
 const list = ref([
-    // {
-    //     name: "Home",
-    //     path: "/"
-    // },
+    {
+        name: "Home",
+        path: "/"
+    },
     {
         name: "Product",
-        path: "/about"
+        path: "/product"
     },
     {
         name: "APP",
@@ -111,14 +111,14 @@ const list = ref([
         path: "/about"
     },
 ])
-const activeIndex = ref(-1)
+const activeIndex = ref(0)
 const handleToPage = (item: object, index: number) => {
     // 基础跳转
     activeIndex.value = index
     navigateTo(item?.path)
 }
 const handleToHome = (path: string) => {
-    activeIndex.value = -1
+    activeIndex.value = 0
     navigateTo(path)
 }
 const handleToPrivacy = async (path: string) => {

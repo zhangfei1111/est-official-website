@@ -3,10 +3,12 @@
         <section class="outlook-header-section">
             <img class="outlook-header-section-bg" src="~/assets/image/outlook-header-bg.webp" alt="">
             <div class="outlook-header-section-content">
-                <div class="outlook-header-section-title">电网合作（VPP / DR / 市场服务）</div>
+                <div class="outlook-header-section-title">Grid Collaboration (VPP / DR / Market Services)</div>
                 <div class="outlook-header-section-desc">
-                    通过AI技术，让接入SolarAI平台的户用光储系统成为千上万个iDER (intelligent Distributed Energy
-                    Resource)，降低和减少新能源系统对电网的“污染”，平衡新能源对电网带来的波动，让未来的电网在更智能、灵活和多变的同时也更加稳定。
+                    Through AI technology, SolarAI connects thousands of residential solar-plus-storage systems into
+                    intelligent Distributed Energy Resources (iDERs). This reduces the "noise" and volatility that
+                    renewables bring to the grid, balancing fluctuations and enabling a smarter, more flexible, and more
+                    stable power system for the future.
                 </div>
             </div>
         </section>
@@ -21,7 +23,7 @@
         </section>
         <section class="footer-section">
             <img class="footer-bg" src="~/assets/image/outlook-footer-bg.webp" alt="">
-          </section>
+        </section>
     </div>
 </template>
 
@@ -49,7 +51,8 @@
 }
 
 .outlook-pc {
-  background: #F9F9F9;
+    background: #F9F9F9;
+
     .outlook-header-section {
         width: 100%;
         height: 100vh;
@@ -108,10 +111,12 @@
             display: flex;
             align-items: center;
             align-items: center;
-            padding: 0  fluid(16px, 210, 210);
+            padding: 0 fluid(16px, 210, 210);
+
             .cooperation-item {
                 flex: 1;
-                img{
+
+                img {
                     width: 100%;
                     height: auto;
                     display: block;
@@ -119,9 +124,11 @@
             }
         }
     }
-    .footer-section{
+
+    .footer-section {
         margin-top: fluid(16px, 24, 24);
-        .footer-bg{
+
+        .footer-bg {
             width: 100%;
             display: block;
         }
