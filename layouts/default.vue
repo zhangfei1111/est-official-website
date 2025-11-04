@@ -2,8 +2,9 @@
     <header>
         <!-- 你的全局导航 -->
         <div class="defatul-pc only-desktop">
-            <div class="nav-header">
-                <img class="logo" @click="handleToHome('/')" src="../assets/image/home-logo.webp" alt="">
+            <div :class="['nav-header', { scrolled: isScrolled }]">
+                <img class="logo" v-if="!isScrolled" @click="handleToHome('/')" src="../assets/image/home-logo.webp" alt="">
+                <img class="logo" v-else @click="handleToHome('/')" src="../assets/image/home-logo-scrolled.png" alt="">   
                 <div class="menus">
                     <div class="menus-item " v-for="(item, index) in list" :key="index">
                         <!-- <NuxtLink :to="item.path">{{ item.name }}</NuxtLink> -->
@@ -79,7 +80,7 @@
 </template>
   
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, onBeforeUnmount } from 'vue'
 const route = useRoute()
 const list = ref([
     {
@@ -112,6 +113,18 @@ const list = ref([
     },
 ])
 const activeIndex = ref(0)
+const isScrolled = ref(false)
+const onScroll = () => {
+    isScrolled.value = window.scrollY > 2   // 超过 2px 就算滚动
+}
+onMounted(() => {
+    onScroll() // 首次渲染时判定一次（比如刷新在中间位置）
+    window.addEventListener('scroll', onScroll, { passive: true })
+})
+
+onBeforeUnmount(() => {
+    window.removeEventListener('scroll', onScroll)
+})
 const handleToPage = (item: object, index: number) => {
     // 基础跳转
     activeIndex.value = index
@@ -199,8 +212,25 @@ const handleToPrivacy = async (path: string) => {
                 }
             }
         }
+
+
     }
 
+    .nav-header.scrolled {
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(6px);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+        .menus .menus-item .menus-item-name {
+            color: #111; // 黑字
+        }
+
+        // 高亮状态在白底下依然可见
+        .menus .menus-item .menus-item-name-active {
+            background: #02B5B1;
+            color: #fff;
+        }
+    }
 
 }
 
