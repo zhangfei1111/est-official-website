@@ -55,9 +55,9 @@
           <div class="home-0down-title">0 Down 0 Monthly 0 Emission</div>
           <div class="home-0down-desc">
             Switch to solar with 0 upfront cost and save immediately. Save up to 30%~80% on your current electricity
-            bill.
-            The solar panels are yours at the end of the payment period. No hidden fees, no extra costs
-            The energy revolution starts at home, and with the full power of sonnenHome you're all set for a clean
+            bill. <br>
+            The solar panels are yours at the end of the payment period. No hidden fees, no extra costs. <br>
+            The energy revolution starts at home, and with the full power of SolarAI you're all set for a clean
             energy future.
           </div>
           <div class="home-0down-icon"></div>
