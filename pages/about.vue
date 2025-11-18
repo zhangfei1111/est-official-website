@@ -179,7 +179,7 @@
     }
 
     .header-section-content {
-      font-family: PingFangSC, PingFang SC;
+      font-family: 'Poppins', sans-serif;
       font-weight: 300;
       width: 100%;
       font-size: fluid(16px, 74, 74);
@@ -197,7 +197,7 @@
   .about-section {
     .title {
       margin: fluid(16px, 80, 80);
-      font-family: PingFangSC, PingFang SC;
+      font-family: 'Poppins', sans-serif;
       font-weight: 600;
       font-size: fluid(16px, 64, 64);
       color: #222222;
@@ -218,7 +218,7 @@
       .about-us-content {
         width: 50%;
         padding: fluid(16px, 50, 50) fluid(16px, 140, 140) fluid(16px, 50, 50) fluid(16px, 80, 80);
-        font-family: PingFangSC, PingFang SC;
+        font-family: 'Poppins', sans-serif;
         font-weight: 300;
         font-size: fluid(16px, 26, 26);
         color: #222222;
@@ -236,7 +236,7 @@
   .corporate-section {
     .title {
       margin: fluid(16px, 80, 80);
-      font-family: PingFangSC, PingFang SC;
+      font-family: 'Poppins', sans-serif;
       font-weight: 600;
       font-size: fluid(16px, 64, 64);
       color: #222222;
@@ -263,7 +263,7 @@
         left: 0;
 
         .corporate-title {
-          font-family: PingFangSC, PingFang SC;
+          font-family: 'Poppins', sans-serif;
           font-weight: 500;
           font-size: fluid(16px, 64, 64);
           color: #FFFFFF;
@@ -275,7 +275,7 @@
         }
 
         .corporate-desc {
-          font-family: PingFangSC, PingFang SC;
+          font-family: 'Poppins', sans-serif;
           font-weight: 100;
           font-size: fluid(16px, 74, 74);
           color: #FFFFFF;
@@ -304,7 +304,7 @@
             transition: box-shadow .2s ease, transform .2s ease;
 
             .corporate-card-item-title {
-              font-family: PingFangSC, PingFang SC;
+              font-family: 'Poppins', sans-serif;
               font-weight: 500;
               font-size: fluid(16px, 40, 40);
               color: #000000;
@@ -314,7 +314,7 @@
 
             .corporate-card-item-content {
 
-              font-family: PingFangSC, PingFang SC;
+              font-family: 'Poppins', sans-serif;
               font-weight: 300;
               font-size: fluid(16px, 24, 24);
               color: #222222;
@@ -346,7 +346,7 @@
   .technical-section {
     .title {
       margin: fluid(16px, 80, 80);
-      font-family: PingFangSC, PingFang SC;
+      font-family: 'Poppins', sans-serif;
       font-weight: 600;
       font-size: fluid(16px, 64, 64);
       color: #222222;
@@ -372,7 +372,7 @@
 
         .technical-title {
           width: 100%;
-          font-family: DINCondensed, DINCondensed;
+          font-family:'Poppins', sans-serif;
           font-weight: bold;
           font-size: fluid(16px, 180, 180);
           color: #FFFFFF;
@@ -389,7 +389,7 @@
 
         .technical-desc {
           width: 100%;
-          font-family: PingFangSC, PingFang SC;
+          font-family: 'Poppins', sans-serif;
           font-weight: 100;
           font-size: fluid(16px, 74, 74);
           color: #FFFFFF;
@@ -407,7 +407,7 @@
 
     .title {
       margin: fluid(16px, 80, 80);
-      font-family: PingFangSC, PingFang SC;
+      font-family: 'Poppins', sans-serif;
       font-weight: 600;
       font-size: fluid(16px, 64, 64);
       color: #222222;
@@ -429,7 +429,7 @@
       .about-core-content {
         flex: 1;
         box-sizing: border-box;
-        font-family: PingFangSC, PingFang SC;
+        font-family: 'Poppins', sans-serif;
         font-weight: 300;
         font-size: fluid(16px, 28, 28);
         color: #222222;
@@ -455,7 +455,7 @@
     }
 
     .header-section-content {
-      font-family: PingFangSC, PingFang SC;
+      font-family: 'Poppins', sans-serif;
       font-weight: 300;
       width: 100%;
       font-size: 0.24rem;
@@ -473,7 +473,7 @@
   .about-section {
     .title {
       margin: 0.24rem;
-      font-family: PingFangSC, PingFang SC;
+      font-family: 'Poppins', sans-serif;
       font-weight: 600;
       font-size: 0.22rem;
       color: #222222;
@@ -495,7 +495,7 @@
         width: 3.43rem;
         box-sizing: border-box;
         padding: 0.24rem 0.16rem;
-        font-family: PingFangSC, PingFang SC;
+        font-family:'Poppins', sans-serif;
         font-weight: 300;
         font-size: 0.14rem;
         color: #222222;
@@ -517,7 +517,7 @@
 
     .title {
       margin: 0.24rem;
-      font-family: PingFangSC, PingFang SC;
+      font-family: 'Poppins', sans-serif;
       font-weight: 600;
       font-size: 0.22rem;
       color: #222222;
@@ -544,7 +544,7 @@
         left: 0;
 
         .corporate-title {
-          font-family: PingFangSC, PingFang SC;
+          font-family: 'Poppins', sans-serif;
           font-weight: 500;
           font-size: 0.3rem;
           color: #FFFFFF;
@@ -556,7 +556,7 @@
         }
 
         .corporate-desc {
-          font-family: PingFangSC, PingFang SC;
+          font-family: 'Poppins', sans-serif;
           font-weight: 100;
           font-size: 0.24rem;
           color: #FFFFFF;
@@ -580,7 +580,7 @@
             padding: 0 0.18rem 0.18rem 0.18rem;
 
             .corporate-card-item-title {
-              font-family: PingFangSC, PingFang SC;
+              font-family: 'Poppins', sans-serif;
               font-weight: 500;
               font-size: 0.2rem;
               color: #000000;
@@ -591,7 +591,7 @@
 
             .corporate-card-item-content {
 
-              font-family: PingFangSC, PingFang SC;
+              font-family:'Poppins', sans-serif;
               font-weight: 300;
               font-size: 0.12rem;
               color: #222222;
@@ -618,7 +618,7 @@
     margin-top: 3.3rem;
 
     .title {
-      font-family: PingFangSC, PingFang SC;
+      font-family: 'Poppins', sans-serif;
       font-weight: 600;
       font-size: 0.22rem;
       color: #222222;
@@ -645,7 +645,7 @@
 
         .technical-title {
           width: 100%;
-          font-family: DINCondensed, DINCondensed;
+          font-family: 'Poppins', sans-serif;
           font-weight: bold;
           font-size: 0.72rem;
           color: #FFFFFF;
@@ -662,7 +662,7 @@
 
         .technical-desc {
           width: 100%;
-          font-family: PingFangSC, PingFang SC;
+          font-family: 'Poppins', sans-serif;
           font-weight: 100;
           font-size: 0.24rem;
           color: #FFFFFF;
@@ -680,7 +680,7 @@
 
     .title {
       margin: 0.24rem 0;
-      font-family: PingFangSC, PingFang SC;
+      font-family:'Poppins', sans-serif;
       font-weight: 600;
       font-size: 0.22rem;
       color: #222222;
@@ -706,7 +706,7 @@
         left: 50%;
         transform: translateX(-50%);
         box-sizing: border-box;
-        font-family: PingFangSC, PingFang SC;
+        font-family: 'Poppins', sans-serif;
         font-weight: 300;
         font-size: 0.14rem;
         color: #222222;

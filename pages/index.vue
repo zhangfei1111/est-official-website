@@ -447,7 +447,7 @@ definePageMeta({ title: 'Home' })
         font-size: fluid(16px, 72, 72);
         color: #fff;
         font-weight: 500;
-        font-family: PingFangSC, PingFang SC;
+        font-family: 'Poppins', sans-serif;
         font-style: normal;
 
         span {
@@ -472,7 +472,7 @@ definePageMeta({ title: 'Home' })
           justify-content: center;
           font-weight: 300;
           font-size: fluid(16px, 26, 26);
-          font-family: PingFangSC, PingFang SC;
+          font-family: 'Poppins', sans-serif;
           color: #222222;
           font-style: normal;
           cursor: pointer;
@@ -491,7 +491,7 @@ definePageMeta({ title: 'Home' })
         bottom: fluid(16px, 35, 35);
         z-index: 2;
         text-align: center;
-        font-family: PingFangSC, PingFang SC;
+        font-family: 'Poppins', sans-serif;
         font-weight: 300;
         font-size: fluid(16px, 20, 20);
         color: #FFFFFF;
@@ -530,7 +530,7 @@ definePageMeta({ title: 'Home' })
       padding-bottom: fluid(16px, 50, 50);
 
       .home-select-name {
-        font-family: PingFangSC, PingFang SC;
+        font-family: 'Poppins', sans-serif;
         font-weight: 600;
         font-size: fluid(16px, 64, 64);
         color: #FFFFFF;
@@ -540,7 +540,7 @@ definePageMeta({ title: 'Home' })
       }
 
       .home-select-desc {
-        font-family: PingFangSC, PingFang SC;
+        font-family: 'Poppins', sans-serif;
         margin-top: fluid(16px, 24, 24);
         font-weight: 400;
         font-size: fluid(16px, 30, 30);
@@ -562,7 +562,7 @@ definePageMeta({ title: 'Home' })
           background: #272F2F;
           align-items: center;
           justify-content: center;
-          font-family: PingFangSC, PingFang SC;
+          font-family: 'Poppins', sans-serif;
           font-weight: 600;
           font-size: fluid(16px, 27, 27);
           color: #FFFFFF;
@@ -630,7 +630,7 @@ definePageMeta({ title: 'Home' })
         padding-left: fluid(16px, 159, 159);
 
         .home-0down-title {
-          font-family: FZLTZHK--GBK1, FZLTZHK--GBK1;
+          font-family: 'Poppins', sans-serif;
           font-weight: normal;
           font-size: fluid(16px, 56, 56);
           color: #FFFFFF;
@@ -639,7 +639,7 @@ definePageMeta({ title: 'Home' })
         }
 
         .home-0down-desc {
-          font-family: PingFangSC, PingFang SC;
+          font-family: 'Poppins', sans-serif;
           font-weight: 300;
           font-size: fluid(16px, 28, 28);
           color: #FFFFFF;
@@ -678,7 +678,7 @@ definePageMeta({ title: 'Home' })
         padding-left: fluid(16px, 159, 159);
 
         .home-smarter-title {
-          font-family: FZLTZHK--GBK1, FZLTZHK--GBK1;
+          font-family: 'Poppins', sans-serif;
           font-weight: normal;
           font-size: fluid(16px, 56, 56);
           color: #FFFFFF;
@@ -691,7 +691,7 @@ definePageMeta({ title: 'Home' })
         }
 
         .home-smarter-desc {
-          font-family: PingFangSC, PingFang SC;
+          font-family: 'Poppins', sans-serif;
           font-weight: 300;
           font-size: fluid(16px, 28, 28);
           color: #FFFFFF;
@@ -730,7 +730,7 @@ definePageMeta({ title: 'Home' })
         padding-left: fluid(16px, 159, 159);
 
         .home-broad-title {
-          font-family: FZLTZHK--GBK1, FZLTZHK--GBK1;
+          font-family: 'Poppins', sans-serif;
           font-weight: normal;
           font-size: fluid(16px, 56, 56);
           color: #FFFFFF;
@@ -739,7 +739,7 @@ definePageMeta({ title: 'Home' })
         }
 
         .home-broad-desc {
-          font-family: PingFangSC, PingFang SC;
+          font-family: 'Poppins', sans-serif;
           font-weight: 300;
           font-size: fluid(16px, 28, 28);
           color: #FFFFFF;
@@ -778,7 +778,7 @@ definePageMeta({ title: 'Home' })
         padding-left: fluid(16px, 159, 159);
 
         .home-seamless-title {
-          font-family: FZLTZHK--GBK1, FZLTZHK--GBK1;
+          font-family: 'Poppins', sans-serif;
           font-weight: normal;
           font-size: fluid(16px, 56, 56);
           color: #FFFFFF;
@@ -787,7 +787,7 @@ definePageMeta({ title: 'Home' })
         }
 
         .home-seamless-desc {
-          font-family: PingFangSC, PingFang SC;
+          font-family: 'Poppins', sans-serif;
           font-weight: 300;
           font-size: fluid(16px, 28, 28);
           color: #FFFFFF;
@@ -826,7 +826,7 @@ definePageMeta({ title: 'Home' })
         font-size: 0.2rem;
         color: #fff;
         font-weight: 500;
-        font-family: PingFangSC, PingFang SC;
+        font-family: 'Poppins', sans-serif;
         font-style: normal;
 
         span {
@@ -851,7 +851,7 @@ definePageMeta({ title: 'Home' })
           justify-content: center;
           font-weight: 300;
           font-size: 0.13rem;
-          font-family: PingFangSC, PingFang SC;
+          font-family: 'Poppins', sans-serif;
           color: #222222;
           font-style: normal;
           cursor: pointer;
@@ -872,7 +872,7 @@ definePageMeta({ title: 'Home' })
       padding-bottom: 0.36rem;
 
       .home-select-name {
-        font-family: PingFangSC, PingFang SC;
+        font-family: 'Poppins', sans-serif;
         font-weight: 600;
         font-size: 0.22rem;
         color: #FFFFFF;
@@ -882,7 +882,7 @@ definePageMeta({ title: 'Home' })
       }
 
       .home-select-desc {
-        font-family: PingFangSC, PingFang SC;
+        font-family: 'Poppins', sans-serif;
         margin-top: 0.16rem;
         font-weight: 400;
         font-size: 0.14rem;
@@ -911,7 +911,7 @@ definePageMeta({ title: 'Home' })
         padding: 0 0.23rem;
 
         .home-0down-title {
-          font-family: FZLTZHK--GBK1, FZLTZHK--GBK1;
+          font-family: 'Poppins', sans-serif;
           font-weight: normal;
           font-size: 0.2rem;
           color: #FFFFFF;
@@ -921,7 +921,7 @@ definePageMeta({ title: 'Home' })
         }
 
         .home-0down-desc {
-          font-family: PingFangSC, PingFang SC;
+          font-family: 'Poppins', sans-serif;
           text-align: justify;
           /* 两端对齐 */
           font-weight: 300;
@@ -958,7 +958,7 @@ definePageMeta({ title: 'Home' })
         padding: 0.16rem;
 
         .home-smarter-title {
-          font-family: FZLTZHK--GBK1, FZLTZHK--GBK1;
+          font-family: 'Poppins', sans-serif;
           font-weight: normal;
           font-size: 0.2rem;
           color: #FFFFFF;
@@ -972,7 +972,7 @@ definePageMeta({ title: 'Home' })
         }
 
         .home-smarter-desc {
-          font-family: PingFangSC, PingFang SC;
+          font-family: 'Poppins', sans-serif;
           font-weight: 300;
           font-size: 0.14rem;
           color: #FFFFFF;
@@ -1009,7 +1009,7 @@ definePageMeta({ title: 'Home' })
         padding: 0.16rem;
 
         .home-broad-title {
-          font-family: FZLTZHK--GBK1, FZLTZHK--GBK1;
+          font-family: 'Poppins', sans-serif;
           text-align: center;
           font-weight: normal;
           font-size: 0.2rem;
@@ -1019,7 +1019,7 @@ definePageMeta({ title: 'Home' })
         }
 
         .home-broad-desc {
-          font-family: PingFangSC, PingFang SC;
+          font-family: 'Poppins', sans-serif;
           font-weight: 300;
           font-size: 0.14rem;
           color: #FFFFFF;
@@ -1054,7 +1054,7 @@ definePageMeta({ title: 'Home' })
         padding: 0.16rem;
 
         .home-seamless-title {
-          font-family: FZLTZHK--GBK1, FZLTZHK--GBK1;
+          font-family: 'Poppins', sans-serif;
           font-weight: normal;
           font-size: 0.2rem;
           text-align: center;
@@ -1064,7 +1064,7 @@ definePageMeta({ title: 'Home' })
         }
 
         .home-seamless-desc {
-          font-family: PingFangSC, PingFang SC;
+          font-family: 'Poppins', sans-serif;
           font-weight: 300;
           font-size: 0.14rem;
           color: #FFFFFF;

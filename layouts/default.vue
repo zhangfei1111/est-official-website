@@ -4,7 +4,7 @@
         <div class="defatul-pc only-desktop">
             <div :class="['nav-header', { scrolled: isScrolled }]">
                 <img class="logo" v-if="!isScrolled" @click="handleToHome('/')" src="../assets/image/home-logo.webp" alt="">
-                <img class="logo" v-else @click="handleToHome('/')" src="../assets/image/home-logo-scrolled.png" alt="">   
+                <img class="logo" v-else @click="handleToHome('/')" src="../assets/image/home-logo-scrolled.png" alt="">
                 <div class="menus">
                     <div class="menus-item " v-for="(item, index) in list" :key="index">
                         <!-- <NuxtLink :to="item.path">{{ item.name }}</NuxtLink> -->
@@ -24,7 +24,9 @@
         <NuxtLink to="/about">关于我们</NuxtLink> -->
     </header>
     <!-- 这里渲染 pages/**/index.vue、about.vue…… -->
-    <NuxtPage />
+    <main class="layout-main">
+        <NuxtPage />
+    </main>
     <footer>
         <div class="footer-pc only-desktop">
             <div class="footer-container">
@@ -163,6 +165,14 @@ const handleToPrivacy = async (path: string) => {
     @return clamp($min, #{$vwVal}vw, $max);
 }
 
+
+.layout-main {
+    min-height: 100vh;
+    background: #050816;
+    /* 你官网主体的深色背景 */
+    color: #fff;
+}
+
 .defatul-pc {
     .nav-header {
         position: fixed;
@@ -176,7 +186,7 @@ const handleToPrivacy = async (path: string) => {
         display: flex;
         align-items: center;
         padding: 0 fluid(16px, 44, 44);
-        font-family: PingFangSC, PingFang SC;
+        font-family: 'Poppins', sans-serif;
         justify-content: space-between;
         background: rgba(255, 255, 255, 0.18); // 60% 不透明
 
@@ -278,7 +288,7 @@ const handleToPrivacy = async (path: string) => {
             justify-content: flex-end;
 
             .footer-nav-item {
-                font-family: PingFangSC, PingFang SC;
+                font-family: 'Poppins', sans-serif;
                 font-weight: 600;
                 font-size: fluid(16px, 24, 24);
                 color: #FFFFFF;
@@ -294,7 +304,7 @@ const handleToPrivacy = async (path: string) => {
         height: fluid(16px, 136, 136);
         border-top: 1px solid #323232;
         text-align: center;
-        font-family: PingFangSC, PingFang SC;
+        font-family: 'Poppins', sans-serif;
         font-weight: 300;
         font-size: fluid(16px, 24, 24);
         color: #FFFFFF;
@@ -304,7 +314,7 @@ const handleToPrivacy = async (path: string) => {
         padding-top: fluid(16px, 23, 23);
 
         .footer-copyright {
-            font-family: PingFangSC, PingFang SC;
+            font-family: 'Poppins', sans-serif;
             font-weight: 300;
             font-size: fluid(16px, 24, 24);
             color: #FFFFFF;
@@ -368,7 +378,7 @@ const handleToPrivacy = async (path: string) => {
             .footer-nav-item {
                 padding: 0.09rem 0 0.06rem;
                 border-bottom: 1px solid #3a3a3a;
-                font-family: PingFangSC, PingFang SC;
+                font-family: 'Poppins', sans-serif;
                 font-weight: 600;
                 font-size: 0.14rem;
                 color: #FFFFFF;
@@ -411,7 +421,7 @@ const handleToPrivacy = async (path: string) => {
     .footer-links {
         border-top: 1px solid #3a3a3a;
         padding-top: 0.16rem;
-        font-family: PingFangSC, PingFang SC;
+        font-family: 'Poppins', sans-serif;
         font-weight: 300;
         font-size: 0.12rem;
         color: #FFFFFF;
@@ -420,7 +430,7 @@ const handleToPrivacy = async (path: string) => {
         font-style: normal;
 
         .footer-copyright {
-            font-family: PingFangSC, PingFang SC;
+            font-family: 'Poppins', sans-serif;
             font-weight: 300;
             font-size: 0.12rem;
             color: #FFFFFF;

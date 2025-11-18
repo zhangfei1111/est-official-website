@@ -5,6 +5,9 @@
 </template>
   
 <script setup lang="ts">
+definePageMeta({
+    layout: 'no-scroll-nav'   // 对应 layouts/app.vue
+})
 import { ref } from 'vue'
 
 // 直接用你的 HTML 字符串

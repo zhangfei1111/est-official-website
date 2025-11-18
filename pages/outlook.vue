@@ -74,7 +74,7 @@
             background: #2C8A85;
 
             .outlook-header-section-title {
-                font-family: PingFangSC, PingFang SC;
+                font-family: 'Poppins', sans-serif;
                 font-weight: 400;
                 font-size: fluid(16px, 54, 54);
                 color: #FFFFFF;
@@ -84,7 +84,7 @@
             }
 
             .outlook-header-section-desc {
-                font-family: PingFangSC, PingFang SC;
+                font-family: 'Poppins', sans-serif;
                 font-weight: 100;
                 font-size: fluid(16px, 28, 28);
                 color: #FFFFFF;
@@ -98,7 +98,7 @@
     .cooperation-section {
         .cooperation-section-title {
             margin: fluid(16px, 80, 80);
-            font-family: PingFangSC, PingFang SC;
+            font-family: 'Poppins', sans-serif;
             font-weight: 600;
             font-size: fluid(16px, 64, 64);
             color: #222222;
