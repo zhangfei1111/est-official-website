@@ -121,7 +121,7 @@
           optimising the use of solar energy and battery storage, offering you hassle-free, efficient energy management.
         </div>
       </section>
-      <section class="section-0down " ref="sec0Ref">
+      <section class="section-0down " >
         <video ref="home0downRef" class="home-0down-video" autoplay muted playsinline loop preload="auto"
           controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
           src="../assets/video/home-0down-mobile.mp4"></video>
@@ -137,7 +137,7 @@
           <div class="home-0down-icon"></div>
         </div>
       </section>
-      <section class="section-smarter" ref="sec1Ref">
+      <section class="section-smarter" >
         <img class="section-smarter-bg" src="../assets/image/home-smarter-bg-mobile.webp" alt="">
         <div class="home-smarter-content">
           <div class="home-smarter-title">Smarter AI, More
@@ -149,7 +149,7 @@
           <div class="home-smarter-icon"></div>
         </div>
       </section>
-      <section class="section-broad " ref="sec2Ref">
+      <section class="section-broad " >
         <img class="section-broad-bg" src="../assets/image/home-broad-bg-mobile.webp" alt="">
         <div class="home-broad-content">
           <div class="home-broad-title">Broad Connectivity</div>
@@ -159,7 +159,7 @@
           <div class="home-broad-icon"></div>
         </div>
       </section>
-      <section class="section-seamless " ref="sec3Ref">
+      <section class="section-seamless " >
         <img class="section-seamless-bg" src="../assets/image/home-seamless-bg-mobile.webp" alt="">
         <div class="home-seamless-content">
           <div class="home-seamless-title">Seamless Integration</div>

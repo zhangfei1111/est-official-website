@@ -243,13 +243,14 @@ function handleToCase(index: number) {
         .case-content {
             width: 100%;
             background: linear-gradient(180deg, #BFD4FF 0%, rgba(25, 58, 131, 0.7) 100%);
+            padding: fluid(16px, 120, 120) 0;
 
             .case-item {
                 display: flex;
                 align-items: center;
                 box-sizing: border-box;
-                padding: fluid(16px, 120, 120) fluid(16px, 200, 200);
-
+                padding: 0 fluid(16px, 200, 200);
+                margin-bottom: fluid(16px, 120, 120);
                 .case-img {
                     width: fluid(16px, 734, 734);
                     height: fluid(16px, 466, 466);
@@ -274,6 +275,7 @@ function handleToCase(index: number) {
                         display: flex;
                         flex-wrap: wrap; // ⭐ 允许换行
                         align-items: flex-start; // 可选，看你是否需要垂直居中
+
                         .case-desc::before {
                             content: " ";
                             position: absolute;
@@ -322,6 +324,9 @@ function handleToCase(index: number) {
 
 
                 }
+            }
+            .case-item:last-child{
+                margin-bottom: 0;
             }
         }
     }
