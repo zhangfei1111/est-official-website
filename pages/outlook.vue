@@ -27,7 +27,12 @@
     </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePageMeta({
+    name: 'Outlook',
+    title: 'Outlook',
+})
+</script>
 
 <style scoped lang="scss">
 @use "sass:math";

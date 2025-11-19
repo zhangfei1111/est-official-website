@@ -13,7 +13,7 @@
       </section>
       <section class="installer-content">
         <div class="installer-title">Easy installation</div>
-        <v-carousel height="auto" >
+        <v-carousel height="auto">
           <v-carousel-item v-for="(item, index) in items" :key="index">
             <div class="installation-content">
               <img class="installation-content-img" :src="item.url" alt="">
@@ -58,7 +58,8 @@ const items = [
 
 // 页面元信息
 definePageMeta({
-  title: 'Home'
+  name: 'Installer',
+  title: 'Installer'
 })
 </script>
   
@@ -150,7 +151,8 @@ definePageMeta({
     }
 
     .installer-content {
-      padding:0 fluid(16px, 124, 124) fluid(16px, 137, 137) fluid(16px, 124, 124);
+      padding: 0 fluid(16px, 124, 124) fluid(16px, 137, 137) fluid(16px, 124, 124);
+
       .installer-title {
         font-family: 'Poppins', sans-serif;
         font-weight: 600;

@@ -15,9 +15,7 @@
     --radius: 8px;
 
     /* 字体族 */
-    --font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI",
-        Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji",
-        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+    --font-family: 'Poppins', sans-serif;
 }
 
 /* 若你的移动端设计稿是 750 宽，可在 <html> 上加 .d750 来切换 */
@@ -35,12 +33,15 @@ body {
     /* IE/旧 Edge */
     scrollbar-width: none;
     /* Firefox */
-    
+
 }
+
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  display: none;              /* Chrome/Safari/新 Edge */
+    display: none;
+    /* Chrome/Safari/新 Edge */
 }
+
 /* 移动端：随视口缩放；桌面：锁 16px */
 html {
     font-size: clamp(12px, calc(100vw / var(--vw-div)), 16px);
@@ -65,7 +66,24 @@ html.is-desktop {
     gap: 12px;
 }
 
+/* 默认按移动端处理 */
+.only-desktop {
+    display: none;
+}
+
+.only-mobile {
+    display: block;
+}
+
 @media (min-width: 1024px) {
+    .only-desktop {
+        display: block;
+    }
+
+    .only-mobile {
+        display: none;
+    }
+
     .grid {
         grid-template-columns: repeat(12, 1fr);
         gap: 16px;
@@ -96,14 +114,13 @@ html.is-desktop {
     }
 }
 
-/* ========= 显隐 ========= */
-html.is-mobile .only-desktop {
-    display: none !important;
+@media (max-width: 1023px) {
+    html {
+        font-size: calc(100vw / 3.75);
+    }
+
 }
 
-html.is-desktop .only-mobile {
-    display: none !important;
-}
 
 /* ========= 常用块 ========= */
 .header {
@@ -122,24 +139,6 @@ html.is-desktop .only-mobile {
     padding: 16px;
 }
 
-/* ========= 深色 ========= */
-@media (prefers-color-scheme: dark) {
-    body {
-        background: #0b0f14;
-        color: rgba(255, 255, 255, .86);
-    }
-
-    .card,
-    .sidebar {
-        background: #0f1620;
-        border-color: #18212d;
-    }
-
-    .header {
-        background: #0f1620;
-        border-bottom-color: #18212d;
-    }
-}
 
 /* ========= 触控命中区 ========= */
 .tap-target {

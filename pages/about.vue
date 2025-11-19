@@ -143,7 +143,10 @@
 </template>
 
 <script setup lang="ts">
-
+definePageMeta({
+    name: 'About',
+    title:'About'
+})
 </script>
 
 <style scoped lang="scss">

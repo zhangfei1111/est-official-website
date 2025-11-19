@@ -51,7 +51,8 @@ const current = ref(0)
 
 // 页面元信息
 definePageMeta({
-  title: 'Home'
+  name:'App',
+  title: 'App'
 })
 </script>
 <style scoped lang="scss">

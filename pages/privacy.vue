@@ -6,7 +6,9 @@
   
 <script setup lang="ts">
 definePageMeta({
-    layout: 'no-scroll-nav'   // 对应 layouts/app.vue
+    name: 'Privacy',
+    title:'Privacy',
+       // 对应 layouts/app.vue
 })
 import { ref } from 'vue'
 

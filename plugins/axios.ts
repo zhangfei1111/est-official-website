@@ -14,8 +14,8 @@ export default defineNuxtPlugin((nuxtApp) => {
   // 3️⃣ 你也可以在这里设置请求拦截 / 响应拦截
   api.interceptors.request.use((req) => {
     // 比如自动带上 token
-    const token = nuxtApp.$pinia?.state?.user?.token
-    if (token) req.headers!['Authorization'] = `Bearer ${token}`
+    // const token = nuxtApp.$pinia?.state?.user?.token
+    // if (token) req.headers!['Authorization'] = `Bearer ${token}`
     return req
   })
 

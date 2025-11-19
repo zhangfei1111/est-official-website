@@ -40,7 +40,10 @@
 </template>
 
 <script setup lang="ts">
-
+definePageMeta({
+    name: 'Product',
+    title:'Product',
+})
 </script>
 
 <style scoped lang="scss">

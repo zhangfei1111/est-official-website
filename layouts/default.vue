@@ -1,20 +1,21 @@
 <template>
     <header>
         <!-- 你的全局导航 -->
-        <div class="defatul-pc only-desktop">
+        <div class="default-pc only-desktop">
             <div :class="['nav-header', { scrolled: isScrolled }]">
                 <img class="logo" v-if="!isScrolled" @click="handleToHome('/')" src="../assets/image/home-logo.webp" alt="">
                 <img class="logo" v-else @click="handleToHome('/')" src="../assets/image/home-logo-scrolled.png" alt="">
                 <div class="menus">
                     <div class="menus-item " v-for="(item, index) in list" :key="index">
-                        <!-- <NuxtLink :to="item.path">{{ item.name }}</NuxtLink> -->
-                        <div :class="activeIndex === index ? 'menus-item-name menus-item-name-active' : 'menus-item-name'"
-                            @click="handleToPage(item, index)">{{ item.name }}</div>
+                        <NuxtLink :to="item.path"
+                            :class="['menus-item-name', { 'menus-item-name-active': activeIndex === index }]">
+                            {{ item.name }}
+                        </NuxtLink>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="defatul-mobile only-mobile">
+        <div class="default-mobile only-mobile">
             <div class="nav-header">
                 <img class="logo" @click="handleToHome('/')" src="../assets/image/logo-mobile.webp" alt="">
                 <img class="menu-mobile" @click="handleToHome('/')" src="../assets/image/menu-mobile.webp" alt="">
@@ -42,7 +43,9 @@
                 <div class="footer-nav">
                     <div class="footer-nav-item" v-for="(item, index) in list" :key="index">
                         <!-- <NuxtLink :to="item.path">{{ item.name }}</NuxtLink> -->
-                        <div @click="handleToPage(item, index)">{{ item.name }}</div>
+                        <NuxtLink class="footer-nav-item-name" :to="item.path">
+                            {{ item.name }}
+                        </NuxtLink>
                     </div>
                 </div>
             </div>
@@ -79,10 +82,13 @@
 
         </div>
     </footer>
+    <NuxtLink to="message">
+        <img class="message-icon" src="~/assets/image/message.webp" alt="">
+    </NuxtLink>
 </template>
   
 <script setup lang="ts">
-import { onMounted, ref, onBeforeUnmount } from 'vue'
+import { onMounted, ref, onBeforeUnmount, watch, nextTick } from 'vue'
 const route = useRoute()
 const list = ref([
     {
@@ -114,33 +120,40 @@ const list = ref([
         path: "/about"
     },
 ])
-const activeIndex = ref(0)
+
+const activeIndex = ref(-1)
 const isScrolled = ref(false)
+const navIsScrolled = ref(['Message', 'Privacy', 'Conditions'])
+watch(() => route.path, (to) => {
+    activeIndex.value = list.value.findIndex(item => item.path === to)
+    if (navIsScrolled.value.includes(route.name)) {
+        isScrolled.value = true
+        nextTick(() => {
+            window.removeEventListener('scroll', onScroll)
+        })
+    } else {
+        nextTick(() => {
+            isScrolled.value = false
+            window.addEventListener('scroll', onScroll, { passive: true })
+        })
+    }
+},
+    { immediate: true })
 const onScroll = () => {
     isScrolled.value = window.scrollY > 2   // 超过 2px 就算滚动
 }
-onMounted(() => {
-    onScroll() // 首次渲染时判定一次（比如刷新在中间位置）
-    window.addEventListener('scroll', onScroll, { passive: true })
-})
-
 onBeforeUnmount(() => {
     window.removeEventListener('scroll', onScroll)
 })
 const handleToPage = (item: object, index: number) => {
     // 基础跳转
-    activeIndex.value = index
     navigateTo(item?.path)
 }
 const handleToHome = (path: string) => {
-    activeIndex.value = 0
     navigateTo(path)
 }
 const handleToPrivacy = async (path: string) => {
-    await navigateTo(path, {
-        external: true,
-        open: { target: '_blank' } // 也可加 windowFeatures
-    })
+    await navigateTo(path)
 }
 </script>
 
@@ -173,7 +186,7 @@ const handleToPrivacy = async (path: string) => {
     color: #fff;
 }
 
-.defatul-pc {
+.default-pc {
     .nav-header {
         position: fixed;
         top: 0;
@@ -214,6 +227,7 @@ const handleToPrivacy = async (path: string) => {
                     font-style: normal;
                     cursor: pointer;
                     padding: 8px fluid(16px, 38, 38);
+                    text-decoration: none;
 
                     &:hover {
                         background: #02B5B1;
@@ -302,14 +316,19 @@ const handleToPrivacy = async (path: string) => {
             justify-content: flex-end;
 
             .footer-nav-item {
-                font-family: 'Poppins', sans-serif;
-                font-weight: 600;
-                font-size: fluid(16px, 24, 24);
-                color: #FFFFFF;
-                line-height: fluid(16px, 33, 33);
-                font-style: normal;
+
                 margin-right: fluid(16px, 40, 40);
                 cursor: pointer;
+
+                .footer-nav-item-name {
+                    text-decoration: none;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 600;
+                    font-size: fluid(16px, 24, 24);
+                    color: #FFFFFF;
+                    line-height: fluid(16px, 33, 33);
+                    font-style: normal;
+                }
             }
         }
     }
@@ -355,7 +374,7 @@ const handleToPrivacy = async (path: string) => {
     }
 }
 
-.defatul-mobile {
+.default-mobile {
     .nav-header {
         height: 0.6rem;
         background: #FFFFFF;
@@ -464,6 +483,16 @@ const handleToPrivacy = async (path: string) => {
             text-decoration-color: currentColor;
         }
     }
+}
+
+.message-icon {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    width: 72px;
+    height: 72px;
+    z-index: 100;
+    cursor: pointer;
 }
 </style>
   

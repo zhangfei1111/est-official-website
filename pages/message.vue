@@ -3,7 +3,7 @@
         <div class="message-pc only-desktop">
             <div class="message-title">Contact Us</div>
             <div class="message-content">
-                <v-form fast-fail @submit.prevent>
+                <v-form fast-fail @submit.prevent="handleSubmit" ref="formRef">
                     <v-container>
                         <v-row>
                             <v-col cols="12" md="6">
@@ -16,8 +16,12 @@
                                 <v-text-field v-model="email" :rules="emailRules" label="Email"></v-text-field>
                             </v-col>
                             <v-col cols="12" md="6">
+                                <v-text-field v-model="phone" :rules="phoneRules" label="Phone"></v-text-field>
+                            </v-col>
+                            <v-col cols="12" md="6">
                                 <v-text-field v-model="address" :rules="addressRules" label="Address"></v-text-field>
                             </v-col>
+
 
                         </v-row>
                     </v-container>
@@ -31,13 +35,65 @@
 
         </div>
     </div>
+    <v-snackbar v-model="snackbar.show" :color="snackbar.color" timeout="3000" location="top right">
+        {{ snackbar.text }}
+
+        <template #actions>
+            <v-btn variant="text" @click="snackbar.show = false">
+                Close
+            </v-btn>
+        </template>
+    </v-snackbar>
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-    layout: 'no-scroll-nav'   // 对应 layouts/app.vue
-})
+
 import { onMounted, ref, onUnmounted, nextTick } from 'vue'
+const nuxtApp = useNuxtApp()
+const api = nuxtApp.$api as import('axios').AxiosInstance
+
+const formRef = ref<any>(null)
+const snackbar = ref({
+    show: false,
+    text: '',
+    color: 'success', // success / error / info / warning
+})
+
+const handleSubmit = async () => {
+    // 先校验表单
+    const result = await formRef.value?.validate()
+    if (!result?.valid) return
+    try {
+        const { data } = await api.post('/api/user/website/lead/add', {
+            firstName: firstName.value,
+            lastName: lastName.value,
+            email: email.value,
+            phone: phone.value,
+            address: address.value,
+        })
+        if (data.status === '0') {
+            snackbar.value = {
+                show: true,
+                text: 'Submitted successfully!',
+                color: 'success',
+            }
+        } else {
+            snackbar.value = {
+                show: true,
+                text: 'Submitted Error!',
+                color: 'error',
+            }
+        }
+        console.log(data, '22')
+    } catch (err) {
+        snackbar.value = {
+            show: true,
+            text: 'Submitted Error!',
+            color: 'error',
+        }
+        console.error('接口调用失败', err)
+    }
+}
 const firstName = ref('')
 const firstNameRules = [
     value => {
@@ -49,25 +105,49 @@ const firstNameRules = [
 const lastName = ref('')
 const lastNameRules = [
     value => {
-        if (/[^0-9]/.test(value)) return true
-        return 'Last name can not contain digits.'
+        if (value?.length >= 3) return true
+        return 'Last name must be at least 3 characters.'
     },
 ]
 const email = ref('')
 const emailRules = [
-    value => {
-        if (/[^0-9]/.test(value)) return true
-        return 'Last name can not contain digits.'
-    },
-]
-const address = ref('')
-const addressRules = [
-    value => {
-        if (/[^0-9]/.test(value)) return true
-        return 'Last name can not contain digits.'
+    (value: string) => {
+        if (!value) return 'Email is required.'
+
+        const pattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/
+
+        if (pattern.test(value)) return true
+        return 'Please enter a valid email.'
     },
 ]
 
+const address = ref('')
+const addressRules = [
+    value => {
+        if (value?.length >= 3) return true
+        return 'Adress must be at least 3 characters.'
+    },
+]
+const phone = ref('')
+const phoneRules = [
+    (value: string) => {
+        if (!value) return 'Phone number is required.'
+
+        // 支持这些格式：
+        // 1234567890
+        // 123-456-7890
+        // (123) 456-7890
+        // 123 456 7890
+        // +1 123 456 7890
+        const pattern = /^(\+1\s?)?(\(?\d{3}\)?[\s.-]?)\d{3}[\s.-]?\d{4}$/
+
+        return pattern.test(value) || 'Please enter a valid US phone number.'
+    },
+]
+definePageMeta({
+    name: 'Message',
+    title: 'Message',
+})
 </script>
 
 <style scoped lang="scss">

@@ -96,6 +96,11 @@ function handleToCase(index: number) {
     if (!el) return
     el.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
+
+definePageMeta({
+    name: 'Case',
+    title:'Case'
+})
 </script>
   
 <style scoped lang="scss">

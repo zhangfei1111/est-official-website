@@ -6,7 +6,8 @@
   
 <script setup lang="ts">
 definePageMeta({
-    layout: 'no-scroll-nav'   // 对应 layouts/app.vue
+    name: 'Conditions',
+    title: 'Conditions',   // 对应 layouts/app.vue
 })
 import { onMounted, ref } from 'vue'
 

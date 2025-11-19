@@ -4,7 +4,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiBase: process.env.VITE_API_BASE_URL // 比如 .env 里定义
+      apiBase: process.env.NUXT_PUBLIC_API_BASE // 比如 .env 里定义
     }
   },
 
@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }]
-    }
+    },
   },
 
   postcss: {
