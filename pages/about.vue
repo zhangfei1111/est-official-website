@@ -9,15 +9,13 @@
       <div class="about-section-content">
         <img class="about-us-bg" src="~/assets/image/about-us-bg.webp" alt="">
         <div class="about-us-content">
-          SolarAI Technologies Co., Ltd. founded in June 2023, leverages big data, machine learning, and artificial
-          intelligence to serve the near real-time electricity markets in North America and Europe. We provide optimized
-          energy monitoring, management, and trading systems for the new energy ecosystem that integrates residential
-          distributed solar PV and energy storage.
+          SolarAI Technologies Co., Ltd., founded in June 2023, uses big data and AI to serve near real-time electricity
+          markets in North America and Europe. 
           <br>
-          Anticipating future trends, we have developed the AI-HEMS platform based on multiple patents, empowering every
-          household to become an iDER (intelligent Distributed Energy Resource). This enables participation in near
-          real-time market trading, maximizing economic benefits while enhancing grid safety, efficiency, and
-          sustainability through low-carbon, intelligent energy management.
+          We provide optimized energy monitoring, management, and trading systems for
+          residential solar PV and storage, powered by our patented AI-HEMS platform, which turns every home into an
+          intelligent distributed energy resource (iDER) to maximize economic returns and support a safer, more efficient,
+          low-carbon grid.
 
           <!-- 江阴橙储智能系统有限公司（SolarAI Technologies），成立于 2023 年 6
           月。我们运用大数据、机器学习与人工智能，面向北美与欧洲的可准实时电力市场，为含家庭分布式光伏+储能的新能源生态提供最优化的能源监控、管理与交易系统。<br>
@@ -35,15 +33,18 @@
           <div class="corporate-card">
             <div class="corporate-card-item">
               <div class="corporate-card-item-title">Outlook</div>
-              <div class="corporate-card-item-content">Empowering homes to make solar and storage tradable and dispatchable — building a flexible, stable future grid.</div>
+              <div class="corporate-card-item-content">Empowering homes to make solar and storage tradable and
+                dispatchable — building a flexible, stable future grid.</div>
             </div>
             <div class="corporate-card-item">
               <div class="corporate-card-item-title">Mission</div>
-              <div class="corporate-card-item-content">AI-HEMS drives intelligent forecasting and scheduling to maximize value for users and the grid.</div>
+              <div class="corporate-card-item-content">AI-HEMS drives intelligent forecasting and scheduling to maximize
+                value for users and the grid.</div>
             </div>
             <div class="corporate-card-item">
               <div class="corporate-card-item-title">Methodology</div>
-              <div class="corporate-card-item-content">15-minute rolling optimization with Tesla EV charging and Google Nest integration, validated in U.S. pilots with ~XX% monthly gains.</div>
+              <div class="corporate-card-item-content">15-minute rolling optimization with Tesla EV charging and Google
+                Nest integration, validated in U.S. pilots with ~XX% monthly gains.</div>
             </div>
           </div>
         </div>
@@ -257,10 +258,11 @@
       .about-corporate-content {
         position: absolute;
         top: 30%;
-        width: 100%;
+        width: 90%;
         box-sizing: border-box;
         padding: 0 fluid(16px, 200, 200);
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
 
         .corporate-title {
           font-family: 'Poppins', sans-serif;
@@ -372,7 +374,7 @@
 
         .technical-title {
           width: 100%;
-          font-family:'Poppins', sans-serif;
+          font-family: 'Poppins', sans-serif;
           font-weight: bold;
           font-size: fluid(16px, 180, 180);
           color: #FFFFFF;
@@ -404,7 +406,7 @@
 
   .core-section {
     margin: 0 fluid(16px, 210, 210);
-
+    padding-bottom: fluid(16px, 135, 135);
     .title {
       margin: fluid(16px, 80, 80);
       font-family: 'Poppins', sans-serif;
@@ -495,7 +497,7 @@
         width: 3.43rem;
         box-sizing: border-box;
         padding: 0.24rem 0.16rem;
-        font-family:'Poppins', sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-weight: 300;
         font-size: 0.14rem;
         color: #222222;
@@ -591,7 +593,7 @@
 
             .corporate-card-item-content {
 
-              font-family:'Poppins', sans-serif;
+              font-family: 'Poppins', sans-serif;
               font-weight: 300;
               font-size: 0.12rem;
               color: #222222;
@@ -680,7 +682,7 @@
 
     .title {
       margin: 0.24rem 0;
-      font-family:'Poppins', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-weight: 600;
       font-size: 0.22rem;
       color: #222222;
@@ -717,5 +719,4 @@
       }
     }
   }
-}
-</style>
+}</style>

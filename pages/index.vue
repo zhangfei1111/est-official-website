@@ -544,7 +544,7 @@ definePageMeta({ title: 'Home' })
         margin-top: fluid(16px, 24, 24);
         font-weight: 400;
         font-size: fluid(16px, 30, 30);
-        color: #969696;
+        color: #fff;
         line-height: fluid(16px, 42, 42);
         font-style: normal;
         padding: 0 fluid(16px, 112, 112);
@@ -631,8 +631,8 @@ definePageMeta({ title: 'Home' })
 
         .home-0down-title {
           font-family: 'Poppins', sans-serif;
-          font-weight: normal;
-          font-size: fluid(16px, 56, 56);
+          font-weight: 600;
+          font-size: fluid(16px, 58, 58);
           color: #FFFFFF;
           line-height: fluid(16px, 78, 78);
           font-style: normal;
@@ -679,8 +679,8 @@ definePageMeta({ title: 'Home' })
 
         .home-smarter-title {
           font-family: 'Poppins', sans-serif;
-          font-weight: normal;
-          font-size: fluid(16px, 56, 56);
+          font-weight: 600;
+          font-size: fluid(16px, 58, 58);
           color: #FFFFFF;
           line-height: fluid(16px, 78, 78);
           font-style: normal;
@@ -731,8 +731,8 @@ definePageMeta({ title: 'Home' })
 
         .home-broad-title {
           font-family: 'Poppins', sans-serif;
-          font-weight: normal;
-          font-size: fluid(16px, 56, 56);
+          font-weight: 600;
+          font-size: fluid(16px, 58, 58);
           color: #FFFFFF;
           line-height: fluid(16px, 78, 78);
           font-style: normal;
@@ -779,8 +779,8 @@ definePageMeta({ title: 'Home' })
 
         .home-seamless-title {
           font-family: 'Poppins', sans-serif;
-          font-weight: normal;
-          font-size: fluid(16px, 56, 56);
+          font-weight: 600;
+          font-size: fluid(16px, 58, 58);
           color: #FFFFFF;
           line-height: fluid(16px, 78, 78);
           font-style: normal;
