@@ -210,17 +210,26 @@ const handleToPrivacy = async (path: string) => {
                     font-weight: 400;
                     font-size: fluid(16px, 24, 24);
                     color: #FFFFFF;
+                    margin-left: 8px;
                     font-style: normal;
                     cursor: pointer;
                     padding: 8px fluid(16px, 38, 38);
 
+                    &:hover {
+                        background: #02B5B1;
+                        border-radius: fluid(8px, 26, 26);
+                    }
                 }
 
                 .menus-item-name-active {
                     background: #02B5B1;
                     border-radius: fluid(8px, 26, 26);
                 }
+
+
             }
+
+
         }
 
 
@@ -237,6 +246,11 @@ const handleToPrivacy = async (path: string) => {
 
         // 高亮状态在白底下依然可见
         .menus .menus-item .menus-item-name-active {
+            background: #02B5B1;
+            color: #fff;
+        }
+
+        .menus .menus-item-name:hover {
             background: #02B5B1;
             color: #fff;
         }

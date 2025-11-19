@@ -9,10 +9,10 @@
           <div class="home-introduce-text">
             <span>0</span> Down · <span>0</span> Monthly · <span>0</span> Emission
           </div>
-          <div class="home-introduce-more">
+          <!-- <div class="home-introduce-more">
             Learn More
             <img class="home-introduce-more-icon" src="../assets/image/home-introduce-more.webp" alt="" />
-          </div>
+          </div> -->
         </div>
         <div class="home-introduce-scroll">
           Scroll to see more
@@ -442,7 +442,8 @@ definePageMeta({ title: 'Home' })
         z-index: 2;
         width: 100%;
         left: 0;
-        top: fluid(16px, 510, 510);
+       /* top: fluid(16px, 510, 510); */
+       top: fluid(16px, 610, 610); 
         text-align: center;
         font-size: fluid(16px, 72, 72);
         color: #fff;
