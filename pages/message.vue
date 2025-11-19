@@ -26,7 +26,9 @@
                                 <v-text-field v-model="address" variant="solo" :rules="addressRules"
                                     label="Address"></v-text-field>
                             </v-col>
-
+                            <v-col cols="12" md="12">
+                                <v-textarea v-model="content" variant="solo" label="Message"></v-textarea>
+                            </v-col>
 
                         </v-row>
                     </v-container>
@@ -75,6 +77,7 @@ const handleSubmit = async () => {
             email: email.value,
             phone: phone.value,
             address: address.value,
+            content: content.value
         })
         if (data.status === '0') {
             snackbar.value = {
@@ -100,6 +103,7 @@ const handleSubmit = async () => {
     }
 }
 const firstName = ref('')
+const content = ref('')
 const firstNameRules = [
     value => {
         if (value?.length >= 3) return true
