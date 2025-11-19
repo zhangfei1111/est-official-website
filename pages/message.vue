@@ -7,19 +7,24 @@
                     <v-container>
                         <v-row>
                             <v-col cols="12" md="6">
-                                <v-text-field v-model="firstName" :rules="firstNameRules" label="First name"></v-text-field>
+                                <v-text-field v-model="firstName" variant="solo" :rules="firstNameRules"
+                                    label="First name"></v-text-field>
                             </v-col>
                             <v-col cols="12" md="6">
-                                <v-text-field v-model="lastName" :rules="lastNameRules" label="Last name"></v-text-field>
+                                <v-text-field v-model="lastName" variant="solo" :rules="lastNameRules"
+                                    label="Last name"></v-text-field>
                             </v-col>
                             <v-col cols="12" md="6">
-                                <v-text-field v-model="email" :rules="emailRules" label="Email"></v-text-field>
+                                <v-text-field v-model="email" variant="solo" :rules="emailRules"
+                                    label="Email"></v-text-field>
                             </v-col>
                             <v-col cols="12" md="6">
-                                <v-text-field v-model="phone" :rules="phoneRules" label="Phone"></v-text-field>
+                                <v-text-field v-model="phone" variant="solo" :rules="phoneRules"
+                                    label="Phone"></v-text-field>
                             </v-col>
                             <v-col cols="12" md="6">
-                                <v-text-field v-model="address" :rules="addressRules" label="Address"></v-text-field>
+                                <v-text-field v-model="address" variant="solo" :rules="addressRules"
+                                    label="Address"></v-text-field>
                             </v-col>
 
 
