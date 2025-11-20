@@ -5,15 +5,7 @@
         <video ref="homeIntroduceRef" class="home-introduce-video" autoplay muted playsinline loop preload="auto"
           controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
           src="../assets/video/home-introduce.mp4"></video>
-        <div class="home-introduce-content">
-          <div class="home-introduce-text">
-            <span>0</span> Down · <span>0</span> Monthly · <span>0</span> Emission
-          </div>
-          <!-- <div class="home-introduce-more">
-            Learn More
-            <img class="home-introduce-more-icon" src="../assets/image/home-introduce-more.webp" alt="" />
-          </div> -->
-        </div>
+        <img class="home-introduce-content" src="~/assets/image/home-0.webp" alt="">
         <div class="home-introduce-scroll">
           Scroll to see more
           <img class="home-introduce-scroll-icon" src="../assets/image/home-introduce-scroll.webp" alt="" />
@@ -28,26 +20,18 @@
           optimising the use of solar energy and battery storage, offering you hassle-free, efficient energy management.
         </div>
         <div class="home-select-tab">
-          <div class="home-select-tab-item home-select-tab-item-selected" @click="scrollTo(0)">
-            <img class="home-select-tab-item-icon" src="../assets/image/home-selected-0Down.webp" alt="" />
-            0Down 0Monthly 0Emission
-            <img class="home-select-tab-item-directive" src="../assets/image/directive.webp" alt="">
-          </div>
-          <div class="home-select-tab-item" @click="scrollTo(1)">
-            <img class="home-select-tab-item-icon" src="../assets/image/home-unselected-smarter.webp" alt="" />
-            Smarter AI, More Revenue
-          </div>
-          <div class="home-select-tab-item" @click="scrollTo(2)">
-            <img class="home-select-tab-item-icon" src="../assets/image/home-unselected-broad.webp" alt="" />
-            Broad Connectivity
-          </div>
-          <div class="home-select-tab-item" @click="scrollTo(3)">
-            <img class="home-select-tab-item-icon" src="../assets/image/home-unselected-seamless.webp" alt="" />
-            Seamless Integration
+          <div class="home-select-tab-track">
+            <!-- 把列表复制一份，形成无缝 -->
+            <div class="home-select-tab-item" v-for="(item, index) in [...tabList, ...tabList]" :key="index"
+              @click="scrollTo(index)">
+              <img class="home-select-tab-item-icon" :src="item.urlS" alt="" />
+              <div class="home-select-tab-item-title">{{ item.label }}</div>
+            </div>
           </div>
         </div>
+
       </section>
-      <section class="section-0down " ref="sec0Ref">
+      <section class="section-0down" ref="sec0Ref">
         <video ref="home0downRef" class="home-0down-video" autoplay muted playsinline loop preload="auto"
           controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
           src="../assets/video/home-0down.mp4"></video>
@@ -63,7 +47,7 @@
           <div class="home-0down-icon"></div>
         </div>
       </section>
-      <section class="section-smarter " ref="sec1Ref">
+      <section class="section-smarter" ref="sec1Ref">
         <img class="section-smarter-bg" src="../assets/image/home-smarter-bg.webp" alt="">
         <div class="home-smarter-content">
           <div class="home-smarter-title">Smarter AI, More
@@ -75,7 +59,24 @@
           <div class="home-smarter-icon"></div>
         </div>
       </section>
-      <section class="section-broad " ref="sec2Ref">
+      <section class="product-ai-section" ref="sec2Ref">
+        <div class="product-ai-introduce">
+          <div class="product-ai-title">AI Strategy</div>
+          <div class="product-ai-desc">SolarAI collects the latest data and recalculates the strategy every 15
+            minutes.</div>
+        </div>
+        <video ref="homeIntroduceRef" class="product-ai-video" autoplay muted playsinline loop preload="auto"
+          controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
+          src="../assets/video/product-ai.mp4"></video>
+
+
+      </section>
+      <section class="product-introduce-section" ref="sec3Ref">
+        <video ref="homeIntroduceRef" class="product-introduce-video" autoplay muted playsinline loop preload="auto"
+          controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
+          src="../assets/video/product-introduce.mp4"></video>
+      </section>
+      <section class="section-broad" ref="sec4Ref">
         <img class="section-broad-bg" src="../assets/image/home-broad-bg.png" alt="">
         <div class="home-broad-content">
           <div class="home-broad-title">Broad Connectivity</div>
@@ -85,7 +86,7 @@
           <div class="home-broad-icon"></div>
         </div>
       </section>
-      <section class="section-seamless " ref="sec3Ref">
+      <section class="section-seamless" ref="sec5Ref">
         <img class="section-seamless-bg" src="../assets/image/home-seamless-bg.png" alt="">
         <div class="home-seamless-content">
           <div class="home-seamless-title">Seamless Integration</div>
@@ -96,6 +97,20 @@
           <div class="home-seamless-icon"></div>
         </div>
       </section>
+      <section class="product-clean-section" ref="sec6Ref">
+        <img class="product-clean-bg" src="~/assets/image/product-clean-bg.webp" alt="">
+        <div class="product-clean-content">
+          <div class="product-clean-title">Cleanliness monitoring; timely cleaning saves money.</div>
+          <div class="product-clean-desc">
+            SolarAI continuously monitors the cleanliness and power generation deviation of photovoltaic
+            modules. When it identifies substantial losses caused by dust, pollen, bird droppings, etc., it
+            proactively alerts users to the need for cleaning and provides an estimated return on investment and
+            payback period. This avoids wasted cleaning and allows for timely adjustments to restore power
+            output to ideal levels.
+          </div>
+        </div>
+      </section>
+
     </div>
     <div class="home-mobile only-mobile">
       <section class="home-introduce-section">
@@ -176,7 +191,20 @@
   
 <script setup lang="ts">
 import { onMounted, ref, onUnmounted } from 'vue'
-
+import tabImgS1 from '~/assets/image/home-tab-0.webp'
+import tabImgS2 from '~/assets/image/home-tab-money.webp'
+import tabImgS3 from '~/assets/image/home-tab-ai.webp'
+import tabImgS4 from '~/assets/image/home-tab-minitor.webp'
+import tabImgS5 from '~/assets/image/home-tab-broad.webp'
+import tabImgS6 from '~/assets/image/home-tab-seamless.webp'
+import tabImgS7 from '~/assets/image/home-tab-clear.webp'
+import tabImgUS1 from '~/assets/image/home-tab-0.webp'
+import tabImgUS2 from '~/assets/image/home-tab-0.webp'
+import tabImgUS3 from '~/assets/image/home-tab-0.webp'
+import tabImgUS4 from '~/assets/image/home-tab-0.webp'
+import tabImgUS5 from '~/assets/image/home-tab-0.webp'
+import tabImgUS6 from '~/assets/image/home-tab-0.webp'
+import tabImgUS7 from '~/assets/image/home-tab-0.webp'
 
 // refs（保留你的）
 const homeIntroduceRef = ref<HTMLVideoElement | null>(null)
@@ -184,8 +212,19 @@ const sec0Ref = ref<HTMLElement | null>(null)
 const sec1Ref = ref<HTMLElement | null>(null)
 const sec2Ref = ref<HTMLElement | null>(null)
 const sec3Ref = ref<HTMLElement | null>(null)
-const sectionRefs = [sec0Ref, sec1Ref, sec2Ref, sec3Ref]
-
+const sec4Ref = ref<HTMLElement | null>(null)
+const sec5Ref = ref<HTMLElement | null>(null)
+const sec6Ref = ref<HTMLElement | null>(null)
+const sectionRefs = [sec0Ref, sec1Ref, sec2Ref, sec3Ref, sec4Ref, sec5Ref, sec6Ref]
+const tabList = ref([
+  { label: '0Down 0Monthly 0Emission', urlS: tabImgS1, urlnS: tabImgUS1 },
+  { label: 'Smarter AI, More Revenue', urlS: tabImgS2, urlnS: tabImgUS2 },
+  { label: 'AI Predictions', urlS: tabImgS3, urlnS: tabImgUS3 },
+  { label: 'Real-time Monitoring', urlS: tabImgS4, urlnS: tabImgUS4 },
+  { label: 'Broad Connectivity', urlS: tabImgS5, urlnS: tabImgUS5 },
+  { label: 'Seamless Integration', urlS: tabImgS6, urlnS: tabImgUS6 },
+  { label: 'Photovoltaic Forecast', urlS: tabImgS7, urlnS: tabImgUS7 },
+])
 // 从 Nuxt 注入里拿 gsap / ScrollTrigger（插件里已注册）
 const { $gsap: gsap, $ScrollTrigger: ScrollTrigger } = useNuxtApp()
 
@@ -440,49 +479,14 @@ definePageMeta({ name: 'Home', title: 'Home' })
       .home-introduce-content {
         position: absolute;
         z-index: 2;
-        width: 100%;
-        left: 0;
+        left: 50%;
+        transform: translate(-50%);
         /* top: fluid(16px, 510, 510); */
-        top: fluid(16px, 610, 610);
-        text-align: center;
-        font-size: fluid(16px, 72, 72);
-        color: #fff;
-        font-weight: 500;
-        font-family: 'Poppins', sans-serif;
-        font-style: normal;
+        top: fluid(16px, 550, 550);
+        width: fluid(16px, 756, 756);
+        height: fluid(16px, 232, 232);
+        margin-left: fluid(16px, 20, 20);
 
-        span {
-          font-weight: 600;
-          font-size: fluid(16px, 90, 90);
-          color: #02B5B1;
-        }
-
-        .home-introduce-text {
-          margin-bottom: fluid(16px, 70, 70);
-
-        }
-
-        .home-introduce-more {
-          width: fluid(16px, 258, 258);
-          height: fluid(16px, 64, 64);
-          margin: 0 auto;
-          background: #FFFFFF;
-          border-radius: fluid(16px, 48, 48);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-weight: 300;
-          font-size: fluid(16px, 26, 26);
-          font-family: 'Poppins', sans-serif;
-          color: #222222;
-          font-style: normal;
-          cursor: pointer;
-
-          .home-introduce-more-icon {
-            width: fluid(16px, 48, 48);
-            margin-left: 9px;
-          }
-        }
       }
 
       .home-introduce-scroll {
@@ -552,53 +556,65 @@ definePageMeta({ name: 'Home', title: 'Home' })
       }
 
       .home-select-tab {
+        position: relative;
+        overflow: hidden;
         margin-top: fluid(16px, 70, 70);
-        display: flex;
         height: fluid(16px, 142, 142);
 
-        .home-select-tab-item {
-          flex: 1;
-          padding-left: fluid(16px, 22, 22);
-          display: flex;
-          background: #272F2F;
-          align-items: center;
-          justify-content: center;
-          font-family: 'Poppins', sans-serif;
-          font-weight: 600;
-          font-size: fluid(16px, 27, 27);
-          color: #FFFFFF;
-          line-height: fluid(16px, 38, 38);
-          text-align: left;
-          font-style: normal;
-          cursor: pointer;
-          padding-right: fluid(16px, 26, 26);
-          position: relative;
-          margin-right: 1px;
-
-          .home-select-tab-item-icon {
-            width: fluid(16px, 75, 75);
-            height: fluid(16px, 75, 75);
-            margin-right: fluid(16px, 21, 21);
-
-          }
-
-          .home-select-tab-item-directive {
-            position: absolute;
-            bottom: -13px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            width: 27px;
-            height: 13px;
-          }
-        }
-
-        .home-select-tab-item-selected {
-          background: linear-gradient(90deg, #02B5B1 0%, #27E3DF 100%);
-          box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.5);
+        /* 悬停暂停动画 */
+        &:hover .home-select-tab-track {
+          animation-play-state: paused;
         }
       }
 
+      /* 轨道容器，负责滚动动画 */
+      .home-select-tab-track {
+        display: flex;
+        width: max-content; // 内容多宽就有多宽
+        --duration: 30s;
+        animation: marquee-reverse var(--duration) linear infinite;
+      }
+
+      /* 单个 item，只负责样式，不再加动画 */
+      .home-select-tab-item {
+        width: fluid(16px, 480, 480);
+        padding: fluid(16px, 33, 33) fluid(16px, 26, 26) fluid(16px, 33, 33) fluid(16px, 22, 22);
+        display: flex;
+        align-items: center;
+        background: #272F2F;
+        box-sizing: border-box;
+        flex-shrink: 0; // 防止被压缩
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: fluid(16px, 27, 27);
+        color: #FFFFFF;
+        line-height: fluid(16px, 38, 38);
+        text-align: left;
+        font-style: normal;
+        cursor: pointer;
+        margin-left: 1px;
+
+        .home-select-tab-item-icon {
+          width: fluid(16px, 75, 75);
+          height: fluid(16px, 75, 75);
+          margin-right: fluid(16px, 16, 16);
+        }
+      }
+      .home-select-tab-item:hover{
+        background: linear-gradient( 90deg, #02B5B1 0%, #27E3DF 100%);
+        box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,0.5);
+      }
+
+      /* 从左往右滚动：整体从 -50% 滚到 0 */
+      @keyframes marquee-reverse {
+        from {
+          transform: translateX(0);
+        }
+
+        to {
+          transform: translateX(-50%);
+        }
+      }
 
     }
 
@@ -801,6 +817,132 @@ definePageMeta({ name: 'Home', title: 'Home' })
           height: fluid(10px, 10, 10);
           margin-top: fluid(16px, 18, 18);
           background: #10C6C2;
+        }
+      }
+    }
+
+    .product-introduce-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+
+      .product-introduce-video {
+        width: 100%;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        bottom: 0;
+        height: 100%;
+        object-fit: cover;
+        /* 等比例，不变形 */
+        object-position: center;
+        /* 需要时调整焦点 */
+        z-index: 1;
+      }
+    }
+
+    .product-ai-section {
+      width: 100%;
+      height: 100vh;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      padding: fluid(16px, 122, 122) fluid(16px, 108, 108) fluid(16px, 124, 124) fluid(16px, 146, 146);
+      position: relative;
+
+      .product-ai-introduce {
+        margin-right: fluid(16px, 75, 75);
+        position: absolute;
+        z-index: 2;
+        left: fluid(16px, 52, 52);
+        top: fluid(16px, 117, 117);
+        border-radius: fluid(2px, 4, 4); 
+        width: fluid(16px, 604, 604);
+        box-sizing: border-box;
+        padding: fluid(16px, 32, 32) fluid(16px, 32, 32) 0;
+        height: fluid(16px, 722, 722);
+        background: rgba(255, 255, 255, 0.62);
+
+        .product-ai-title {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 600;
+          font-size: fluid(16px, 52, 52);
+          color: #222222;
+          line-height: fluid(16px, 73, 73);
+          text-align: left;
+          font-style: normal;
+        }
+
+        .product-ai-desc {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 300;
+          font-size: fluid(16px, 28, 28);
+          color: #222222;
+          line-height: fluid(16px, 47, 47);
+          text-align: left;
+          font-style: normal;
+          margin-top: fluid(16px, 36, 36);
+        }
+
+      }
+
+      .product-ai-video {
+        width: 100%;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        bottom: 0;
+        height: 100%;
+        object-fit: cover;
+        /* 等比例，不变形 */
+        object-position: center;
+        /* 需要时调整焦点 */
+        z-index: 1;
+
+      }
+    }
+
+    .product-clean-section {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+
+      .product-clean-bg {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: fill;
+      }
+
+      .product-clean-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: fluid(16px, 166, 166);
+        padding: fluid(16px, 56, 56);
+        background: rgba(255, 255, 255, 0.62);
+        border-radius: fluid(2px, 4, 4);
+        box-sizing: border-box;
+        width: fluid(16px, 804, 804);
+
+        .product-clean-title {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 600;
+          font-size: fluid(16px, 52, 52);
+          color: #222222;
+          line-height: fluid(16px, 73, 73);
+          text-align: left;
+          font-style: normal;
+        }
+
+        .product-clean-desc {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 300;
+          font-size: fluid(16px, 28, 28);
+          color: #222222;
+          line-height: fluid(16px, 47, 47);
+          font-style: normal;
         }
       }
     }

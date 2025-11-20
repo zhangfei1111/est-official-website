@@ -85,6 +85,9 @@
     <NuxtLink to="message">
         <img class="message-icon" src="~/assets/image/message.webp" alt="">
     </NuxtLink>
+    <transition name="fade-back-top">
+        <img v-if="showBackToTop" class="back-to-top" src="~/assets/image/back-top.webp" alt="" @click="scrollToTop" />
+    </transition>
 </template>
   
 <script setup lang="ts">
@@ -94,10 +97,6 @@ const list = ref([
     {
         name: "Home",
         path: "/"
-    },
-    {
-        name: "Product",
-        path: "/product"
     },
     {
         name: "APP",
@@ -123,27 +122,58 @@ const list = ref([
 
 const activeIndex = ref(-1)
 const isScrolled = ref(false)
+const showBackToTop = ref(false)
 const navIsScrolled = ref(['Message', 'Privacy', 'Conditions'])
-watch(() => route.path, (to) => {
-    activeIndex.value = list.value.findIndex(item => item.path === to)
-    if (navIsScrolled.value.includes(route.name)) {
-        isScrolled.value = true
-        nextTick(() => {
-            window.removeEventListener('scroll', onScroll)
-        })
+// 这些页面导航条永远用“scrolled”样式
+const isForceScrolledPage = computed(() =>
+    navIsScrolled.value.includes((route.name || '') as string)
+)
+
+watch(
+  () => route.path,
+  () => {
+    activeIndex.value = list.value.findIndex(item => item.path === route.path)
+
+    // 路由切换时，根据是否强制 scrolled 立即调整一次
+    if (isForceScrolledPage.value) {
+      isScrolled.value = true
     } else {
-        nextTick(() => {
-            isScrolled.value = false
-            window.addEventListener('scroll', onScroll, { passive: true })
-        })
+      // 非强制页面，按当前滚动条位置来
+      nextTick(() => {
+        handleScroll()
+      })
     }
-},
-    { immediate: true })
-const onScroll = () => {
-    isScrolled.value = window.scrollY > 2   // 超过 2px 就算滚动
+  },
+  { immediate: true }
+)
+const handleScroll = () => {
+    const y =
+        window.scrollY ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        0
+
+    // 回到顶部按钮：超过 200px 出现
+    showBackToTop.value = y > 200
+
+    // 导航条：特殊页面固定高亮，其它页面根据滚动位置
+    if (!isForceScrolledPage.value) {
+        isScrolled.value = y > 2
+    }
 }
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'   // 平滑滚动
+    })
+}
+// 首次挂载时绑定一次 scroll
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll, { passive: true })
+  handleScroll() // 初始化一次状态
+})
 onBeforeUnmount(() => {
-    window.removeEventListener('scroll', onScroll)
+    window.removeEventListener('scroll', handleScroll)
 })
 const handleToPage = (item: object, index: number) => {
     // 基础跳转
@@ -487,7 +517,17 @@ const handleToPrivacy = async (path: string) => {
 
 .message-icon {
     position: fixed;
-    bottom: 100px;
+    bottom: 200px;
+    right: 100px;
+    width: 72px;
+    height: 72px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 130px;
     right: 100px;
     width: 72px;
     height: 72px;

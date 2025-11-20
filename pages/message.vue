@@ -34,7 +34,8 @@
                     </v-container>
                     <v-row>
                         <v-col cols="12" md="3" style="margin: 0 auto;">
-                            <v-btn color="#02B5B1" width="300" type="submit" size="x-large" block>Submit</v-btn>
+                            <v-btn :disabled="loading" :loading="loading" color="#02B5B1" width="300" type="submit"
+                                size="x-large" block>Submit</v-btn>
                         </v-col>
                     </v-row>
                 </v-form>
@@ -58,7 +59,7 @@
 import { onMounted, ref, onUnmounted, nextTick } from 'vue'
 const nuxtApp = useNuxtApp()
 const api = nuxtApp.$api as import('axios').AxiosInstance
-
+const loading = ref(false)
 const formRef = ref<any>(null)
 const snackbar = ref({
     show: false,
@@ -70,6 +71,7 @@ const handleSubmit = async () => {
     // 先校验表单
     const result = await formRef.value?.validate()
     if (!result?.valid) return
+    loading.value = true
     try {
         const { data } = await api.post('/api/user/website/lead/add', {
             firstName: firstName.value,
@@ -100,6 +102,8 @@ const handleSubmit = async () => {
             color: 'error',
         }
         console.error('接口调用失败', err)
+    } finally {
+        loading.value = false
     }
 }
 const firstName = ref('')
@@ -140,7 +144,7 @@ const addressRules = [
 const phone = ref('')
 const phoneRules = [
     (value: string) => {
-        if (!value) return 'Phone number is required.'
+        // if (!value) return 'Phone number is required.'
 
         // 支持这些格式：
         // 1234567890

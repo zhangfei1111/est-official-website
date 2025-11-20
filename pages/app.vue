@@ -5,7 +5,7 @@
         <img class="header-bg" src="~/assets/image/app-header-bg.webp" alt="">
         <img class="hand-bg" src="~/assets/image/app-hand.webp" alt="">
         <div class="hand-container">
-          <v-carousel hide-delimiters v-model="current" crossfade height="auto" :show-arrows="false" cycle
+          <v-carousel hide-delimiters v-model="current"  height="auto" :show-arrows="false" cycle
             :interval="3000">
             <v-carousel-item src="~/assets/image/app-home.webp" cover></v-carousel-item>
             <v-carousel-item src="~/assets/image/app-ai.webp" cover></v-carousel-item>
@@ -15,15 +15,21 @@
         <div class="text-container">
           <div class="text-item" v-show="current === 0">
             <div class="text-title">AI-powered home energy</div>
-            <div class="text-desc">Download the monitoring app for a user-friendly interface, real-time home energy flow charts and detailed energy data. Gain deep insight into production and consumption, and track everything in real time to keep your system at peak performance.</div>
+            <div class="text-desc">Download the monitoring app for a user-friendly interface, real-time home energy flow
+              charts and detailed energy data. Gain deep insight into production and consumption, and track everything in
+              real time to keep your system at peak performance.</div>
           </div>
           <div class="text-item" v-show="current === 1">
             <div class="text-title">AI-powered home energy</div>
-            <div class="text-desc">Download the monitoring app for a user-friendly interface, real-time home energy flow charts and detailed energy data. Gain deep insight into production and consumption, and track everything in real time to keep your system at peak performance.</div>
+            <div class="text-desc">Download the monitoring app for a user-friendly interface, real-time home energy flow
+              charts and detailed energy data. Gain deep insight into production and consumption, and track everything in
+              real time to keep your system at peak performance.</div>
           </div>
           <div class="text-item" v-show="current === 2">
             <div class="text-title">AI-powered home energy</div>
-            <div class="text-desc">Download the monitoring app for a user-friendly interface, real-time home energy flow charts and detailed energy data. Gain deep insight into production and consumption, and track everything in real time to keep your system at peak performance.</div>
+            <div class="text-desc">Download the monitoring app for a user-friendly interface, real-time home energy flow
+              charts and detailed energy data. Gain deep insight into production and consumption, and track everything in
+              real time to keep your system at peak performance.</div>
           </div>
         </div>
         <div class="code-container">
@@ -51,7 +57,7 @@ const current = ref(0)
 
 // 页面元信息
 definePageMeta({
-  name:'App',
+  name: 'App',
   title: 'App'
 })
 </script>
@@ -132,6 +138,8 @@ definePageMeta({
         height: fluid(16px, 735, 735);
         position: absolute;
         z-index: 1;
+        overflow: hidden;
+        border-radius: fluid(16px, 45, 45);
         right: fluid(16px, 343, 343);
         bottom: fluid(16px, 86, 86);
       }
@@ -142,6 +150,7 @@ definePageMeta({
         z-index: 1;
         left: fluid(16px, 170, 170);
         top: fluid(16px, 128, 128);
+
         .text-item {
           .text-title {
             width: fluid(16px, 748, 748);
