@@ -72,6 +72,7 @@
 
       </section>
       <section class="product-introduce-section" ref="sec3Ref">
+        <div style="height: 100vh;background-color: #000;position: absolute;left: 0;top: 0;width: 100%;z-index: 9;opacity: 0.6;"></div>
         <video ref="homeIntroduceRef" class="product-introduce-video" autoplay muted playsinline loop preload="auto"
           controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
           src="../assets/video/product-introduce.mp4"></video>
