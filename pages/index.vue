@@ -36,7 +36,8 @@
           controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
           src="../assets/video/home-0down.mp4"></video>
         <div class="home-0down-content">
-          <div class="home-0down-title">0 Down 0 Monthly 0 Emission</div>
+          <div class="home-0down-title"><span style="color: #FFA12B;">0</span> Down <span
+              style="color: #FFA12B;">0</span> Monthly <span style="color: #FFA12B;">0</span> Emission</div>
           <div class="home-0down-desc">
             Switch to solar with 0 upfront cost and save immediately. Save up to 30%~80% on your current electricity
             bill. <br>
@@ -65,14 +66,14 @@
           <div class="product-ai-desc">SolarAI collects the latest data and recalculates the strategy every 15
             minutes.</div>
         </div>
-        <video ref="homeIntroduceRef" class="product-ai-video" autoplay muted playsinline loop preload="auto"
+        <video ref="productAiVideoRef" class="product-ai-video" autoplay muted playsinline loop preload="auto"
           controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
           src="../assets/video/product-ai.mp4"></video>
 
 
       </section>
       <section class="product-introduce-section" ref="sec3Ref">
-        <div style="height: 100vh;background-color: #000;position: absolute;left: 0;top: 0;width: 100%;z-index: 9;opacity: 0.6;"></div>
+        <div class="section-mask"></div>
         <video ref="homeIntroduceRef" class="product-introduce-video" autoplay muted playsinline loop preload="auto"
           controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
           src="../assets/video/product-introduce.mp4"></video>
@@ -99,6 +100,7 @@
         </div>
       </section>
       <section class="product-clean-section" ref="sec6Ref">
+        <div class="section-mask"></div>
         <img class="product-clean-bg" src="~/assets/image/product-clean-bg.webp" alt="">
         <div class="product-clean-content">
           <div class="product-clean-title">Cleanliness monitoring; timely cleaning saves money.</div>
@@ -189,7 +191,7 @@
     </div>
   </div>
 </template>
-  
+
 <script setup lang="ts">
 import { onMounted, ref, onUnmounted } from 'vue'
 import tabImgS1 from '~/assets/image/home-tab-0.webp'
@@ -209,6 +211,7 @@ import tabImgUS7 from '~/assets/image/home-tab-0.webp'
 
 // refs（保留你的）
 const homeIntroduceRef = ref<HTMLVideoElement | null>(null)
+const productAiVideoRef = ref<HTMLVideoElement | null>(null)
 const sec0Ref = ref<HTMLElement | null>(null)
 const sec1Ref = ref<HTMLElement | null>(null)
 const sec2Ref = ref<HTMLElement | null>(null)
@@ -241,6 +244,10 @@ const setVh = () =>
   document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`)
 
 onMounted(() => {
+
+  if (productAiVideoRef.value) {
+    productAiVideoRef.value.playbackRate = 0.9
+  }
   const mq = window.matchMedia('(max-width: 1023.98px)')
 
   if (!mq.matches) {
@@ -429,8 +436,8 @@ onUnmounted(() => {
 // 页面元信息
 definePageMeta({ name: 'Home', title: 'Home' })
 </script>
-  
-  
+
+
 
 <style scoped lang="scss">
 @use "sass:math";
@@ -601,9 +608,10 @@ definePageMeta({ name: 'Home', title: 'Home' })
           margin-right: fluid(16px, 16, 16);
         }
       }
-      .home-select-tab-item:hover{
-        background: linear-gradient( 90deg, #02B5B1 0%, #27E3DF 100%);
-        box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,0.5);
+
+      .home-select-tab-item:hover {
+        background: linear-gradient(90deg, #02B5B1 0%, #27E3DF 100%);
+        box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.5);
       }
 
       /* 从左往右滚动：整体从 -50% 滚到 0 */
@@ -841,6 +849,17 @@ definePageMeta({ name: 'Home', title: 'Home' })
         /* 需要时调整焦点 */
         z-index: 1;
       }
+
+      .section-mask {
+        height: 100vh;
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 9;
+        opacity: 0.4;
+      }
     }
 
     .product-ai-section {
@@ -858,18 +877,17 @@ definePageMeta({ name: 'Home', title: 'Home' })
         z-index: 2;
         left: fluid(16px, 52, 52);
         top: fluid(16px, 117, 117);
-        border-radius: fluid(2px, 4, 4); 
+        border-radius: fluid(2px, 4, 4);
         width: fluid(16px, 604, 604);
         box-sizing: border-box;
         padding: fluid(16px, 32, 32) fluid(16px, 32, 32) 0;
         height: fluid(16px, 722, 722);
-        background: rgba(255, 255, 255, 0.62);
 
         .product-ai-title {
           font-family: 'Poppins', sans-serif;
           font-weight: 600;
           font-size: fluid(16px, 52, 52);
-          color: #222222;
+          color: #fff;
           line-height: fluid(16px, 73, 73);
           text-align: left;
           font-style: normal;
@@ -879,7 +897,7 @@ definePageMeta({ name: 'Home', title: 'Home' })
           font-family: 'Poppins', sans-serif;
           font-weight: 300;
           font-size: fluid(16px, 28, 28);
-          color: #222222;
+          color: #fff;
           line-height: fluid(16px, 47, 47);
           text-align: left;
           font-style: normal;
@@ -926,6 +944,7 @@ definePageMeta({ name: 'Home', title: 'Home' })
         border-radius: fluid(2px, 4, 4);
         box-sizing: border-box;
         width: fluid(16px, 804, 804);
+        z-index: 10;
 
         .product-clean-title {
           font-family: 'Poppins', sans-serif;
@@ -945,6 +964,17 @@ definePageMeta({ name: 'Home', title: 'Home' })
           line-height: fluid(16px, 47, 47);
           font-style: normal;
         }
+      }
+
+      .section-mask {
+        height: 100vh;
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 9;
+        opacity: 0.4;
       }
     }
 
@@ -1227,5 +1257,3 @@ definePageMeta({ name: 'Home', title: 'Home' })
   }
 }
 </style>
-
-  

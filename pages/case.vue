@@ -23,25 +23,25 @@
             </section>
             <section class="case-content">
                 <div class="case-item" ref="portland">
-                    <img class="case-img" src="../assets/image/case-house.webp" alt="">
+                    <img class="case-img" src="../assets/image/case-house.jpeg" alt="">
                     <div class="case-info">
                         <div class="case-title">Southem California</div>
                         <div class="case-desc-container">
                             <div class="case-desc">
                                 <div class="case-desc-label">Specification</div>
-                                <div class="case-desc-info">9KW</div>
+                                <div class="case-desc-info">9 kW</div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">Installation time</div>
-                                <div class="case-desc-info">2025-10-30</div>
+                                <div class="case-desc-info">10/30/2024</div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">Electricity generation</div>
-                                <div class="case-desc-info">1320kwh</div>
+                                <div class="case-desc-info">1320 kwh / year</div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">AI benefits</div>
-                                <div class="case-desc-info">10000</div>
+                                <div class="case-desc-info">$ 10000</div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">Increased revenue</div>
@@ -52,25 +52,25 @@
                     </div>
                 </div>
                 <div class="case-item" ref="california">
-                    <img class="case-img" src="../assets/image/case-house.webp" alt="">
+                    <img class="case-img" src="../assets/image/case-house.jpeg" alt="">
                     <div class="case-info">
                         <div class="case-title">Portland</div>
                         <div class="case-desc-container">
                             <div class="case-desc">
                                 <div class="case-desc-label">Specification</div>
-                                <div class="case-desc-info">9KW</div>
+                                <div class="case-desc-info">9 kW</div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">Installation time</div>
-                                <div class="case-desc-info">2025-10-30</div>
+                                <div class="case-desc-info">10/30/2024</div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">Electricity generation</div>
-                                <div class="case-desc-info">1320kwh</div>
+                                <div class="case-desc-info">1320kwh / year</div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">AI benefits</div>
-                                <div class="case-desc-info">10000</div>
+                                <div class="case-desc-info">$ 10000</div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">Increased revenue</div>

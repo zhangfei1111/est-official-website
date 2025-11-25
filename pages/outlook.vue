@@ -12,6 +12,10 @@
                 </div>
             </div>
         </section>
+        <section class="intelligent-section">
+            <div class="section-title">Intelligent Distributed Energy Resouce</div>
+            <img class="outlook-intelligent" src="~/assets/image/outlook-intelligent.webp" alt="">
+        </section>
         <section class="cooperation-section">
             <div class="cooperation-section-title">Cooperation Partners</div>
             <div class="cooperation-section-content">
@@ -97,6 +101,25 @@ definePageMeta({
                 text-align: left;
                 font-style: normal;
             }
+        }
+    }
+
+    .intelligent-section {
+        margin: 0 fluid(16px, 210, 210);
+
+        .section-title {
+            margin: fluid(16px, 80, 80);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: fluid(16px, 64, 64);
+            color: #222222;
+            line-height: fluid(16px, 90, 90);
+            text-align: center;
+            font-style: normal;
+        }
+
+        .outlook-intelligent {
+            width: fluid(16px, 1500, 1500);
         }
     }
 

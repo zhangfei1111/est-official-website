@@ -220,7 +220,7 @@ const handleToPrivacy = async (path: string) => {
     .nav-header {
         position: fixed;
         top: 0;
-        z-index: 10;
+        z-index: 999;
         left: 0;
         right: 0;
         width: 100%;
@@ -517,8 +517,8 @@ const handleToPrivacy = async (path: string) => {
 
 .message-icon {
     position: fixed;
-    bottom: 200px;
-    right: 100px;
+    bottom: 150px;
+    right: 60px;
     width: 72px;
     height: 72px;
     z-index: 100;
@@ -527,8 +527,8 @@ const handleToPrivacy = async (path: string) => {
 
 .back-to-top {
     position: fixed;
-    bottom: 130px;
-    right: 100px;
+    bottom: 80px;
+    right: 60px;
     width: 72px;
     height: 72px;
     z-index: 100;

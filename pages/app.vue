@@ -6,7 +6,7 @@
         <img class="hand-bg" src="~/assets/image/app-hand.webp" alt="">
         <div class="hand-container">
           <v-carousel hide-delimiters v-model="current"  height="auto" :show-arrows="false" cycle
-            :interval="3000">
+            :interval="4500">
             <v-carousel-item src="~/assets/image/app-home.webp" cover></v-carousel-item>
             <v-carousel-item src="~/assets/image/app-ai.webp" cover></v-carousel-item>
             <v-carousel-item src="~/assets/image/app-income.webp" cover></v-carousel-item>
