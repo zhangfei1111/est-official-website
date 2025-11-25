@@ -5,8 +5,7 @@
         <img class="header-bg" src="~/assets/image/app-header-bg.webp" alt="">
         <img class="hand-bg" src="~/assets/image/app-hand.webp" alt="">
         <div class="hand-container">
-          <v-carousel hide-delimiters v-model="current"  height="auto" :show-arrows="false" cycle
-            :interval="4500">
+          <v-carousel hide-delimiters v-model="current" height="auto" :show-arrows="false" cycle :interval="4500">
             <v-carousel-item src="~/assets/image/app-home.webp" cover></v-carousel-item>
             <v-carousel-item src="~/assets/image/app-ai.webp" cover></v-carousel-item>
             <v-carousel-item src="~/assets/image/app-income.webp" cover></v-carousel-item>
@@ -16,19 +15,22 @@
           <div class="text-item" v-show="current === 0">
             <div class="text-title">AI-powered home energy</div>
             <div class="text-desc">Download the monitoring app for a user-friendly interface, real-time home energy flow
-              charts and detailed energy data. Gain deep insight into production and consumption, and track everything in
+              charts and detailed energy data. Gain deep insight into production and consumption, and track everything
+              in
               real time to keep your system at peak performance.</div>
           </div>
           <div class="text-item" v-show="current === 1">
             <div class="text-title">AI-powered home energy</div>
             <div class="text-desc">Download the monitoring app for a user-friendly interface, real-time home energy flow
-              charts and detailed energy data. Gain deep insight into production and consumption, and track everything in
+              charts and detailed energy data. Gain deep insight into production and consumption, and track everything
+              in
               real time to keep your system at peak performance.</div>
           </div>
           <div class="text-item" v-show="current === 2">
             <div class="text-title">AI-powered home energy</div>
             <div class="text-desc">Download the monitoring app for a user-friendly interface, real-time home energy flow
-              charts and detailed energy data. Gain deep insight into production and consumption, and track everything in
+              charts and detailed energy data. Gain deep insight into production and consumption, and track everything
+              in
               real time to keep your system at peak performance.</div>
           </div>
         </div>
@@ -48,7 +50,7 @@
     <div class="app-mobile only-mobile">手机端</div>
   </div>
 </template>
-    
+
 <script setup lang="ts">
 
 
@@ -180,5 +182,19 @@ definePageMeta({
   }
 }
 </style>
-  
-    
+<style lang="scss">
+.v-window {
+
+  &-x-transition,
+  &-x-reverse-transition,
+  &-y-transition,
+  &-y-reverse-transition {
+
+    &-enter-active,
+    &-leave-active {
+      transition: 0.7s cubic-bezier(.25, .8, .50, 1) !important;
+      // 原来大概是 0.3s 左右，这里全局改慢
+    }
+  }
+}
+</style>
