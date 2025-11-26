@@ -74,6 +74,11 @@
       </section>
       <section class="product-introduce-section" ref="sec3Ref">
         <div class="section-mask"></div>
+        <div class="product-introduce-introduce">
+          <div class="product-introduce-title">Real-time monitoring</div>
+          <div class="product-introduce-desc">Constantly monitoring the flow of every unit of electricity in the home.
+          </div>
+        </div>
         <video ref="homeIntroduceRef" class="product-introduce-video" autoplay muted playsinline loop preload="auto"
           controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
           src="../assets/video/product-introduce.mp4"></video>
@@ -835,6 +840,41 @@ definePageMeta({ name: 'Home', title: 'Home' })
       width: 100%;
       height: 100vh;
       overflow: hidden;
+
+      .product-introduce-introduce {
+        margin-right: fluid(16px, 75, 75);
+        position: absolute;
+        z-index: 10;
+        left: fluid(16px, 52, 52);
+        top: fluid(16px, 117, 117);
+        border-radius: fluid(2px, 4, 4);
+        width: fluid(16px, 1004, 1004);
+        box-sizing: border-box;
+        padding: fluid(16px, 32, 32) fluid(16px, 32, 32) 0;
+        height: fluid(16px, 722, 722);
+
+        .product-introduce-title {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 600;
+          font-size: fluid(16px, 52, 52);
+          color: #fff;
+          line-height: fluid(16px, 73, 73);
+          text-align: left;
+          font-style: normal;
+        }
+
+        .product-introduce-desc {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 300;
+          font-size: fluid(16px, 28, 28);
+          color: #fff;
+          line-height: fluid(16px, 47, 47);
+          text-align: left;
+          font-style: normal;
+          margin-top: fluid(16px, 36, 36);
+        }
+
+      }
 
       .product-introduce-video {
         width: 100%;

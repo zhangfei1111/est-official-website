@@ -37,15 +37,15 @@
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">Electricity generation</div>
-                                <div class="case-desc-info">1320 kwh / year</div>
+                                <div class="case-desc-info">8.85 MWh / year</div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">AI benefits</div>
-                                <div class="case-desc-info">$ 10000</div>
+                                <div class="case-desc-info">$ 2645 / year</div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">Increased revenue</div>
-                                <div class="case-desc-info">35%</div>
+                                <div class="case-desc-info">45%</div>
                             </div>
                         </div>
 
@@ -62,15 +62,15 @@
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">Installation time</div>
-                                <div class="case-desc-info">10/30/2024</div>
+                                <div class="case-desc-info">10/30/2023</div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">Electricity generation</div>
-                                <div class="case-desc-info">1320kwh / year</div>
+                                <div class="case-desc-info">5.91 MWh / year</div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">AI benefits</div>
-                                <div class="case-desc-info">$ 10000</div>
+                                <div class="case-desc-info">$ 1876 / year</div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">Increased revenue</div>
