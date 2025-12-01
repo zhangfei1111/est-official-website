@@ -13,11 +13,11 @@
       </section>
       <section class="home-select-section">
         <div class="home-select-name">
-          Why Select SolarAI
+          Why SolarAI
         </div>
         <div class="home-select-desc">
-          With just one click, SolarAI effortlessly maximises savings. It intelligently minimises grid reliance by
-          optimising the use of solar energy and battery storage, offering you hassle-free, efficient energy management.
+          SolarAI transforms your home into an intelligent energy hub. Our verified AI optimizes your solar, battery,
+          and grid usage in real-time—reducing your bills and your carbon footprint automatically.
         </div>
         <div class="home-select-tab">
           <div class="home-select-tab-track">
@@ -36,14 +36,12 @@
           controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
           src="../assets/video/home-0down.mp4"></video>
         <div class="home-0down-content">
-          <div class="home-0down-title"><span style="color: #FFA12B;">0</span> Down <span
-              style="color: #FFA12B;">0</span> Monthly <span style="color: #FFA12B;">0</span> Emission</div>
+          <div class="home-0down-title"><span style="color: #FFA12B;">0</span> Down &nbsp;&nbsp;<span
+              style="color: #FFA12B;">0</span> Monthly &nbsp;&nbsp;<span style="color: #FFA12B;">0</span> Emission</div>
           <div class="home-0down-desc">
-            Switch to solar with 0 upfront cost and save immediately. Save up to 30%~80% on your current electricity
-            bill. <br>
-            The solar panels are yours at the end of the payment period. No hidden fees, no extra costs. <br>
-            The energy revolution starts at home, and with the full power of SolarAI you're all set for a clean
-            energy future.
+            Switch to intelligent solar with <span style="font-weight: 600;">$0 upfront cost.</span> Enjoy lower
+            electricity bills immediately with a system
+            that pays for itself—transparent pricing, no surprise fees, and 100% clean energy.
           </div>
           <div class="home-0down-icon"></div>
         </div>
@@ -51,20 +49,32 @@
       <section class="section-smarter" ref="sec1Ref">
         <img class="section-smarter-bg" src="../assets/image/home-smarter-bg.webp" alt="">
         <div class="home-smarter-content">
-          <div class="home-smarter-title">Smarter AI, More
-            Revenue，<span class="home-smarter-title-remark">30%~80%+</span></div>
+          <div class="home-smarter-title">Smarter AI, Higher Revenue.&nbsp;&nbsp;<span
+              class="home-smarter-title-remark">10%~250%+</span></div>
           <div class="home-smarter-desc">
-            The verified residential iDER (intelligent Distributed Energy Resource) system, with its self-developed AI
-            model, increases additional revenue by over 30%~80%
+            <span style="font-weight: 600;">Don't Just Generate Power. Trade It.</span> Our AI makes intelligent
+            decisions every 15
+            minutes—analyzing weather,
+            grid rates, and your usage—to boost your solar revenue by up to <span
+              class="home-smarter-desc-remark">250%</span>&nbsp;&nbsp;.
           </div>
+          <div class="section-remark">* Based on actual 2024 PTO test results from users in Southern California. Results
+            are not guaranteed and may vary by system.</div>
           <div class="home-smarter-icon"></div>
         </div>
       </section>
       <section class="product-ai-section" ref="sec2Ref">
         <div class="product-ai-introduce">
-          <div class="product-ai-title">AI Strategy</div>
-          <div class="product-ai-desc">SolarAI collects the latest data and recalculates the strategy every 15
-            minutes.</div>
+          <div class="product-ai-title">Predictive Intelligence.</div>
+          <div class="product-ai-desc"><span style="font-weight: 600;">You Don't Need a PhD to Outsmart the Grid.</span>
+            Utility tariffs are confusing. Rates
+            change by the hour, and seasons shift demand. Managing this manually is impossible. SolarAI automates the
+            complexity, syncing your Solar, Battery, EV, and Thermostat to buy low and sell high—automatically. <br>
+            We forecast your home's consumption and local weather and solar patterns. This allows SolarAI to prepare
+            your battery for cloudy days or price spikes before they happen.
+          </div>
+          <div class="product-ai-icon"></div>
+
         </div>
         <video ref="productAiVideoRef" class="product-ai-video" autoplay muted playsinline loop preload="auto"
           controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
@@ -75,9 +85,12 @@
       <section class="product-introduce-section" ref="sec3Ref">
         <div class="section-mask"></div>
         <div class="product-introduce-introduce">
-          <div class="product-introduce-title">Real-time monitoring</div>
-          <div class="product-introduce-desc">Constantly monitoring the flow of every unit of electricity in the home.
+          <div class="product-introduce-title">Total Visibility, Real-Time Control.</div>
+          <div class="product-introduce-desc">Track every watt and cents from your phone. View live energy flow, battery
+            health, and savings in real-time. If performance drops due to dust or debris, our Smart O&M system alerts
+            you and your service provider instantly.
           </div>
+          <div class="product-introduce-icon"></div>
         </div>
         <video ref="homeIntroduceRef" class="product-introduce-video" autoplay muted playsinline loop preload="auto"
           controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
@@ -86,9 +99,11 @@
       <section class="section-broad" ref="sec4Ref">
         <img class="section-broad-bg" src="../assets/image/home-broad-bg.png" alt="">
         <div class="home-broad-content">
-          <div class="home-broad-title">Broad Connectivity</div>
+          <div class="home-broad-title">Universal Compatibility. Limitless Choice.</div>
           <div class="home-broad-desc">
-            The most easy & diverse connection methods in the industry
+            SolarAI separates the intelligence from the metal. Because our software is designed to control a broad
+            spectrum of energy hardware, you aren't restricted to one solar or battery brand. Select the best equipment
+            for your specific needs, and let SolarAI’s algorithms take over to maximize your savings and grid stability.
           </div>
           <div class="home-broad-icon"></div>
         </div>
@@ -96,10 +111,10 @@
       <section class="section-seamless" ref="sec5Ref">
         <img class="section-seamless-bg" src="../assets/image/home-seamless-bg.png" alt="">
         <div class="home-seamless-content">
-          <div class="home-seamless-title">Seamless Integration</div>
+          <div class="home-seamless-title">The Heart of Your Smart Home.</div>
           <div class="home-seamless-desc">
-            All sonnenHome solutions interconnect intelligently to optimize your energy use, without any additional
-            effort!
+            SolarAI seamlessly syncs with your ecosystem. From optimizing EV charging to adjusting your Smart thermostat
+            and other connected smart devices, we ensure your most power-hungry devices only run at the right timing.
           </div>
           <div class="home-seamless-icon"></div>
         </div>
@@ -108,13 +123,12 @@
         <div class="section-mask"></div>
         <img class="product-clean-bg" src="~/assets/image/product-clean-bg.webp" alt="">
         <div class="product-clean-content">
-          <div class="product-clean-title">Cleanliness monitoring; timely cleaning saves money.</div>
+          <div class="product-clean-title">Smart Maintenance: Clean Only When It Pays.</div>
           <div class="product-clean-desc">
-            SolarAI continuously monitors the cleanliness and power generation deviation of photovoltaic
-            modules. When it identifies substantial losses caused by dust, pollen, bird droppings, etc., it
-            proactively alerts users to the need for cleaning and provides an estimated return on investment and
-            payback period. This avoids wasted cleaning and allows for timely adjustments to restore power
-            output to ideal levels.
+            Dirt, pollen, and debris kill solar efficiency. Instead of guessing when to clean, SolarAI analyzes your
+            power generation 24/7 to detect specific efficiency drops. We alert you exactly when the value of lost
+            energy exceeds the cost of cleaning—providing a clear ROI calculation, so you know every maintenance dollar
+            is an investment, not an expense.
           </div>
         </div>
       </section>
@@ -226,13 +240,13 @@ const sec5Ref = ref<HTMLElement | null>(null)
 const sec6Ref = ref<HTMLElement | null>(null)
 const sectionRefs = [sec0Ref, sec1Ref, sec2Ref, sec3Ref, sec4Ref, sec5Ref, sec6Ref]
 const tabList = ref([
-  { label: '0Down 0Monthly 0Emission', urlS: tabImgS1, urlnS: tabImgUS1 },
-  { label: 'Smarter AI, More Revenue', urlS: tabImgS2, urlnS: tabImgUS2 },
-  { label: 'AI Predictions', urlS: tabImgS3, urlnS: tabImgUS3 },
-  { label: 'Real-time Monitoring', urlS: tabImgS4, urlnS: tabImgUS4 },
-  { label: 'Broad Connectivity', urlS: tabImgS5, urlnS: tabImgUS5 },
-  { label: 'Seamless Integration', urlS: tabImgS6, urlnS: tabImgUS6 },
-  { label: 'Photovoltaic Forecast', urlS: tabImgS7, urlnS: tabImgUS7 },
+  { label: '0 Down 0 Monthly 0 Emission', urlS: tabImgS1, urlnS: tabImgUS1 },
+  { label: 'Smarter AI, Higher Revenue.', urlS: tabImgS2, urlnS: tabImgUS2 },
+  { label: 'Predictive Intelligence.', urlS: tabImgS3, urlnS: tabImgUS3 },
+  { label: 'Total Visibility, Real-Time Control.', urlS: tabImgS4, urlnS: tabImgUS4 },
+  { label: 'Universal Compatibility. Limitless Choice.', urlS: tabImgS5, urlnS: tabImgUS5 },
+  { label: 'The Heart of Your Smart Home.', urlS: tabImgS6, urlnS: tabImgUS6 },
+  { label: 'Smart Maintenance: Clean Only When It Pays.', urlS: tabImgS7, urlnS: tabImgUS7 },
 ])
 // 从 Nuxt 注入里拿 gsap / ScrollTrigger（插件里已注册）
 const { $gsap: gsap, $ScrollTrigger: ScrollTrigger } = useNuxtApp()
@@ -328,7 +342,9 @@ onMounted(() => {
       '.home-smarter-title',
       '.home-broad-title',
       '.home-seamless-title',
-      '.home-select-name'
+      '.home-select-name',
+      '.product-ai-title',
+      '.product-introduce-title'
     ]
     onceEnter(bigTitles.join(','), {
       from: { y: 80, opacity: 0, scale: 1.08, skewY: 4 },
@@ -343,7 +359,9 @@ onMounted(() => {
       '.home-smarter-desc',
       '.home-broad-desc',
       '.home-seamless-desc',
-      '.home-select-desc'
+      '.home-select-desc',
+      '.product-ai-desc',
+      '.product-introduce-desc'
     ]
     onceEnter(descs.join(','), { from: { y: 44, opacity: 0 }, duration: 0.95 })
 
@@ -728,6 +746,23 @@ definePageMeta({ name: 'Home', title: 'Home' })
           color: #FFFFFF;
           line-height: fluid(16px, 48, 48);
           font-style: normal;
+
+          .home-smarter-desc-remark {
+            position: relative;
+          }
+        }
+
+        .home-smarter-desc-remark::after {
+          content: "*";
+          position: absolute;
+          top: -0.2em;
+          /* 往上一点 */
+          right: -0.5em;
+          /* 往右一点 */
+          font-size: 1.2em;
+          /* 星号比数字小 */
+          color: #FFFFFF;
+          /* 星号颜色 */
         }
 
         .home-smarter-icon {
@@ -735,6 +770,15 @@ definePageMeta({ name: 'Home', title: 'Home' })
           height: fluid(10px, 10, 10);
           margin-top: fluid(16px, 18, 18);
           background: #10C6C2;
+        }
+
+        .section-remark {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 300;
+          font-size: fluid(12px, 12, 12);
+          color: #FFFFFF;
+          line-height: fluid(16px, 48, 48);
+          font-style: normal;
         }
       }
     }
@@ -874,6 +918,12 @@ definePageMeta({ name: 'Home', title: 'Home' })
           margin-top: fluid(16px, 36, 36);
         }
 
+        .product-introduce-icon {
+          width: fluid(16px, 120, 120);
+          height: fluid(10px, 10, 10);
+          margin-top: fluid(16px, 18, 18);
+          background: #10C6C2;
+        }
       }
 
       .product-introduce-video {
@@ -918,7 +968,7 @@ definePageMeta({ name: 'Home', title: 'Home' })
         left: fluid(16px, 52, 52);
         top: fluid(16px, 117, 117);
         border-radius: fluid(2px, 4, 4);
-        width: fluid(16px, 604, 604);
+        width: fluid(16px, 704, 704);
         box-sizing: border-box;
         padding: fluid(16px, 32, 32) fluid(16px, 32, 32) 0;
         height: fluid(16px, 722, 722);
@@ -942,6 +992,13 @@ definePageMeta({ name: 'Home', title: 'Home' })
           text-align: left;
           font-style: normal;
           margin-top: fluid(16px, 36, 36);
+        }
+
+        .product-ai-icon {
+          width: fluid(16px, 120, 120);
+          height: fluid(10px, 10, 10);
+          margin-top: fluid(16px, 18, 18);
+          background: #10C6C2;
         }
 
       }
