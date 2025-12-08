@@ -65,11 +65,11 @@
       </section>
       <section class="product-ai-section" ref="sec2Ref">
         <div class="product-ai-introduce">
-          <div class="product-ai-title">Predictive Intelligence.</div>
+          <div class="product-ai-title">Predictive Intelligence</div>
           <div class="product-ai-desc"><span style="font-weight: 600;">You Don't Need a PhD to Outsmart the Grid.</span>
             Utility tariffs are confusing. Rates
             change by the hour, and seasons shift demand. Managing this manually is impossible. SolarAI automates the
-            complexity, syncing your Solar, Battery, EV, and Thermostat to buy low and sell high—automatically. <br>
+            complexity, syncing your Solar, Battery, EV, and Thermostat to buy low and sell high—automatically. <br><br>
             We forecast your home's consumption and local weather and solar patterns. This allows SolarAI to prepare
             your battery for cloudy days or price spikes before they happen.
           </div>
@@ -85,7 +85,7 @@
       <section class="product-introduce-section" ref="sec3Ref">
         <div class="section-mask"></div>
         <div class="product-introduce-introduce">
-          <div class="product-introduce-title">Total Visibility, Real-Time Control.</div>
+          <div class="product-introduce-title">Total Visibility, Real-Time Control</div>
           <div class="product-introduce-desc">Track every watt and cents from your phone. View live energy flow, battery
             health, and savings in real-time. If performance drops due to dust or debris, our Smart O&M system alerts
             you and your service provider instantly.
@@ -99,7 +99,7 @@
       <section class="section-broad" ref="sec4Ref">
         <img class="section-broad-bg" src="../assets/image/home-broad-bg.png" alt="">
         <div class="home-broad-content">
-          <div class="home-broad-title">Universal Compatibility. Limitless Choice.</div>
+          <div class="home-broad-title">Universal Compatibility. Limitless Choice</div>
           <div class="home-broad-desc">
             SolarAI separates the intelligence from the metal. Because our software is designed to control a broad
             spectrum of energy hardware, you aren't restricted to one solar or battery brand. Select the best equipment
@@ -111,7 +111,7 @@
       <section class="section-seamless" ref="sec5Ref">
         <img class="section-seamless-bg" src="../assets/image/home-seamless-bg.png" alt="">
         <div class="home-seamless-content">
-          <div class="home-seamless-title">The Heart of Your Smart Home.</div>
+          <div class="home-seamless-title">The Heart of Your Smart Home</div>
           <div class="home-seamless-desc">
             SolarAI seamlessly syncs with your ecosystem. From optimizing EV charging to adjusting your Smart thermostat
             and other connected smart devices, we ensure your most power-hungry devices only run at the right timing.
@@ -123,13 +123,15 @@
         <div class="section-mask"></div>
         <img class="product-clean-bg" src="~/assets/image/product-clean-bg.webp" alt="">
         <div class="product-clean-content">
-          <div class="product-clean-title">Smart Maintenance: Clean Only When It Pays.</div>
+          <div class="product-clean-title">Smart Maintenance: Clean Only When It Pays</div>
           <div class="product-clean-desc">
             Dirt, pollen, and debris kill solar efficiency. Instead of guessing when to clean, SolarAI analyzes your
             power generation 24/7 to detect specific efficiency drops. We alert you exactly when the value of lost
             energy exceeds the cost of cleaning—providing a clear ROI calculation, so you know every maintenance dollar
             is an investment, not an expense.
           </div>
+          <div class="product-clean-icon"></div>
+
         </div>
       </section>
 
@@ -344,7 +346,8 @@ onMounted(() => {
       '.home-seamless-title',
       '.home-select-name',
       '.product-ai-title',
-      '.product-introduce-title'
+      '.product-introduce-title',
+      '.product-clean-title'
     ]
     onceEnter(bigTitles.join(','), {
       from: { y: 80, opacity: 0, scale: 1.08, skewY: 4 },
@@ -361,7 +364,8 @@ onMounted(() => {
       '.home-seamless-desc',
       '.home-select-desc',
       '.product-ai-desc',
-      '.product-introduce-desc'
+      '.product-introduce-desc',
+      '.product-clean-desc'
     ]
     onceEnter(descs.join(','), { from: { y: 44, opacity: 0 }, duration: 0.95 })
 
@@ -581,6 +585,7 @@ definePageMeta({ name: 'Home', title: 'Home' })
         font-weight: 400;
         font-size: fluid(16px, 30, 30);
         color: #fff;
+        text-align: center;
         line-height: fluid(16px, 42, 42);
         font-style: normal;
         padding: 0 fluid(16px, 112, 112);
@@ -966,7 +971,7 @@ definePageMeta({ name: 'Home', title: 'Home' })
         position: absolute;
         z-index: 2;
         left: fluid(16px, 52, 52);
-        top: fluid(16px, 117, 117);
+        top: fluid(16px, 90, 90);
         border-radius: fluid(2px, 4, 4);
         width: fluid(16px, 704, 704);
         box-sizing: border-box;
@@ -991,7 +996,6 @@ definePageMeta({ name: 'Home', title: 'Home' })
           line-height: fluid(16px, 47, 47);
           text-align: left;
           font-style: normal;
-          margin-top: fluid(16px, 36, 36);
         }
 
         .product-ai-icon {
@@ -1033,21 +1037,20 @@ definePageMeta({ name: 'Home', title: 'Home' })
 
       .product-clean-content {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: fluid(16px, 166, 166);
+        right: fluid(16px, 52, 52);
+        top: fluid(16px, 117, 117);
         padding: fluid(16px, 56, 56);
-        background: rgba(255, 255, 255, 0.62);
         border-radius: fluid(2px, 4, 4);
         box-sizing: border-box;
-        width: fluid(16px, 804, 804);
+        width: fluid(16px, 904, 904);
+
         z-index: 10;
 
         .product-clean-title {
           font-family: 'Poppins', sans-serif;
           font-weight: 600;
           font-size: fluid(16px, 52, 52);
-          color: #222222;
+          color: #fff;
           line-height: fluid(16px, 73, 73);
           text-align: left;
           font-style: normal;
@@ -1057,9 +1060,16 @@ definePageMeta({ name: 'Home', title: 'Home' })
           font-family: 'Poppins', sans-serif;
           font-weight: 300;
           font-size: fluid(16px, 28, 28);
-          color: #222222;
+          color: #fff;
           line-height: fluid(16px, 47, 47);
           font-style: normal;
+        }
+
+        .product-clean-icon {
+          width: fluid(16px, 120, 120);
+          height: fluid(10px, 10, 10);
+          margin-top: fluid(16px, 18, 18);
+          background: #10C6C2;
         }
       }
 

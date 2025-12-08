@@ -4,7 +4,13 @@
       <section class="installer-header">
         <img class="installer-header-bg" src="../assets/image/installer-header-bg.webp" alt="">
         <div class="installer-header-content">
-          Simple installation, saves time and effort
+          <div class="installer-header-title">
+            Empowering Installers with Speed, Insight, and Profit.
+          </div>
+          <div class="installer-header-text">
+            SolarAI isn't just a product; it's a partner that lowers your operational costs and creates new revenue
+            streams long after the install is done.
+          </div>
         </div>
         <div class="installer-scroll">
           Scroll to see more
@@ -14,12 +20,43 @@
       <section class="installer-content">
         <div class="installer-title">Easy installation</div>
         <v-carousel height="auto">
-          <v-carousel-item v-for="(item, index) in items" :key="index">
+          <v-carousel-item>
             <div class="installation-content">
-              <img class="installation-content-img" :src="item.url" alt="">
+              <img class="installation-content-img" src="~/assets/image/installer-1.webp" alt="">
               <div class="step-content">
-                <div class="setp-content-title">{{ item.title }}</div>
-                <div class="setp-content-desc">{{ item.text }}</div>
+                <div class="setp-content-title">Streamlined Installation</div>
+                <div class="setp-content-desc"><span style="font-weight: 600;">Plug-and-Play Commissioning.</span> Time
+                  on the roof is your biggest cost. SolarAI is designed for speed, featuring a universal 'Operating
+                  System' that integrates seamlessly with major inverter and battery brands. Our intuitive Installer App
+                  simplifies configuration, allowing you to commission systems in minutes—not hours—so your crew can
+                  move to the next job faster.</div>
+              </div>
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div class="installation-content">
+              <img class="installation-content-img" src="~/assets/image/installer-2.webp" alt="">
+              <div class="step-content">
+                <div class="setp-content-title">Smarter Operations</div>
+                <div class="setp-content-desc"><span style="font-weight: 600;">AI-Driven Remote Diagnostics.</span> Stop
+                  rolling trucks for false alarms. SolarAI’s predictive engine monitors your entire fleet 24/7,
+                  identifying specific hardware faults or efficiency drops remotely. You get precise fault analysis
+                  before you leave the office, allowing you to troubleshoot problems from your desk or ensure
+                  technicians arrive with exactly the right parts.</div>
+              </div>
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div class="installation-content">
+              <img class="installation-content-img" src="~/assets/image/installer-3.webp" alt="">
+              <div class="step-content">
+                <div class="setp-content-title">Business Growth</div>
+                <div class="setp-content-desc"><span style="font-weight: 600;">Turn O&M Into a Recurring Revenue
+                    Stream.</span> Don't just install and leave. SolarAI provides you with actionable opportunities for
+                  ongoing service. Our system monitors fleet cleanliness and calculates the exact ROI of cleaning for
+                  every homeowner. Instead of cold-calling, you can contact customers with data-backed proof—'Your
+                  system is losing money due to debris'—creating a justified, profitable service call that customers
+                  welcome.</div>
               </div>
             </div>
           </v-carousel-item>
@@ -29,40 +66,15 @@
     </div>
   </div>
 </template>
-    
+
 <script setup lang="ts">
-import installer1 from '~/assets/image/installer-1.webp'
-import installer2 from '~/assets/image/installer-2.webp'
-import installer3 from '~/assets/image/installer-3.webp'
-import { onMounted, ref, onUnmounted, nextTick } from 'vue'
-const model = ref(0)
-const items = [
-  {
-    url: installer1,
-    title: 'Fast one-visit onsite installation',
-    text: 'Standardized workflow and pre-checks let the team mount, wire, power on and commission everything in a single visit. Connect to the app on site and start using it right away, with minimal disruption or downtime.'
-  },
-  {
-    url: installer2,
-    title: 'Remote O&M with less hassle, more efficiency',
-    text: 'SolarAI provides 24/7 remote monitoring, smart alerts with root-cause hints, one-click work orders and OTA updates, so installers can keep systems stable with fewer site visits and shorter outages.'
-  },
-  {
-    url: installer3,
-    title: 'Scheduled panel cleaning, less hassle, better yield',
-    text: 'When soiling causes generation loss beyond a set threshold, the system recommends cleaning and shows expected extra yield and payback. With one tap you can book certified cleaners to restore performance and keep returns stable.'
-  },
-]
-
-
-
 // 页面元信息
 definePageMeta({
   name: 'Installer',
   title: 'Installer'
 })
 </script>
-  
+
 <style scoped lang="scss">
 @use "sass:math";
 
@@ -100,17 +112,34 @@ definePageMeta({
 
       .installer-header-content {
         position: absolute;
-        left: 0;
-        width: 100%;
-        bottom: fluid(16px, 165, 165);
-        font-family: 'Poppins', sans-serif;
-        font-weight: 300;
-        font-size: fluid(16px, 80, 80);
-        color: #FFFFFF;
-        line-height: fluid(16px, 112, 112);
-        text-align: center;
-        font-style: normal;
+        bottom:  fluid(16px, 150, 150);;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - fluid(16px, 360, 360));
+        padding: fluid(16px, 20, 20) fluid(16px, 40, 40);
+
+        .installer-header-title {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 600;
+          font-size: fluid(16px, 54, 54);
+          color: #FFFFFF;
+          line-height: fluid(16px, 75, 75);
+          text-align: center;
+          font-style: normal;
+        }
+
+        .installer-header-text {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 300;
+          font-size: fluid(16px, 28, 28);
+          color: #FFFFFF;
+          margin-top: 20px;
+          line-height: fluid(16px, 40, 40);
+          text-align: center;
+          font-style: normal;
+        }
       }
+
 
       .installer-scroll {
         position: absolute;
@@ -201,7 +230,6 @@ definePageMeta({
             font-size: fluid(16px, 28, 28);
             color: #FFFFFF;
             line-height: fluid(16px, 40, 40);
-            text-align: justify;
             font-style: normal;
           }
         }
@@ -210,5 +238,3 @@ definePageMeta({
   }
 }
 </style>
-  
-    

@@ -13,25 +13,16 @@
         </div>
         <div class="text-container">
           <div class="text-item" v-show="current === 0">
-            <div class="text-title">AI-powered home energy</div>
-            <div class="text-desc">Download the monitoring app for a user-friendly interface, real-time home energy flow
-              charts and detailed energy data. Gain deep insight into production and consumption, and track everything
-              in
-              real time to keep your system at peak performance.</div>
+            <div class="text-title">Your Energy Command Center</div>
+            <div class="text-desc">The SolarAI App gives you X-ray vision into your home’s energy. See your savings grow in real-time, control your battery, EV, Thermostat and more, receive instant health alerts. Complex data, presented simply. All at one place powered by AI. </div>
           </div>
           <div class="text-item" v-show="current === 1">
-            <div class="text-title">AI-powered home energy</div>
-            <div class="text-desc">Download the monitoring app for a user-friendly interface, real-time home energy flow
-              charts and detailed energy data. Gain deep insight into production and consumption, and track everything
-              in
-              real time to keep your system at peak performance.</div>
+            <div class="text-title">Your Energy Command Center</div>
+            <div class="text-desc">The SolarAI App gives you X-ray vision into your home’s energy. See your savings grow in real-time, control your battery, EV, Thermostat and more, receive instant health alerts. Complex data, presented simply. All at one place powered by AI. </div>
           </div>
           <div class="text-item" v-show="current === 2">
-            <div class="text-title">AI-powered home energy</div>
-            <div class="text-desc">Download the monitoring app for a user-friendly interface, real-time home energy flow
-              charts and detailed energy data. Gain deep insight into production and consumption, and track everything
-              in
-              real time to keep your system at peak performance.</div>
+            <div class="text-title">Your Energy Command Center</div>
+            <div class="text-desc">The SolarAI App gives you X-ray vision into your home’s energy. See your savings grow in real-time, control your battery, EV, Thermostat and more, receive instant health alerts. Complex data, presented simply. All at one place powered by AI. </div>
           </div>
         </div>
         <div class="code-container">
@@ -157,7 +148,7 @@ definePageMeta({
           .text-title {
             width: fluid(16px, 748, 748);
             font-family: 'Poppins', sans-serif;
-            font-weight: 300;
+            font-weight: 600;
             font-size: fluid(16px, 68, 68);
             color: #FFFFFF;
             line-height: fluid(16px, 95, 95);

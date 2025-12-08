@@ -184,7 +184,7 @@ definePageMeta({
 
     .header-section-content {
       font-family: 'Poppins', sans-serif;
-      font-weight: 300;
+      font-weight: 600;
       width: 100%;
       font-size: fluid(16px, 74, 74);
       color: #FFFFFF;

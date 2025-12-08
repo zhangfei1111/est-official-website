@@ -11,7 +11,11 @@
                 </div>
                 <div class="Southem-shadow" style="left:35%; bottom: 15%;" @click="handleToCase(1)">
                     <div class="dot"></div>
-                    <div class="text">Southem California</div>
+                    <div class="text">Southern California</div>
+                </div>
+                <div class="Southem-shadow" style="left:35.5%; bottom: 19%;" @click="handleToCase(2)">
+                    <div class="dot"></div>
+                    <!-- <div class="text">Southern California</div> -->
                 </div>
                 <!-- 如需多个点，复制一份并改坐标与文本 -->
                 <!--
@@ -22,59 +26,106 @@
           -->
             </section>
             <section class="case-content">
-                <div class="case-item" ref="portland">
-                    <img class="case-img" src="../assets/image/case-house.jpeg" alt="">
+                <div class="case-item" ref="california1">
+                    <div class="case-img">
+                        <v-carousel show-arrows="hover" height="auto" cycle :interval="4500">
+                            <v-carousel-item src="~/assets/image/nanjiazhou1-1.png" cover></v-carousel-item>
+                            <v-carousel-item src="~/assets/image/nanjiazhou1-2.png" cover></v-carousel-item>
+                            <v-carousel-item src="~/assets/image/nanjiazhou1-3.png" cover></v-carousel-item>
+                        </v-carousel>
+                    </div>
                     <div class="case-info">
-                        <div class="case-title">Southem California</div>
+                        <div class="case-title">Southern California Equipment 1</div>
                         <div class="case-desc-container">
                             <div class="case-desc">
-                                <div class="case-desc-label">Specification</div>
-                                <div class="case-desc-info">9 kW</div>
+                                <div class="case-desc-label">PV capacity</div>
+                                <div class="case-desc-info">6.8 kWp </div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">Installation time</div>
-                                <div class="case-desc-info">10/30/2024</div>
+                                <div class="case-desc-info">12/06/2024</div>
                             </div>
                             <div class="case-desc">
-                                <div class="case-desc-label">Electricity generation</div>
-                                <div class="case-desc-info">8.85 MWh / year</div>
+                                <div class="case-desc-label">Battery</div>
+                                <div class="case-desc-info">8.2 kWh</div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">AI benefits</div>
-                                <div class="case-desc-info">$ 2645 / year</div>
+                                <div class="case-desc-info">$ 985.6</div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">Increased revenue</div>
-                                <div class="case-desc-info">45%</div>
+                                <div class="case-desc-info">57.8%</div>
                             </div>
                         </div>
 
                     </div>
                 </div>
-                <div class="case-item" ref="california">
-                    <img class="case-img" src="../assets/image/case-house.jpeg" alt="">
+                <div class="case-item" ref="california2">
+                    <div class="case-img">
+                        <v-carousel show-arrows="hover" height="auto" cycle :interval="4500">
+                            <v-carousel-item src="~/assets/image/nanjiazhou2-1.png" cover></v-carousel-item>
+                            <v-carousel-item src="~/assets/image/nanjiazhou2-2.png" cover></v-carousel-item>
+                            <v-carousel-item src="~/assets/image/nanjiazhou2-3.png" cover></v-carousel-item>
+                        </v-carousel>
+                    </div>
+                    <div class="case-info">
+                        <div class="case-title">Southern California Equipment 2</div>
+                        <div class="case-desc-container">
+                            <div class="case-desc">
+                                <div class="case-desc-label">PV capacity</div>
+                                <div class="case-desc-info">5.88 kWp </div>
+                            </div>
+                            <div class="case-desc">
+                                <div class="case-desc-label">Installation time</div>
+                                <div class="case-desc-info">07/07/2025</div>
+                            </div>
+                            <div class="case-desc">
+                                <div class="case-desc-label">Battery</div>
+                                <div class="case-desc-info">16.4 kWh</div>
+                            </div>
+                            <div class="case-desc">
+                                <div class="case-desc-label">AI benefits</div>
+                                <div class="case-desc-info">$ 509.82</div>
+                            </div>
+                            <div class="case-desc">
+                                <div class="case-desc-label">Increased revenue</div>
+                                <div class="case-desc-info">43.5%</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="case-item" ref="portland">
+                    <div class="case-img">
+                        <v-carousel height="auto" show-arrows="hover" cycle :interval="4500">
+                            <v-carousel-item src="~/assets/image/potelan1-1.png" cover></v-carousel-item>
+                            <v-carousel-item src="~/assets/image/potelan1-2.png" cover></v-carousel-item>
+                            <v-carousel-item src="~/assets/image/potelan1-3.png" cover></v-carousel-item>
+                        </v-carousel>
+                    </div>
                     <div class="case-info">
                         <div class="case-title">Portland</div>
                         <div class="case-desc-container">
                             <div class="case-desc">
-                                <div class="case-desc-label">Specification</div>
-                                <div class="case-desc-info">9 kW</div>
+                                <div class="case-desc-label">PV capacity</div>
+                                <div class="case-desc-info">7.38 kWp </div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">Installation time</div>
-                                <div class="case-desc-info">10/30/2023</div>
+                                <div class="case-desc-info">07/22/2024</div>
                             </div>
                             <div class="case-desc">
-                                <div class="case-desc-label">Electricity generation</div>
-                                <div class="case-desc-info">5.91 MWh / year</div>
+                                <div class="case-desc-label">Battery</div>
+                                <div class="case-desc-info">8.2 kWh</div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">AI benefits</div>
-                                <div class="case-desc-info">$ 1876 / year</div>
+                                <div class="case-desc-info">$ 683.19</div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">Increased revenue</div>
-                                <div class="case-desc-info">35%</div>
+                                <div class="case-desc-info">97.0%</div>
                             </div>
                         </div>
 
@@ -84,13 +135,14 @@
         </div>
     </div>
 </template>
-  
+
 <script lang="ts" setup>
 // 无脚本逻辑
 // 点击 Tab 滚动到对应模块（保留你的）
 const portland = ref<HTMLElement | null>(null)
-const california = ref<HTMLElement | null>(null)
-const sectionRefs = [portland, california]
+const california1 = ref<HTMLElement | null>(null)
+const california2 = ref<HTMLElement | null>(null)
+const sectionRefs = [portland, california1, california2]
 function handleToCase(index: number) {
     const el = sectionRefs[index]?.value
     if (!el) return
@@ -99,10 +151,10 @@ function handleToCase(index: number) {
 
 definePageMeta({
     name: 'Case',
-    title:'Case'
+    title: 'Case'
 })
 </script>
-  
+
 <style scoped lang="scss">
 @use "sass:math";
 
@@ -145,7 +197,7 @@ definePageMeta({
 
             .case-header-title {
                 font-family: 'Poppins', sans-serif;
-                font-weight: 300;
+                font-weight: 600;
                 font-size: fluid(16px, 80, 80);
                 position: absolute;
                 color: #FFFFFF;
@@ -256,11 +308,13 @@ definePageMeta({
                 box-sizing: border-box;
                 padding: 0 fluid(16px, 200, 200);
                 margin-bottom: fluid(16px, 120, 120);
+                scroll-margin-top: fluid(16px, 120, 120); // 自适应一点
+
                 .case-img {
-                    width: fluid(16px, 734, 734);
-                    height: fluid(16px, 466, 466);
-                    object-fit: fill;
-                    display: block;
+                    width: fluid(16px, 534, 534);
+                    // height: fluid(16px, 466, 466);
+                    // object-fit: fill;
+                    // display: block;
                     margin-right: fluid(16px, 98, 98);
                 }
 
@@ -330,11 +384,27 @@ definePageMeta({
 
                 }
             }
-            .case-item:last-child{
+
+            .case-item:last-child {
                 margin-bottom: 0;
             }
         }
     }
 }
 </style>
-  
+<style lang="scss">
+.v-window {
+
+    &-x-transition,
+    &-x-reverse-transition,
+    &-y-transition,
+    &-y-reverse-transition {
+
+        &-enter-active,
+        &-leave-active {
+            transition: 0.7s cubic-bezier(.25, .8, .50, 1) !important;
+            // 原来大概是 0.3s 左右，这里全局改慢
+        }
+    }
+}
+</style>

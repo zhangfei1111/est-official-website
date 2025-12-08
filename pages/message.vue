@@ -195,7 +195,7 @@ definePageMeta({
             padding-top: fluid(16px, 118, 118);
             padding-bottom: fluid(16px, 40, 40);
             font-family: 'Poppins', sans-serif;
-            font-weight: 300;
+            font-weight: 600;
             font-size: fluid(16px, 74, 74);
             color: #222222;
             line-height: fluid(16px, 103, 103);

@@ -3,12 +3,15 @@
         <section class="outlook-header-section">
             <img class="outlook-header-section-bg" src="~/assets/image/outlook-header-bg.webp" alt="">
             <div class="outlook-header-section-content">
-                <div class="outlook-header-section-title">Grid Collaboration (VPP / DR / Market Services)</div>
+                <div class="outlook-header-section-title">From Home Energy to Global Stability by Intelligent
+                    Distributed Energy Resource (iDER)</div>
                 <div class="outlook-header-section-desc">
-                    Through AI technology, SolarAI connects thousands of residential solar-plus-storage systems into
-                    intelligent Distributed Energy Resources (iDERs). This reduces the "noise" and volatility that
-                    renewables bring to the grid, balancing fluctuations and enabling a smarter, more flexible, and more
-                    stable power system for the future.
+                    <span style="font-weight: 600;">iDER is turning passive batteries into active grid assets.</span> Renewable energy is powerful, but
+                    unpredictable. The grid of the future needs stability, not just capacity. <span style="font-weight: 600;">SolarAI bridges the gap.</span>
+                    By transforming individual homes into intelligent Distributed Energy Resources (iDERs), we dampen
+                    the volatility of renewables—smoothing out fluctuations and providing real-time support to the grid.
+                    The result? A power system that is smarter, more flexible, and more resilient. And for our users, it
+                    means their equipment isn't just saving money—it's <span style="font-weight: 600;">earning revenue</span> by serving the community.
                 </div>
             </div>
         </section>
@@ -84,7 +87,7 @@ definePageMeta({
 
             .outlook-header-section-title {
                 font-family: 'Poppins', sans-serif;
-                font-weight: 400;
+                font-weight: 600;
                 font-size: fluid(16px, 54, 54);
                 color: #FFFFFF;
                 line-height: fluid(16px, 75, 75);

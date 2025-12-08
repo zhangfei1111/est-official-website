@@ -148,9 +148,9 @@ watch(
 )
 const handleScroll = () => {
     const y =
-        window.scrollY ||
-        document.documentElement.scrollTop ||
-        document.body.scrollTop ||
+        window?.scrollY ||
+        document?.documentElement?.scrollTop ||
+        document?.body?.scrollTop ||
         0
 
     // 回到顶部按钮：超过 200px 出现
