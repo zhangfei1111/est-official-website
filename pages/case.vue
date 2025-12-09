@@ -38,11 +38,11 @@
                         <div class="case-title">Southern California Equipment 1</div>
                         <div class="case-desc-container">
                             <div class="case-desc">
-                                <div class="case-desc-label">PV capacity</div>
+                                <div class="case-desc-label">PV Capacity</div>
                                 <div class="case-desc-info">6.8 kWp </div>
                             </div>
                             <div class="case-desc">
-                                <div class="case-desc-label">Installation time</div>
+                                <div class="case-desc-label">Installation Date</div>
                                 <div class="case-desc-info">12/06/2024</div>
                             </div>
                             <div class="case-desc">
@@ -50,11 +50,11 @@
                                 <div class="case-desc-info">8.2 kWh</div>
                             </div>
                             <div class="case-desc">
-                                <div class="case-desc-label">AI benefits</div>
+                                <div class="case-desc-label">AI Benefits</div>
                                 <div class="case-desc-info">$ 985.6</div>
                             </div>
                             <div class="case-desc">
-                                <div class="case-desc-label">Increased revenue</div>
+                                <div class="case-desc-label">Increased Revenue</div>
                                 <div class="case-desc-info">57.8%</div>
                             </div>
                         </div>
@@ -73,11 +73,11 @@
                         <div class="case-title">Southern California Equipment 2</div>
                         <div class="case-desc-container">
                             <div class="case-desc">
-                                <div class="case-desc-label">PV capacity</div>
+                                <div class="case-desc-label">PV Capacity</div>
                                 <div class="case-desc-info">5.88 kWp </div>
                             </div>
                             <div class="case-desc">
-                                <div class="case-desc-label">Installation time</div>
+                                <div class="case-desc-label">Installation Date</div>
                                 <div class="case-desc-info">07/07/2025</div>
                             </div>
                             <div class="case-desc">
@@ -85,11 +85,11 @@
                                 <div class="case-desc-info">16.4 kWh</div>
                             </div>
                             <div class="case-desc">
-                                <div class="case-desc-label">AI benefits</div>
+                                <div class="case-desc-label">AI Benefits</div>
                                 <div class="case-desc-info">$ 509.82</div>
                             </div>
                             <div class="case-desc">
-                                <div class="case-desc-label">Increased revenue</div>
+                                <div class="case-desc-label">Increased Revenue</div>
                                 <div class="case-desc-info">43.5%</div>
                             </div>
                         </div>
@@ -108,11 +108,11 @@
                         <div class="case-title">Portland</div>
                         <div class="case-desc-container">
                             <div class="case-desc">
-                                <div class="case-desc-label">PV capacity</div>
+                                <div class="case-desc-label">PV Capacity</div>
                                 <div class="case-desc-info">7.38 kWp </div>
                             </div>
                             <div class="case-desc">
-                                <div class="case-desc-label">Installation time</div>
+                                <div class="case-desc-label">Installation Date</div>
                                 <div class="case-desc-info">07/22/2024</div>
                             </div>
                             <div class="case-desc">
@@ -120,11 +120,11 @@
                                 <div class="case-desc-info">8.2 kWh</div>
                             </div>
                             <div class="case-desc">
-                                <div class="case-desc-label">AI benefits</div>
+                                <div class="case-desc-label">AI Benefits</div>
                                 <div class="case-desc-info">$ 683.19</div>
                             </div>
                             <div class="case-desc">
-                                <div class="case-desc-label">Increased revenue</div>
+                                <div class="case-desc-label">Increased Revenue</div>
                                 <div class="case-desc-info">97.0%</div>
                             </div>
                         </div>

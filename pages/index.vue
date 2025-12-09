@@ -222,6 +222,7 @@ import tabImgS4 from '~/assets/image/home-tab-minitor.webp'
 import tabImgS5 from '~/assets/image/home-tab-broad.webp'
 import tabImgS6 from '~/assets/image/home-tab-seamless.webp'
 import tabImgS7 from '~/assets/image/home-tab-clear.webp'
+
 import tabImgUS1 from '~/assets/image/home-tab-0.webp'
 import tabImgUS2 from '~/assets/image/home-tab-0.webp'
 import tabImgUS3 from '~/assets/image/home-tab-0.webp'
@@ -242,7 +243,7 @@ const sec5Ref = ref<HTMLElement | null>(null)
 const sec6Ref = ref<HTMLElement | null>(null)
 const sectionRefs = [sec0Ref, sec1Ref, sec2Ref, sec3Ref, sec4Ref, sec5Ref, sec6Ref]
 const tabList = ref([
-  { label: '0 Down 0 Monthly 0 Emission', urlS: tabImgS1, urlnS: tabImgUS1 },
+  { label: '0 Down 0 Monthly 0 Emission.', urlS: tabImgS1, urlnS: tabImgUS1 },
   { label: 'Smarter AI, Higher Revenue.', urlS: tabImgS2, urlnS: tabImgUS2 },
   { label: 'Predictive Intelligence.', urlS: tabImgS3, urlnS: tabImgUS3 },
   { label: 'Total Visibility, Real-Time Control.', urlS: tabImgS4, urlnS: tabImgUS4 },
@@ -614,7 +615,8 @@ definePageMeta({ name: 'Home', title: 'Home' })
       /* 单个 item，只负责样式，不再加动画 */
       .home-select-tab-item {
         width: fluid(16px, 480, 480);
-        padding: fluid(16px, 33, 33) fluid(16px, 26, 26) fluid(16px, 33, 33) fluid(16px, 22, 22);
+        height: fluid(16px, 142, 142);
+        padding: 0 fluid(16px, 26, 26) 0 fluid(16px, 22, 22);
         display: flex;
         align-items: center;
         background: #272F2F;

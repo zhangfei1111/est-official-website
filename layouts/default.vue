@@ -115,7 +115,7 @@ const list = ref([
         path: "/case"
     },
     {
-        name: "About-us",
+        name: "About Us",
         path: "/about"
     },
 ])
