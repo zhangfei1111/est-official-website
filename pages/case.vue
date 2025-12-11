@@ -39,7 +39,7 @@
                         <div class="case-desc-container">
                             <div class="case-desc">
                                 <div class="case-desc-label">PV Capacity</div>
-                                <div class="case-desc-info">6.8 kWp </div>
+                                <div class="case-desc-info">5.88 kWp </div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">Installation Date</div>
@@ -50,11 +50,7 @@
                                 <div class="case-desc-info">8.2 kWh</div>
                             </div>
                             <div class="case-desc">
-                                <div class="case-desc-label">AI Benefits</div>
-                                <div class="case-desc-info">$ 985.6</div>
-                            </div>
-                            <div class="case-desc">
-                                <div class="case-desc-label">Increased Revenue</div>
+                                <div class="case-desc-label">Extra Revenue Brought By AI</div>
                                 <div class="case-desc-info">57.8%</div>
                             </div>
                         </div>
@@ -74,7 +70,7 @@
                         <div class="case-desc-container">
                             <div class="case-desc">
                                 <div class="case-desc-label">PV Capacity</div>
-                                <div class="case-desc-info">5.88 kWp </div>
+                                <div class="case-desc-info">6.97 kWp </div>
                             </div>
                             <div class="case-desc">
                                 <div class="case-desc-label">Installation Date</div>
@@ -85,11 +81,7 @@
                                 <div class="case-desc-info">16.4 kWh</div>
                             </div>
                             <div class="case-desc">
-                                <div class="case-desc-label">AI Benefits</div>
-                                <div class="case-desc-info">$ 509.82</div>
-                            </div>
-                            <div class="case-desc">
-                                <div class="case-desc-label">Increased Revenue</div>
+                                <div class="case-desc-label">Extra Revenue Brought By AI</div>
                                 <div class="case-desc-info">43.5%</div>
                             </div>
                         </div>
@@ -120,11 +112,7 @@
                                 <div class="case-desc-info">8.2 kWh</div>
                             </div>
                             <div class="case-desc">
-                                <div class="case-desc-label">AI Benefits</div>
-                                <div class="case-desc-info">$ 683.19</div>
-                            </div>
-                            <div class="case-desc">
-                                <div class="case-desc-label">Increased Revenue</div>
+                                <div class="case-desc-label">Extra Revenue Brought By AI</div>
                                 <div class="case-desc-info">97.0%</div>
                             </div>
                         </div>

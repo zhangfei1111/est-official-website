@@ -49,8 +49,8 @@
       <section class="section-smarter" ref="sec1Ref">
         <img class="section-smarter-bg" src="../assets/image/home-smarter-bg.webp" alt="">
         <div class="home-smarter-content">
-          <div class="home-smarter-title">Smarter AI, Higher Revenue.&nbsp;&nbsp;<span
-              class="home-smarter-title-remark">10%~250%+</span></div>
+          <div class="home-smarter-title">Smarter AI, Higher <span class="home-smarter-title-remark">250%+</span>
+            Revenue.</div>
           <div class="home-smarter-desc">
             <span style="font-weight: 600;">Don't Just Generate Power. Trade It.</span> Our AI makes intelligent
             decisions every 15
@@ -424,30 +424,35 @@ onMounted(() => {
     }
 
     // 数字递增：解析 "30%~80%+"
+    // 数字递增：从 0%+ 数到 250%+
     const remarkEl = document.querySelector('.home-smarter-title-remark') as HTMLElement | null
+
     if (remarkEl) {
-      const m = remarkEl.textContent?.match(/(\d+)\s*%?\s*[~\-～]\s*(\d+)\s*%?/)
-      const minTo = m ? parseInt(m[1], 10) : 30
-      const maxTo = m ? parseInt(m[2], 10) : 80
-      const a = { v: 0 }, b = { v: 0 }
-      remarkEl.textContent = `0%~0%+`
+      // 读取 span 里的目标数字（例如 250%+ → 250）
+      const m = remarkEl.textContent?.match(/(\d+)/)
+      const target = m ? parseInt(m[1], 10) : 250
+
+      const state = { v: 0 }
+      // 初始显示
+      remarkEl.textContent = '0%+'
 
       ScrollTrigger.create({
         trigger: '.section-smarter',
         start: 'top 78%',
         once: true,
         onEnter: () => {
-          gsap.to(a, {
-            v: minTo, duration: 0.9, ease: 'power3.out',
-            onUpdate: () => (remarkEl.textContent = `${Math.round(a.v)}%~${Math.round(b.v)}%+`)
-          })
-          gsap.to(b, {
-            v: maxTo, duration: 1.2, delay: 0.1, ease: 'power3.out',
-            onUpdate: () => (remarkEl.textContent = `${Math.round(a.v)}%~${Math.round(b.v)}%+`)
+          gsap.to(state, {
+            v: target,
+            duration: 1.2,
+            ease: 'power3.out',
+            onUpdate: () => {
+              remarkEl.textContent = `${Math.round(state.v)}%+`
+            }
           })
         }
       })
     }
+
   }
 
 })
@@ -766,7 +771,7 @@ definePageMeta({ name: 'Home', title: 'Home' })
           /* 往上一点 */
           right: -0.5em;
           /* 往右一点 */
-          font-size: 1.2em;
+          font-size: 1em;
           /* 星号比数字小 */
           color: #FFFFFF;
           /* 星号颜色 */

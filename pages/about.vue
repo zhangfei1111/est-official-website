@@ -9,21 +9,17 @@
       <div class="about-section-content">
         <img class="about-us-bg" src="~/assets/image/about-us-bg.webp" alt="">
         <div class="about-us-content">
-          SolarAI Technologies Co., Ltd., founded in June 2023, uses big data and AI to serve near real-time electricity
-          markets in North America and Europe. 
-          <br>
-          We provide optimized energy monitoring, management, and trading systems for
-          residential solar PV and storage, powered by our patented AI-HEMS platform, which turns every home into an
-          intelligent distributed energy resource (iDER) to maximize economic returns and support a safer, more efficient,
-          low-carbon grid.
-
+          We are building the grid of the future. SolarAI combines AI, big data and machine learning to turn every home
+          into <text style="font-weight: 600;">an Intelligent Distributed Energy Resource (iDER).</text> We don't just
+          help you save money; we empower you to
+          participate in the real-time energy market, making the grid safer, greener, and more efficient for everyone.
           <!-- 江阴橙储智能系统有限公司（SolarAI Technologies），成立于 2023 年 6
           月。我们运用大数据、机器学习与人工智能，面向北美与欧洲的可准实时电力市场，为含家庭分布式光伏+储能的新能源生态提供最优化的能源监控、管理与交易系统。<br>
           面向趋势，我们基于多项专利打造 AI-HEMS 平台，让每个家庭成为 iDER（智能分布式能源系统），参与准实时市场交易，在最大化收益的同时，让电网更安全、高效、绿色低碳。 -->
         </div>
       </div>
     </section>
-    <section class="corporate-section">
+    <!-- <section class="corporate-section">
       <div class="title">Corporate Philosophy</div>
       <div class="about-section-content">
         <img class="about-corporate-bg" src="~/assets/image/about-corporate-bg.webp" alt="">
@@ -49,8 +45,8 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="technical-section">
+    </section> -->
+    <!-- <section class="technical-section">
       <div class="title">Technical Advantage</div>
       <div class="about-section-content">
         <img class="about-technical-bg" src="~/assets/image/about-technical-bg.webp" alt="">
@@ -59,19 +55,16 @@
           <div class="technical-desc">U.S. Grid Intelligence & Machine Learning Expertise</div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="core-section">
       <div class="title">Core Members</div>
       <div class="about-section-content">
         <img class="about-core-bg" src="~/assets/image/about-core-bg.webp" alt="">
         <div class="about-core-content">
-          SolarAI Technologies was co-founded by Jiyang Power and former experts from Microsoft, Intel, and Oracle. The
-          founding team has developed smart grid analytics platforms used by leading U.S. energy companies, covering load
-          forecasting, fault prediction, demand response, and shared residential storage.
-
-          These technologies enable energy providers to rapidly deploy electrification, solar, and storage solutions,
-          helping users shift consumption to more sustainable hours and accelerating the transition to a smarter, greener
-          grid.
+          <text style="font-weight: 600;">SolarAI is built by Giants of the Tech World.</text> SolarAI wasn't founded by sales reps; it was engineered by data
+          scientists. Our leadership team brings decades of experience from  <text style="font-weight: 600;"> Microsoft, Intel, Oracle and Google.</text> We have
+          built the analytics platforms used by major U.S. utility companies, and now we are bringing that utility-grade
+          intelligence to your home.
         </div>
       </div>
     </section>
@@ -92,7 +85,7 @@
         </div>
       </div>
     </section>
-    <section class="corporate-section">
+    <!-- <section class="corporate-section">
       <div class="title">Corporate Philosophy</div>
       <div class="about-section-content">
         <img class="about-corporate-bg" src="~/assets/image/about-corporate-bg-mobile.webp" alt="">
@@ -119,8 +112,8 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="technical-section">
+    </section> -->
+    <!-- <section class="technical-section">
       <div class="title">Technical Advantage</div>
       <div class="about-section-content">
         <img class="about-technical-bg" src="~/assets/image/about-technical-bg-mobile.webp" alt="">
@@ -129,7 +122,7 @@
           <div class="technical-desc">美国电网智能化 & ML 积累</div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="core-section">
       <div class="title">Core Members</div>
       <div class="about-section-content">
@@ -144,8 +137,8 @@
 
 <script setup lang="ts">
 definePageMeta({
-    name: 'About',
-    title:'About'
+  name: 'About',
+  title: 'About'
 })
 </script>
 
@@ -221,7 +214,7 @@ definePageMeta({
 
       .about-us-content {
         width: 50%;
-        padding: fluid(16px, 50, 50) fluid(16px, 140, 140) fluid(16px, 50, 50) fluid(16px, 80, 80);
+        padding: fluid(16px, 50, 50) fluid(16px, 140, 140) fluid(16px, 150, 150) fluid(16px, 80, 80);
         font-family: 'Poppins', sans-serif;
         font-weight: 300;
         font-size: fluid(16px, 26, 26);
@@ -410,6 +403,7 @@ definePageMeta({
   .core-section {
     margin: 0 fluid(16px, 210, 210);
     padding-bottom: fluid(16px, 135, 135);
+
     .title {
       margin: fluid(16px, 80, 80);
       font-family: 'Poppins', sans-serif;
@@ -722,4 +716,5 @@ definePageMeta({
       }
     }
   }
-}</style>
+}
+</style>

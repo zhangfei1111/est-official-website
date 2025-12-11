@@ -122,7 +122,7 @@ definePageMeta({
         }
 
         .outlook-intelligent {
-            width: fluid(16px, 1500, 1500);
+            width: 100%;
         }
     }
 
