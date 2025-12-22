@@ -24,7 +24,8 @@
             <!-- 把列表复制一份，形成无缝 -->
             <div class="home-select-tab-item" v-for="(item, index) in [...tabList, ...tabList]" :key="index"
               @click="scrollTo(index)">
-              <img class="home-select-tab-item-icon" :src="item.urlS" alt="" />
+              <img class="home-select-tab-item-icon icon-unactive" :src="item.urlS" alt="" />
+              <img class="home-select-tab-item-icon icon-active" :src="item.urlnS" alt="" />
               <div class="home-select-tab-item-title">{{ item.label }}</div>
             </div>
           </div>
@@ -50,7 +51,7 @@
         <img class="section-smarter-bg" src="../assets/image/home-smarter-bg.webp" alt="">
         <div class="home-smarter-content">
           <div class="home-smarter-title">Smarter AI, Higher <span class="home-smarter-title-remark">250%+</span>
-            Revenue.</div>
+            Revenue</div>
           <div class="home-smarter-desc">
             <span style="font-weight: 600;">Don't Just Generate Power. Trade It.</span> Our AI makes intelligent
             decisions every 15
@@ -69,9 +70,12 @@
           <div class="product-ai-desc"><span style="font-weight: 600;">You Don't Need a PhD to Outsmart the Grid.</span>
             Utility tariffs are confusing. Rates
             change by the hour, and seasons shift demand. Managing this manually is impossible. SolarAI automates the
-            complexity, syncing your Solar, Battery, EV, and Thermostat to buy low and sell high—automatically. <br><br>
-            We forecast your home's consumption and local weather and solar patterns. This allows SolarAI to prepare
-            your battery for cloudy days or price spikes before they happen.
+            complexity, syncing your Solar, Battery, EV, and Thermostat to buy low and sell high—automatically.
+
+            <p class="product-ai-desc-br"> We forecast your home's consumption and local weather and solar patterns.
+              This allows SolarAI to
+              prepare
+              your battery for cloudy days or price spikes before they happen.</p>
           </div>
           <div class="product-ai-icon"></div>
 
@@ -141,37 +145,28 @@
         <video ref="homeIntroduceRef" class="home-introduce-video" autoplay muted playsinline loop preload="auto"
           controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
           src="../assets/video/home-introduce-mobile.mp4"></video>
-        <div class="home-introduce-content">
-          <div class="home-introduce-text">
-            <span>0</span> Down · <span>0</span> Monthly · <span>0</span> Emission
-          </div>
-          <div class="home-introduce-more">
-            Learn More
-            <img class="home-introduce-more-icon" src="../assets/image/home-introduce-more.webp" alt="" />
-          </div>
-        </div>
+        <img class="home-introduce-content" src="~/assets/image/home-mobile-0.webp" alt="">
       </section>
       <section class="home-select-section">
         <div class="home-select-name">
-          Why Select SolarAI
+          Why SolarAI
         </div>
         <div class="home-select-desc">
-          With just one click, SolarAI effortlessly maximises savings. It intelligently minimises grid reliance by
-          optimising the use of solar energy and battery storage, offering you hassle-free, efficient energy management.
+          SolarAI transforms your home into an intelligent energy hub. Our verified AI optimizes your solar, battery,
+          and grid usage in real-time—reducing your bills and your carbon footprint automatically.
         </div>
       </section>
-      <section class="section-0down ">
+      <section class="section-0down">
         <video ref="home0downRef" class="home-0down-video" autoplay muted playsinline loop preload="auto"
           controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
           src="../assets/video/home-0down-mobile.mp4"></video>
         <div class="home-0down-content">
-          <div class="home-0down-title">0 Down 0 Monthly 0 Emission</div>
+          <div class="home-0down-title"><span style="color: #FFA12B;">0</span> Down &nbsp;&nbsp;<span
+              style="color: #FFA12B;">0</span> Monthly &nbsp;&nbsp;<span style="color: #FFA12B;">0</span> Emission</div>
           <div class="home-0down-desc">
-            Switch to solar with 0 upfront cost and save immediately. Save up to 30%~80% on your current electricity
-            bill.
-            The solar panels are yours at the end of the payment period. No hidden fees, no extra costs
-            The energy revolution starts at home, and with the full power of sonnenHome you're all set for a clean
-            energy future.
+            Switch to intelligent solar with <span style="font-weight: 600;">$0 upfront cost.</span> Enjoy lower
+            electricity bills immediately with a system
+            that pays for itself—transparent pricing, no surprise fees, and 100% clean energy.
           </div>
           <div class="home-0down-icon"></div>
         </div>
@@ -179,34 +174,91 @@
       <section class="section-smarter">
         <img class="section-smarter-bg" src="../assets/image/home-smarter-bg-mobile.webp" alt="">
         <div class="home-smarter-content">
-          <div class="home-smarter-title">Smarter AI, More
-            Revenue，<span class="home-smarter-title-remark">30%~80%+</span></div>
+          <div class="home-smarter-title">Smarter AI, Higher <span class="home-smarter-title-remark">250%+</span>
+            Revenue</div>
           <div class="home-smarter-desc">
-            The verified residential iDER (intelligent Distributed Energy Resource) system, with its self-developed AI
-            model, increases additional revenue by over 30%~80%
+            <span style="font-weight: 600;">Don't Just Generate Power. Trade It.</span> Our AI makes intelligent
+            decisions every 15
+            minutes—analyzing weather,
+            grid rates, and your usage—to boost your solar revenue by up to <span
+              class="home-smarter-desc-remark">250%</span>&nbsp;&nbsp;.
           </div>
+          <div class="section-remark">* Based on actual 2024 PTO test results from users in Southern California. Results
+            are not guaranteed and may vary by system.</div>
           <div class="home-smarter-icon"></div>
         </div>
       </section>
-      <section class="section-broad ">
+      <section class="product-ai-section" ref="sec2Ref">
+
+        <video ref="productAiVideoRef" class="product-ai-video" autoplay muted playsinline loop preload="auto"
+          controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
+          src="../assets/video/product-ai-mobile.mp4"></video>
+
+        <div class="product-ai-introduce">
+          <div class="product-ai-title">Predictive Intelligence</div>
+          <div class="product-ai-desc"><span style="font-weight: 600;">You Don't Need a PhD to Outsmart the Grid.</span>
+            Utility tariffs are confusing. Rates
+            change by the hour, and seasons shift demand. Managing this manually is impossible. SolarAI automates the
+            complexity, syncing your Solar, Battery, EV, and Thermostat to buy low and sell high—automatically.
+
+            <p class="product-ai-desc-br"> We forecast your home's consumption and local weather and solar patterns.
+              This allows SolarAI to
+              prepare
+              your battery for cloudy days or price spikes before they happen.</p>
+          </div>
+          <div class="product-ai-icon"></div>
+
+        </div>
+      </section>
+      <section class="product-introduce-section" ref="sec3Ref">
+        <div class="section-mask"></div>
+        <div class="product-introduce-introduce">
+          <div class="product-introduce-title">Total Visibility, Real-Time Control</div>
+          <div class="product-introduce-desc">Track every watt and cents from your phone. View live energy flow, battery
+            health, and savings in real-time. If performance drops due to dust or debris, our Smart O&M system alerts
+            you and your service provider instantly.
+          </div>
+          <div class="product-introduce-icon"></div>
+        </div>
+        <video ref="homeIntroduceRef" class="product-introduce-video" autoplay muted playsinline loop preload="auto"
+          controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture
+          src="../assets/video/product-introduce-mobile.mp4"></video>
+      </section>
+      <section class="section-broad">
         <img class="section-broad-bg" src="../assets/image/home-broad-bg-mobile.webp" alt="">
         <div class="home-broad-content">
-          <div class="home-broad-title">Broad Connectivity</div>
+          <div class="home-broad-title">Universal Compatibility. Limitless Choice</div>
           <div class="home-broad-desc">
-            The most easy & diverse connection methods in the industry
+            SolarAI separates the intelligence from the metal. Because our software is designed to control a broad
+            spectrum of energy hardware, you aren't restricted to one solar or battery brand. Select the best equipment
+            for your specific needs, and let SolarAI’s algorithms take over to maximize your savings and grid stability.
           </div>
           <div class="home-broad-icon"></div>
         </div>
       </section>
-      <section class="section-seamless ">
+      <section class="section-seamless">
         <img class="section-seamless-bg" src="../assets/image/home-seamless-bg-mobile.webp" alt="">
         <div class="home-seamless-content">
-          <div class="home-seamless-title">Seamless Integration</div>
+          <div class="home-seamless-title">The Heart of Your Smart Home</div>
           <div class="home-seamless-desc">
-            All sonnenHome solutions interconnect intelligently to optimize your energy use, without any additional
-            effort!
+            SolarAI seamlessly syncs with your ecosystem. From optimizing EV charging to adjusting your Smart thermostat
+            and other connected smart devices, we ensure your most power-hungry devices only run at the right timing.
           </div>
           <div class="home-seamless-icon"></div>
+        </div>
+      </section>
+      <section class="product-clean-section" ref="sec6Ref">
+        <img class="product-clean-bg" src="~/assets/image/product-clean-mobile-bg.webp" alt="">
+        <div class="product-clean-content">
+          <div class="product-clean-title">Smart Maintenance: Clean Only When It Pays</div>
+          <div class="product-clean-desc">
+            Dirt, pollen, and debris kill solar efficiency. Instead of guessing when to clean, SolarAI analyzes your
+            power generation 24/7 to detect specific efficiency drops. We alert you exactly when the value of lost
+            energy exceeds the cost of cleaning—providing a clear ROI calculation, so you know every maintenance dollar
+            is an investment, not an expense.
+          </div>
+          <div class="product-clean-icon"></div>
+
         </div>
       </section>
     </div>
@@ -223,13 +275,13 @@ import tabImgS5 from '~/assets/image/home-tab-broad.webp'
 import tabImgS6 from '~/assets/image/home-tab-seamless.webp'
 import tabImgS7 from '~/assets/image/home-tab-clear.webp'
 
-import tabImgUS1 from '~/assets/image/home-tab-0.webp'
-import tabImgUS2 from '~/assets/image/home-tab-0.webp'
-import tabImgUS3 from '~/assets/image/home-tab-0.webp'
-import tabImgUS4 from '~/assets/image/home-tab-0.webp'
-import tabImgUS5 from '~/assets/image/home-tab-0.webp'
-import tabImgUS6 from '~/assets/image/home-tab-0.webp'
-import tabImgUS7 from '~/assets/image/home-tab-0.webp'
+import tabImgUS1 from '~/assets/image/home-tab-u-0.webp'
+import tabImgUS2 from '~/assets/image/home-tab-u-money.webp'
+import tabImgUS3 from '~/assets/image/home-tab-u-ai.webp'
+import tabImgUS4 from '~/assets/image/home-tab-u-minitor.webp'
+import tabImgUS5 from '~/assets/image/home-tab-u-broad.webp'
+import tabImgUS6 from '~/assets/image/home-tab-u-seamless.webp'
+import tabImgUS7 from '~/assets/image/home-tab-u-clear.webp'
 
 // refs（保留你的）
 const homeIntroduceRef = ref<HTMLVideoElement | null>(null)
@@ -573,7 +625,6 @@ definePageMeta({ name: 'Home', title: 'Home' })
       background: #222;
       box-sizing: border-box;
       padding-top: fluid(16px, 30, 30);
-      padding-bottom: fluid(16px, 50, 50);
 
       .home-select-name {
         font-family: 'Poppins', sans-serif;
@@ -642,11 +693,29 @@ definePageMeta({ name: 'Home', title: 'Home' })
           height: fluid(16px, 75, 75);
           margin-right: fluid(16px, 16, 16);
         }
+
+        .icon-unactive {
+
+          display: block;
+        }
+
+        .icon-active {
+          display: none;
+        }
       }
 
       .home-select-tab-item:hover {
         background: linear-gradient(90deg, #02B5B1 0%, #27E3DF 100%);
         box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.5);
+
+        .icon-unactive {
+          display: none;
+
+        }
+
+        .icon-active {
+          display: block;
+        }
       }
 
       /* 从左往右滚动：整体从 -50% 滚到 0 */
@@ -693,9 +762,9 @@ definePageMeta({ name: 'Home', title: 'Home' })
         .home-0down-title {
           font-family: 'Poppins', sans-serif;
           font-weight: 600;
-          font-size: fluid(16px, 58, 58);
+          font-size: fluid(16px, 54, 54);
           color: #FFFFFF;
-          line-height: fluid(16px, 78, 78);
+          line-height: fluid(16px, 73, 73);
           font-style: normal;
         }
 
@@ -705,6 +774,7 @@ definePageMeta({ name: 'Home', title: 'Home' })
           font-size: fluid(16px, 28, 28);
           color: #FFFFFF;
           line-height: fluid(16px, 48, 48);
+          margin-top: fluid(16px, 36, 36);
           font-style: normal;
         }
 
@@ -741,9 +811,9 @@ definePageMeta({ name: 'Home', title: 'Home' })
         .home-smarter-title {
           font-family: 'Poppins', sans-serif;
           font-weight: 600;
-          font-size: fluid(16px, 58, 58);
+          font-size: fluid(16px, 54, 54);
           color: #FFFFFF;
-          line-height: fluid(16px, 78, 78);
+          line-height: fluid(16px, 73, 73);
           font-style: normal;
 
           .home-smarter-title-remark {
@@ -758,6 +828,7 @@ definePageMeta({ name: 'Home', title: 'Home' })
           color: #FFFFFF;
           line-height: fluid(16px, 48, 48);
           font-style: normal;
+          margin-top: fluid(16px, 36, 36);
 
           .home-smarter-desc-remark {
             position: relative;
@@ -819,9 +890,9 @@ definePageMeta({ name: 'Home', title: 'Home' })
         .home-broad-title {
           font-family: 'Poppins', sans-serif;
           font-weight: 600;
-          font-size: fluid(16px, 58, 58);
+          font-size: fluid(16px, 54, 54);
           color: #FFFFFF;
-          line-height: fluid(16px, 78, 78);
+          line-height: fluid(16px, 73, 73);
           font-style: normal;
         }
 
@@ -831,6 +902,7 @@ definePageMeta({ name: 'Home', title: 'Home' })
           font-size: fluid(16px, 28, 28);
           color: #FFFFFF;
           line-height: fluid(16px, 48, 48);
+          margin-top: fluid(16px, 36, 36);
           font-style: normal;
         }
 
@@ -867,9 +939,9 @@ definePageMeta({ name: 'Home', title: 'Home' })
         .home-seamless-title {
           font-family: 'Poppins', sans-serif;
           font-weight: 600;
-          font-size: fluid(16px, 58, 58);
+          font-size: fluid(16px, 54, 54);
           color: #FFFFFF;
-          line-height: fluid(16px, 78, 78);
+          line-height: fluid(16px, 73, 73);
           font-style: normal;
         }
 
@@ -879,6 +951,7 @@ definePageMeta({ name: 'Home', title: 'Home' })
           font-size: fluid(16px, 28, 28);
           color: #FFFFFF;
           line-height: fluid(16px, 48, 48);
+          margin-top: fluid(16px, 36, 36);
           font-style: normal;
         }
 
@@ -912,7 +985,7 @@ definePageMeta({ name: 'Home', title: 'Home' })
         .product-introduce-title {
           font-family: 'Poppins', sans-serif;
           font-weight: 600;
-          font-size: fluid(16px, 52, 52);
+          font-size: fluid(16px, 54, 54);
           color: #fff;
           line-height: fluid(16px, 73, 73);
           text-align: left;
@@ -988,7 +1061,7 @@ definePageMeta({ name: 'Home', title: 'Home' })
         .product-ai-title {
           font-family: 'Poppins', sans-serif;
           font-weight: 600;
-          font-size: fluid(16px, 52, 52);
+          font-size: fluid(16px, 54, 54);
           color: #fff;
           line-height: fluid(16px, 73, 73);
           text-align: left;
@@ -1003,6 +1076,12 @@ definePageMeta({ name: 'Home', title: 'Home' })
           line-height: fluid(16px, 47, 47);
           text-align: left;
           font-style: normal;
+          margin-top: fluid(16px, 36, 36);
+
+          .product-ai-desc-br {
+            margin-top: fluid(16px, 18, 18);
+
+          }
         }
 
         .product-ai-icon {
@@ -1056,7 +1135,7 @@ definePageMeta({ name: 'Home', title: 'Home' })
         .product-clean-title {
           font-family: 'Poppins', sans-serif;
           font-weight: 600;
-          font-size: fluid(16px, 52, 52);
+          font-size: fluid(16px, 54, 54);
           color: #fff;
           line-height: fluid(16px, 73, 73);
           text-align: left;
@@ -1070,6 +1149,7 @@ definePageMeta({ name: 'Home', title: 'Home' })
           color: #fff;
           line-height: fluid(16px, 47, 47);
           font-style: normal;
+          margin-top: fluid(16px, 36, 36);
         }
 
         .product-clean-icon {
@@ -1095,6 +1175,8 @@ definePageMeta({ name: 'Home', title: 'Home' })
   }
 
   .home-mobile {
+    padding-top: 3.75rem;
+
     .home-introduce-section {
       position: relative;
       width: 100%;
@@ -1105,50 +1187,11 @@ definePageMeta({ name: 'Home', title: 'Home' })
       }
 
       .home-introduce-content {
+        width: 20.125rem;
         position: absolute;
-        z-index: 1;
-        width: 100%;
-        left: 0;
-        top: 3rem;
-        text-align: center;
-        font-size: 0.2rem;
-        color: #fff;
-        font-weight: 500;
-        font-family: 'Poppins', sans-serif;
-        font-style: normal;
-
-        span {
-          font-weight: 600;
-          font-size: 0.26rem;
-          color: #02B5B1;
-        }
-
-        .home-introduce-text {
-          margin-bottom: 0.24rem;
-
-        }
-
-        .home-introduce-more {
-          width: 1.3rem;
-          height: 0.32rem;
-          margin: 0 auto;
-          background: #FFFFFF;
-          border-radius: 0.24rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-weight: 300;
-          font-size: 0.13rem;
-          font-family: 'Poppins', sans-serif;
-          color: #222222;
-          font-style: normal;
-          cursor: pointer;
-
-          .home-introduce-more-icon {
-            width: 0.2rem;
-            margin-left: 0.06rem;
-          }
-        }
+        left: 50%;
+        top: 15.6rem;
+        transform: translateX(-50%);
       }
     }
 
@@ -1156,29 +1199,29 @@ definePageMeta({ name: 'Home', title: 'Home' })
       width: 100%;
       background: #222;
       box-sizing: border-box;
-      padding-top: 0.16rem;
-      padding-bottom: 0.36rem;
+      padding: 1rem 1.5rem 1.5rem 1.5rem;
 
       .home-select-name {
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
-        font-size: 0.22rem;
+        font-size: 1.375rem;
         color: #FFFFFF;
-        line-height: 0.3rem;
+        line-height: 1.875rem;
         text-align: center;
         font-style: normal;
       }
 
       .home-select-desc {
         font-family: 'Poppins', sans-serif;
-        margin-top: 0.16rem;
+        margin-top: 1rem;
         font-weight: 400;
-        font-size: 0.14rem;
-        color: #969696;
-        line-height: 0.2rem;
+        font-size: 0.875rem;
+        color: #fff;
+        text-align: justify;
+        line-height: 1.25rem;
         font-style: normal;
-        padding: 0 0.23rem;
       }
+
     }
 
     .section-0down {
@@ -1196,15 +1239,16 @@ definePageMeta({ name: 'Home', title: 'Home' })
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        padding: 0 0.23rem;
+        padding: 0 1.5rem;
 
         .home-0down-title {
           font-family: 'Poppins', sans-serif;
           font-weight: normal;
-          font-size: 0.2rem;
+          font-size: 1.125rem;
+          font-weight: 600;
           color: #FFFFFF;
           text-align: center;
-          line-height: 0.28rem;
+          line-height: 1.5625rem;
           font-style: normal;
         }
 
@@ -1213,16 +1257,17 @@ definePageMeta({ name: 'Home', title: 'Home' })
           text-align: justify;
           /* 两端对齐 */
           font-weight: 300;
-          font-size: 0.14rem;
+          font-size: 0.875rem;
           color: #FFFFFF;
-          line-height: 0.2rem;
+          line-height: 1.25rem;
           font-style: normal;
+          margin-top: 1rem;
         }
 
         .home-0down-icon {
-          width: 0.72rem;
-          height: 0.04rem;
-          margin-top: 0.16rem;
+          width: 4.5rem;
+          height: 0.25rem;
+          margin-top: 1rem;
           background: #10C6C2;
         }
       }
@@ -1243,15 +1288,16 @@ definePageMeta({ name: 'Home', title: 'Home' })
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        padding: 0.16rem;
+        padding: 0 1.5rem;
 
         .home-smarter-title {
           font-family: 'Poppins', sans-serif;
           font-weight: normal;
-          font-size: 0.2rem;
+          font-size: 1.125rem;
+          font-weight: 600;
           color: #FFFFFF;
-          line-height: 0.28rem;
           text-align: center;
+          line-height: 1.5625rem;
           font-style: normal;
 
           .home-smarter-title-remark {
@@ -1261,18 +1307,154 @@ definePageMeta({ name: 'Home', title: 'Home' })
 
         .home-smarter-desc {
           font-family: 'Poppins', sans-serif;
+          text-align: justify;
+          /* 两端对齐 */
           font-weight: 300;
-          font-size: 0.14rem;
+          font-size: 0.875rem;
           color: #FFFFFF;
-          line-height: 0.2rem;
+          line-height: 1.25rem;
           font-style: normal;
-          text-align: left;
+          margin-top: 1rem;
+
+          .home-smarter-desc-remark {
+            position: relative;
+          }
+
+          .home-smarter-desc-remark::after {
+            content: "*";
+            position: absolute;
+            top: -0.2em;
+            /* 往上一点 */
+            right: -0.5em;
+            /* 往右一点 */
+            font-size: 1em;
+            /* 星号比数字小 */
+            color: #FFFFFF;
+            /* 星号颜色 */
+          }
+        }
+
+        .section-remark {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 300;
+          font-size: 0.575rem;
+          color: #FFFFFF;
+          line-height: 1.5;
+          margin-top: 1rem;
+          font-style: normal;
         }
 
         .home-smarter-icon {
-          width: 0.72rem;
-          height: 0.04rem;
-          margin-top: 0.16rem;
+          width: 4.5rem;
+          height: 0.25rem;
+          margin-top: 1rem;
+          background: #10C6C2;
+        }
+      }
+    }
+
+    .product-ai-section {
+      width: 100%;
+      font-size: 0;
+
+      .product-ai-video {
+        width: 100%;
+      }
+
+      .product-ai-introduce {
+        padding: 1rem 1.5rem;
+
+        .product-ai-title {
+          font-family: 'Poppins', sans-serif;
+          font-weight: normal;
+          font-size: 1.125rem;
+          font-weight: 600;
+          color: #FFFFFF;
+          text-align: center;
+          line-height: 1.5625rem;
+          font-style: normal;
+        }
+
+        .product-ai-desc {
+          font-family: 'Poppins', sans-serif;
+          text-align: justify;
+          /* 两端对齐 */
+          font-weight: 300;
+          font-size: 0.875rem;
+          color: #FFFFFF;
+          line-height: 1.25rem;
+          font-style: normal;
+          margin-top: 1rem;
+
+          .product-ai-desc-br {
+            margin-top: 0.5rem;
+          }
+        }
+
+        .product-ai-icon {
+          width: 4.5rem;
+          height: 0.25rem;
+          margin-top: 1rem;
+          background: #10C6C2;
+        }
+      }
+    }
+
+    .product-introduce-section {
+      position: relative;
+      width: 100%;
+      font-size: 0;
+
+      .section-mask {
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+        opacity: 0.4;
+      }
+
+      .product-introduce-video {
+        width: 100%;
+      }
+
+      .product-introduce-introduce {
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0 1.5rem;
+
+        .product-introduce-title {
+          font-family: 'Poppins', sans-serif;
+          font-weight: normal;
+          font-size: 1.125rem;
+          font-weight: 600;
+          color: #FFFFFF;
+          text-align: center;
+          line-height: 1.5625rem;
+          font-style: normal;
+        }
+
+        .product-introduce-desc {
+          font-family: 'Poppins', sans-serif;
+          text-align: justify;
+          /* 两端对齐 */
+          font-weight: 300;
+          font-size: 0.875rem;
+          color: #FFFFFF;
+          line-height: 1.25rem;
+          font-style: normal;
+          margin-top: 1rem;
+        }
+
+        .product-introduce-icon {
+          width: 4.5rem;
+          height: 0.25rem;
+          margin-top: 1rem;
           background: #10C6C2;
         }
       }
@@ -1285,7 +1467,6 @@ definePageMeta({ name: 'Home', title: 'Home' })
 
       .section-broad-bg {
         width: 100%;
-
       }
 
       .home-broad-content {
@@ -1294,31 +1475,35 @@ definePageMeta({ name: 'Home', title: 'Home' })
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        padding: 0.16rem;
+        padding: 0 1.5rem;
 
         .home-broad-title {
           font-family: 'Poppins', sans-serif;
-          text-align: center;
           font-weight: normal;
-          font-size: 0.2rem;
+          font-size: 1.125rem;
+          font-weight: 600;
           color: #FFFFFF;
-          line-height: 0.28rem;
+          text-align: center;
+          line-height: 1.5625rem;
           font-style: normal;
         }
 
         .home-broad-desc {
           font-family: 'Poppins', sans-serif;
+          text-align: justify;
+          /* 两端对齐 */
           font-weight: 300;
-          font-size: 0.14rem;
+          font-size: 0.875rem;
           color: #FFFFFF;
-          line-height: 0.2rem;
+          line-height: 1.25rem;
           font-style: normal;
+          margin-top: 1rem;
         }
 
         .home-broad-icon {
-          width: 0.72rem;
-          height: 0.04rem;
-          margin-top: 0.16rem;
+          width: 4.5rem;
+          height: 0.25rem;
+          margin-top: 1rem;
           background: #10C6C2;
         }
       }
@@ -1339,35 +1524,91 @@ definePageMeta({ name: 'Home', title: 'Home' })
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        padding: 0.16rem;
+        padding: 0 1.5rem;
 
         .home-seamless-title {
           font-family: 'Poppins', sans-serif;
           font-weight: normal;
-          font-size: 0.2rem;
-          text-align: center;
+          font-size: 1.125rem;
+          font-weight: 600;
           color: #FFFFFF;
-          line-height: 0.28rem;
+          text-align: center;
+          line-height: 1.5625rem;
           font-style: normal;
         }
 
         .home-seamless-desc {
           font-family: 'Poppins', sans-serif;
+          text-align: justify;
+          /* 两端对齐 */
           font-weight: 300;
-          font-size: 0.14rem;
+          font-size: 0.875rem;
           color: #FFFFFF;
-          line-height: 0.2rem;
+          line-height: 1.25rem;
           font-style: normal;
+          margin-top: 1rem;
         }
 
         .home-seamless-icon {
-          width: 0.72rem;
-          height: 0.04rem;
-          margin-top: 0.16rem;
+          width: 4.5rem;
+          height: 0.25rem;
+          margin-top: 1rem;
           background: #10C6C2;
         }
       }
     }
+
+    .product-clean-section {
+      width: 100%;
+      position: relative;
+
+      .product-clean-bg {
+        width: 100%;
+        display: block;
+      }
+
+      .product-clean-content {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0 1.5rem;
+
+        .product-clean-title {
+          font-family: 'Poppins', sans-serif;
+          font-weight: normal;
+          font-size: 1.125rem;
+          font-weight: 600;
+          color: #FFFFFF;
+          text-align: center;
+          line-height: 1.5625rem;
+          font-style: normal;
+        }
+
+        .product-clean-desc {
+          font-family: 'Poppins', sans-serif;
+          text-align: justify;
+          /* 两端对齐 */
+          font-weight: 300;
+          font-size: 0.875rem;
+          color: #FFFFFF;
+          line-height: 1.25rem;
+          font-style: normal;
+          margin-top: 1rem;
+        }
+
+        .product-clean-icon {
+          width: 4.5rem;
+          height: 0.25rem;
+          margin-top: 1rem;
+          background: #10C6C2;
+        }
+      }
+
+
+    }
   }
+
 }
 </style>

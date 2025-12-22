@@ -1,9 +1,5 @@
 <template>
   <div class="about-pc only-desktop">
-    <section class="header-section">
-      <img class="header-section-bg" src="~/assets/image/about-header-bg.webp" alt="">
-      <div class="header-section-content">SolarAI Technologies</div>
-    </section>
     <section class="about-section">
       <div class="title">About Us</div>
       <div class="about-section-content">
@@ -13,56 +9,18 @@
           into <text style="font-weight: 600;">an Intelligent Distributed Energy Resource (iDER).</text> We don't just
           help you save money; we empower you to
           participate in the real-time energy market, making the grid safer, greener, and more efficient for everyone.
-          <!-- 江阴橙储智能系统有限公司（SolarAI Technologies），成立于 2023 年 6
-          月。我们运用大数据、机器学习与人工智能，面向北美与欧洲的可准实时电力市场，为含家庭分布式光伏+储能的新能源生态提供最优化的能源监控、管理与交易系统。<br>
-          面向趋势，我们基于多项专利打造 AI-HEMS 平台，让每个家庭成为 iDER（智能分布式能源系统），参与准实时市场交易，在最大化收益的同时，让电网更安全、高效、绿色低碳。 -->
         </div>
       </div>
     </section>
-    <!-- <section class="corporate-section">
-      <div class="title">Corporate Philosophy</div>
-      <div class="about-section-content">
-        <img class="about-corporate-bg" src="~/assets/image/about-corporate-bg.webp" alt="">
-        <div class="about-corporate-content">
-          <div class="corporate-title">SolarAI Technologies Co., Ltd.</div>
-          <div class="corporate-desc">Empowering a more flexible and stable future power grid.</div>
-          <div class="corporate-card">
-            <div class="corporate-card-item">
-              <div class="corporate-card-item-title">Outlook</div>
-              <div class="corporate-card-item-content">Empowering homes to make solar and storage tradable and
-                dispatchable — building a flexible, stable future grid.</div>
-            </div>
-            <div class="corporate-card-item">
-              <div class="corporate-card-item-title">Mission</div>
-              <div class="corporate-card-item-content">AI-HEMS drives intelligent forecasting and scheduling to maximize
-                value for users and the grid.</div>
-            </div>
-            <div class="corporate-card-item">
-              <div class="corporate-card-item-title">Methodology</div>
-              <div class="corporate-card-item-content">15-minute rolling optimization with Tesla EV charging and Google
-                Nest integration, validated in U.S. pilots with ~XX% monthly gains.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- <section class="technical-section">
-      <div class="title">Technical Advantage</div>
-      <div class="about-section-content">
-        <img class="about-technical-bg" src="~/assets/image/about-technical-bg.webp" alt="">
-        <div class="about-technical-content">
-          <div class="technical-title">10<span>+</span></div>
-          <div class="technical-desc">U.S. Grid Intelligence & Machine Learning Expertise</div>
-        </div>
-      </div>
-    </section> -->
     <section class="core-section">
       <div class="title">Core Members</div>
       <div class="about-section-content">
         <img class="about-core-bg" src="~/assets/image/about-core-bg.webp" alt="">
         <div class="about-core-content">
-          <text style="font-weight: 600;">SolarAI is built by Giants of the Tech World.</text> SolarAI wasn't founded by sales reps; it was engineered by data
-          scientists. Our leadership team brings decades of experience from  <text style="font-weight: 600;"> Microsoft, Intel, Oracle and Google.</text> We have
+          <text style="font-weight: 600;">SolarAI is built by Giants of the Tech World.</text> SolarAI wasn't founded by
+          sales reps; it was engineered by data
+          scientists. Our leadership team brings decades of experience from <text style="font-weight: 600;"> Microsoft,
+            Intel, Oracle and Google.</text> We have
           built the analytics platforms used by major U.S. utility companies, and now we are bringing that utility-grade
           intelligence to your home.
         </div>
@@ -70,65 +28,30 @@
     </section>
   </div>
   <div class="about-mobile only-mobile">
-    <section class="header-section">
-      <img class="header-section-bg" src="~/assets/image/about-header-bg-mobile.webp" alt="">
-      <div class="header-section-content">SolarAI Technologies</div>
-    </section>
     <section class="about-section">
       <div class="title">About Us</div>
       <div class="about-section-content">
         <img class="about-us-bg" src="~/assets/image/about-us-bg-mobile.webp" alt="">
         <div class="about-us-content">
-          江阴橙储智能系统有限公司（SolarAI Technologies），成立于 2023 年 6
-          月。我们运用大数据、机器学习与人工智能，面向北美与欧洲的可准实时电力市场，为含家庭分布式光伏+储能的新能源生态提供最优化的能源监控、管理与交易系统。<br>
-          面向趋势，我们基于多项专利打造 AI-HEMS 平台，让每个家庭成为 iDER（智能分布式能源系统），参与准实时市场交易，在最大化收益的同时，让电网更安全、高效、绿色低碳。
+          We are building the grid of the future. SolarAI combines AI, big data and machine learning to turn every home
+          into <text style="font-weight: 600;">an Intelligent Distributed Energy Resource (iDER).</text> We don't just
+          help you save money; we empower you to
+          participate in the real-time energy market, making the grid safer, greener, and more efficient for everyone.
         </div>
       </div>
     </section>
-    <!-- <section class="corporate-section">
-      <div class="title">Corporate Philosophy</div>
-      <div class="about-section-content">
-        <img class="about-corporate-bg" src="~/assets/image/about-corporate-bg-mobile.webp" alt="">
-        <div class="about-corporate-content">
-          <div class="corporate-title">橙储智能</div>
-          <div class="corporate-desc">助力更灵活、更稳定的未来电网</div>
-          <div class="corporate-card">
-            <div class="corporate-card-item">
-              <div class="corporate-card-item-title">远景</div>
-              <div class="corporate-card-item-content">让千家万户的光伏与储能通过 AI 成为“可交易、可调度”的 iDER，助力更灵活、更稳定的未来电网</div>
-              <div class="corporate-card-item-icon"></div>
-            </div>
-            <div class="corporate-card-item">
-              <div class="corporate-card-item-title">使命</div>
-              <div class="corporate-card-item-content">以 AI-HEMS 为核心，结合电价/负荷/发电预测与市场机制，持续为用户与电网创造更大综合价值</div>
-              <div class="corporate-card-item-icon"></div>
-            </div>
-            <div class="corporate-card-item">
-              <div class="corporate-card-item-title">方法论</div>
-              <div class="corporate-card-item-content">每 15 分钟滚动调度、48 小时前瞻预测，已集成 Tesla EV 自动充电调度与 Google Nest
-                温控；在波特兰、洛杉矶等地的验证系统里，月度增益平均提升约 102%</div>
-              <div class="corporate-card-item-icon"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- <section class="technical-section">
-      <div class="title">Technical Advantage</div>
-      <div class="about-section-content">
-        <img class="about-technical-bg" src="~/assets/image/about-technical-bg-mobile.webp" alt="">
-        <div class="about-technical-content">
-          <div class="technical-title">10<span>+</span></div>
-          <div class="technical-desc">美国电网智能化 & ML 积累</div>
-        </div>
-      </div>
-    </section> -->
+
     <section class="core-section">
       <div class="title">Core Members</div>
       <div class="about-section-content">
         <img class="about-core-bg" src="~/assets/image/about-core-bg-mobile.webp" alt="">
         <div class="about-core-content">
-          橙储智能由暨阳电力和多位曾服务于美国微软、英特尔和甲骨文等科技公司的核心成员共同创办。其主要创始人过去开发的智能电网数据数据分析平台，包括用电行为预测、设备负载和故障预测、需求响应管理和结算、智能化共享户用储能试点等被包括美国多家智能电网公司验证和应用，赋予能源供应商迅速部署新能源业务的能力，包括电气化改造，太阳能和储能等分布式新能源资源的采用等，并帮助客户将能源使用转移到一天中能源最可持续的时段
+          <text style="font-weight: 600;">SolarAI is built by Giants of the Tech World.</text> SolarAI wasn't founded by
+          sales reps; it was engineered by data
+          scientists. Our leadership team brings decades of experience from <text style="font-weight: 600;"> Microsoft,
+            Intel, Oracle and Google.</text> We have
+          built the analytics platforms used by major U.S. utility companies, and now we are bringing that utility-grade
+          intelligence to your home.
         </div>
       </div>
     </section>
@@ -166,37 +89,16 @@ definePageMeta({
 .about-pc {
   background: #F9F9F9;
 
-  .header-section {
-    position: relative;
 
-    .header-section-bg {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .header-section-content {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      width: 100%;
-      font-size: fluid(16px, 74, 74);
-      color: #FFFFFF;
-      line-height: fluid(16px, 103, 103);
-      text-align: center;
-      font-style: normal;
-      position: absolute;
-      bottom: 30%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
 
   .about-section {
+    padding-top: fluid(16px, 60, 60);
+
     .title {
       margin: fluid(16px, 80, 80);
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
-      font-size: fluid(16px, 64, 64);
+      font-size: fluid(16px, 54, 54);
       color: #222222;
       line-height: fluid(16px, 90, 90);
       text-align: center;
@@ -207,13 +109,13 @@ definePageMeta({
       position: relative;
 
       .about-us-bg {
-        width: 60%;
+        width: 54%;
         height: auto;
         display: block;
       }
 
       .about-us-content {
-        width: 50%;
+        width: 55%;
         padding: fluid(16px, 50, 50) fluid(16px, 140, 140) fluid(16px, 150, 150) fluid(16px, 80, 80);
         font-family: 'Poppins', sans-serif;
         font-weight: 300;
@@ -408,7 +310,7 @@ definePageMeta({
       margin: fluid(16px, 80, 80);
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
-      font-size: fluid(16px, 64, 64);
+      font-size: fluid(16px, 54, 54);
       color: #222222;
       line-height: fluid(16px, 90, 90);
       text-align: center;
@@ -444,39 +346,17 @@ definePageMeta({
 .about-mobile {
   background: #F9F9F9;
 
-  .header-section {
-    position: relative;
-
-    .header-section-bg {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .header-section-content {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 300;
-      width: 100%;
-      font-size: 0.24rem;
-      color: #FFFFFF;
-      line-height: 0.33rem;
-      text-align: center;
-      font-style: normal;
-      position: absolute;
-      bottom: 30%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-
   .about-section {
+    padding-top: 3.75rem;
+    height: 34.375rem;
+
     .title {
-      margin: 0.24rem;
+      margin: 1.5rem;
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
-      font-size: 0.22rem;
+      font-size: 1.375rem;
       color: #222222;
-      line-height: 0.3rem;
+      line-height: 1.875rem;
       text-align: center;
       font-style: normal;
     }
@@ -491,36 +371,34 @@ definePageMeta({
       }
 
       .about-us-content {
-        width: 3.43rem;
+        width: 21.4375rem;
         box-sizing: border-box;
-        padding: 0.24rem 0.16rem;
+        padding: 1.5rem 1rem;
         font-family: 'Poppins', sans-serif;
         font-weight: 300;
-        font-size: 0.14rem;
+        font-size: 0.875rem;
         color: #222222;
-        line-height: .21rem;
+        line-height: 1.3125rem;
         font-style: normal;
         position: absolute;
-        top: 1.92rem;
+        top: 12rem;
         left: 50%;
         margin: 0 auto;
         transform: translateX(-50%);
         background: #FFFFFF;
-        border-radius: 0.04rem;
+        border-radius: 0.25rem;
       }
     }
   }
 
   .corporate-section {
-    margin-top: 2.2rem;
-
     .title {
-      margin: 0.24rem;
+      margin: 1.5rem;
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
-      font-size: 0.22rem;
+      font-size: 1.375rem;
       color: #222222;
-      line-height: 0.3rem;
+      line-height: 1.875rem;
       text-align: center;
       font-style: normal;
     }
@@ -539,73 +417,72 @@ definePageMeta({
         top: 30%;
         width: 100%;
         box-sizing: border-box;
-        padding: 0 0.16rem;
+        padding: 0 1rem;
         left: 0;
 
         .corporate-title {
           font-family: 'Poppins', sans-serif;
           font-weight: 500;
-          font-size: 0.3rem;
+          font-size: 1.875rem;
           color: #FFFFFF;
-          line-height: 0.42rem;
+          line-height: 2.625rem;
           text-align: center;
           width: 100%;
           font-style: normal;
-          margin-bottom: 0.08rem;
+          margin-bottom: 0.5rem;
         }
 
         .corporate-desc {
           font-family: 'Poppins', sans-serif;
           font-weight: 100;
-          font-size: 0.24rem;
+          font-size: 1.5rem;
           color: #FFFFFF;
-          line-height: 0.33rem;
+          line-height: 2.0625rem;
           text-align: center;
           width: 100%;
           font-style: normal;
-          margin-bottom: 0.4rem;
+          margin-bottom: 2.5rem;
         }
 
         .corporate-card {
-          width: 3.43rem;
+          width: 21.4375rem;
           margin: 0 auto;
           background: #FFFFFF;
-          padding-top: 0.18rem;
+          padding-top: 1.125rem;
 
           .corporate-card-item {
             cursor: pointer;
             width: 100%;
             box-sizing: border-box;
-            padding: 0 0.18rem 0.18rem 0.18rem;
+            padding: 0 1.125rem 1.125rem 1.125rem;
 
             .corporate-card-item-title {
               font-family: 'Poppins', sans-serif;
               font-weight: 500;
-              font-size: 0.2rem;
+              font-size: 1.25rem;
               color: #000000;
               text-align: center;
-              line-height: 0.28rem;
+              line-height: 1.75rem;
               font-style: normal;
             }
 
             .corporate-card-item-content {
-
               font-family: 'Poppins', sans-serif;
               font-weight: 300;
-              font-size: 0.12rem;
+              font-size: 0.75rem;
               color: #222222;
-              line-height: 0.17rem;
+              line-height: 1.0625rem;
               text-align: left;
               font-style: normal;
-              margin-top: 0.08rem;
+              margin-top: 0.5rem;
             }
 
             .corporate-card-item-icon {
-              width: 0.68rem;
-              height: 0.03rem;
+              width: 4.25rem;
+              height: 0.1875rem;
               background: #2F2F2F;
               margin: 0 auto;
-              margin-top: 0.16rem;
+              margin-top: 1rem;
             }
           }
         }
@@ -614,17 +491,17 @@ definePageMeta({
   }
 
   .technical-section {
-    margin-top: 3.3rem;
+    margin-top: 20.625rem;
 
     .title {
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
-      font-size: 0.22rem;
+      font-size: 1.375rem;
       color: #222222;
-      line-height: 0.30rem;
+      line-height: 1.875rem;
       text-align: center;
       font-style: normal;
-      margin: 0.24rem 0;
+      margin: 1.5rem 0;
     }
 
     .about-section-content {
@@ -646,16 +523,15 @@ definePageMeta({
           width: 100%;
           font-family: 'Poppins', sans-serif;
           font-weight: bold;
-          font-size: 0.72rem;
+          font-size: 4.5rem;
           color: #FFFFFF;
-          line-height: 0.86rem;
+          line-height: 5.375rem;
           text-align: center;
           font-style: normal;
 
           span {
-            font-size: 0.256rem;
+            font-size: 1.6rem;
             font-weight: normal;
-
           }
         }
 
@@ -663,27 +539,26 @@ definePageMeta({
           width: 100%;
           font-family: 'Poppins', sans-serif;
           font-weight: 100;
-          font-size: 0.24rem;
+          font-size: 1.5rem;
           color: #FFFFFF;
-          line-height: 0.33rem;
+          line-height: 2.0625rem;
           text-align: center;
           font-style: normal;
         }
       }
-
     }
   }
 
   .core-section {
-    padding-bottom: 2rem;
+    padding-bottom: 12.5rem;
 
     .title {
-      margin: 0.24rem 0;
+      margin: 1.5rem 0;
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
-      font-size: 0.22rem;
+      font-size: 1.375rem;
       color: #222222;
-      line-height: 0.3rem;
+      line-height: 1.875rem;
       text-align: center;
       font-style: normal;
     }
@@ -700,21 +575,22 @@ definePageMeta({
       .about-core-content {
         position: absolute;
         background-color: #ffffff;
-        width: 3.43rem;
-        top: 1.5rem;
+        width: 21.4375rem;
+        top: 9.375rem;
         left: 50%;
         transform: translateX(-50%);
         box-sizing: border-box;
         font-family: 'Poppins', sans-serif;
         font-weight: 300;
-        font-size: 0.14rem;
+        font-size: 0.875rem;
         color: #222222;
-        line-height: 0.21rem;
+        line-height: 1.3125rem;
         text-align: left;
         font-style: normal;
-        padding: 0.24rem 0.16rem;
+        padding: 1.5rem 1rem;
       }
     }
   }
 }
+
 </style>

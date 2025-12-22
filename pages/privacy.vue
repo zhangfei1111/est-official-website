@@ -2,6 +2,9 @@
     <div class="privacy-pc only-desktop">
         <div class="rich-html" v-html="content"></div>
     </div>
+     <div class="privacy-mobile only-mobile">
+        <div class="rich-html" v-html="content"></div>
+    </div>
 </template>
   
 <script setup lang="ts">
@@ -39,7 +42,7 @@ const content = ref(`<p><br></p><p><span style="font-size: 12px;"><strong>Privac
 }
 
 .privacy-pc {
-    background: #e4e4e4;
+    background: #222;
     padding: 0 fluid(16px, 44, 44);
     padding-top: fluid(16px, 98, 98);
 }
@@ -85,5 +88,8 @@ const content = ref(`<p><br></p><p><span style="font-size: 12px;"><strong>Privac
 /* 如果你一定要 scoped，就把上面这段包进 :deep()： 
   :deep(.rich-html) { ...同上... }
   */
+.privacy-mobile{
+    padding: 3.75rem 1.5rem 1.5rem 1.5rem;
+}
 </style>
   

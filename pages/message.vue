@@ -42,6 +42,48 @@
             </div>
 
         </div>
+        <div class="message-mobile only-mobile">
+            <div class="message-title">Contact Us</div>
+            <div class="message-content">
+                <v-form fast-fail @submit.prevent="handleSubmit" ref="formRef">
+                    <v-container>
+                        <v-row>
+                            <v-col cols="12" md="12">
+                                <v-text-field v-model="firstName" variant="solo" :rules="firstNameRules"
+                                    label="First name"></v-text-field>
+                            </v-col>
+                            <v-col cols="12" md="12">
+                                <v-text-field v-model="lastName" variant="solo" :rules="lastNameRules"
+                                    label="Last name"></v-text-field>
+                            </v-col>
+                            <v-col cols="12" md="12">
+                                <v-text-field v-model="email" variant="solo" :rules="emailRules"
+                                    label="Email"></v-text-field>
+                            </v-col>
+                            <v-col cols="12" md="12">
+                                <v-text-field v-model="phone" variant="solo" :rules="phoneRules"
+                                    label="Phone"></v-text-field>
+                            </v-col>
+                            <v-col cols="12" md="12">
+                                <v-text-field v-model="address" variant="solo" :rules="addressRules"
+                                    label="Address"></v-text-field>
+                            </v-col>
+                            <v-col cols="12" md="12">
+                                <v-textarea v-model="content" variant="solo" label="Message"></v-textarea>
+                            </v-col>
+
+                        </v-row>
+                    </v-container>
+                    <v-row style="padding: 0 1rem;">
+                        <v-col cols="12" md="3" style="margin: 0 auto;margin-top: 1rem;">
+                            <v-btn :disabled="loading" :loading="loading" color="#02B5B1" width="300" type="submit"
+                                size="x-large" block>Submit</v-btn>
+                        </v-col>
+                    </v-row>
+                </v-form>
+            </div>
+
+        </div>
     </div>
     <v-snackbar v-model="snackbar.show" :color="snackbar.color" timeout="3000" location="top right">
         {{ snackbar.text }}
@@ -196,9 +238,9 @@ definePageMeta({
             padding-bottom: fluid(16px, 40, 40);
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
-            font-size: fluid(16px, 74, 74);
+            font-size: fluid(16px, 54, 54);
             color: #222222;
-            line-height: fluid(16px, 103, 103);
+            line-height: fluid(16px, 73, 73);
             text-align: center;
             font-style: normal;
         }
@@ -212,5 +254,29 @@ definePageMeta({
             padding: fluid(16px, 80, 80);
         }
     }
+
+    .message-mobile {
+        background: #F9F9F9;
+        padding: 3.75rem 1rem 2rem 1rem;
+
+        .message-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.75rem;
+            color: #222222;
+            line-height: 1.875rem;
+            text-align: center;
+            font-style: normal;
+            padding: 1.5rem 0;
+        }
+
+        .message-content {
+            background: #fff;
+            box-shadow: 0px 0px 8px 0px rgba(228, 228, 228, 0.5);
+            border-radius: 0.25rem;
+            box-sizing: border-box;
+        }
+    }
+
 }
 </style>

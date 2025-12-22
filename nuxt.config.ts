@@ -22,7 +22,7 @@ export default defineNuxtConfig({
   postcss: {
     plugins: {
       'postcss-pxtorem': {
-        rootValue: 100,           // 对齐 “1rem≈100px”
+        rootValue: 16,           // 对齐 “1rem≈100px”
         unitPrecision: 5,
         propList: ['*'],          // 也可逐步放开
         selectorBlackList: [],    // ['.no-rem'] 可用来跳过某些选择器

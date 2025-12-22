@@ -17,13 +17,6 @@
                     <div class="dot"></div>
                     <!-- <div class="text">Southern California</div> -->
                 </div>
-                <!-- 如需多个点，复制一份并改坐标与文本 -->
-                <!--
-          <div class="botelan-shadow" style="left: 62%; top: 48%;">
-            <div class="dot"></div>
-            <div class="text">另一个点</div>
-          </div>
-          -->
             </section>
             <section class="case-content">
                 <div class="case-item" ref="california1">
@@ -121,6 +114,103 @@
                 </div>
             </section>
         </div>
+        <div class="case-mobile only-mobile">
+            <section class="case-content">
+                <div class="case-item" ref="california1">
+                    <div class="case-img">
+                        <v-carousel height="auto" show-arrows cycle :interval="4500">
+                            <v-carousel-item src="~/assets/image/nanjiazhou-mobile1-1.webp" cover></v-carousel-item>
+                            <v-carousel-item src="~/assets/image/nanjiazhou-mobile1-2.webp" cover></v-carousel-item>
+                            <v-carousel-item src="~/assets/image/nanjiazhou-mobile1-3.webp" cover></v-carousel-item>
+                        </v-carousel>
+                    </div>
+                    <div class="case-info">
+                        <div class="case-title">Southern California Equipment 1</div>
+                        <div class="case-desc-container">
+                            <div class="case-desc">
+                                <div class="case-desc-label">PV Capacity</div>
+                                <div class="case-desc-info">5.88 kWp </div>
+                            </div>
+                            <div class="case-desc">
+                                <div class="case-desc-label">Installation Date</div>
+                                <div class="case-desc-info">12/06/2024</div>
+                            </div>
+                            <div class="case-desc">
+                                <div class="case-desc-label">Battery</div>
+                                <div class="case-desc-info">8.2 kWh</div>
+                            </div>
+                            <div class="case-desc">
+                                <div class="case-desc-label">Extra Revenue Brought By AI</div>
+                                <div class="case-desc-info">57.8%</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="case-item" ref="california2">
+                    <div class="case-img">
+                        <v-carousel show-arrows="hover" height="auto" cycle :interval="4500">
+                            <v-carousel-item src="~/assets/image/nanjiazhou-mobile2-1.webp" cover></v-carousel-item>
+                            <v-carousel-item src="~/assets/image/nanjiazhou-mobile2-2.webp" cover></v-carousel-item>
+                            <v-carousel-item src="~/assets/image/nanjiazhou-mobile2-3.webp" cover></v-carousel-item>
+                        </v-carousel>
+                    </div>
+                    <div class="case-info">
+                        <div class="case-title">Southern California Equipment 2</div>
+                        <div class="case-desc-container">
+                            <div class="case-desc">
+                                <div class="case-desc-label">PV Capacity</div>
+                                <div class="case-desc-info">6.97 kWp </div>
+                            </div>
+                            <div class="case-desc">
+                                <div class="case-desc-label">Installation Date</div>
+                                <div class="case-desc-info">07/07/2025</div>
+                            </div>
+                            <div class="case-desc">
+                                <div class="case-desc-label">Battery</div>
+                                <div class="case-desc-info">16.4 kWh</div>
+                            </div>
+                            <div class="case-desc">
+                                <div class="case-desc-label">Extra Revenue Brought By AI</div>
+                                <div class="case-desc-info">43.5%</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="case-item" ref="portland">
+                    <div class="case-img">
+                        <v-carousel height="auto" show-arrows="hover" cycle :interval="4500">
+                            <v-carousel-item src="~/assets/image/potelan-mobile1-1.webp" cover></v-carousel-item>
+                            <v-carousel-item src="~/assets/image/potelan-mobile1-2.webp" cover></v-carousel-item>
+                            <v-carousel-item src="~/assets/image/potelan-mobile1-3.webp" cover></v-carousel-item>
+                        </v-carousel>
+                    </div>
+                    <div class="case-info">
+                        <div class="case-title">Portland</div>
+                        <div class="case-desc-container">
+                            <div class="case-desc">
+                                <div class="case-desc-label">PV Capacity</div>
+                                <div class="case-desc-info">7.38 kWp </div>
+                            </div>
+                            <div class="case-desc">
+                                <div class="case-desc-label">Installation Date</div>
+                                <div class="case-desc-info">07/22/2024</div>
+                            </div>
+                            <div class="case-desc">
+                                <div class="case-desc-label">Battery</div>
+                                <div class="case-desc-info">8.2 kWh</div>
+                            </div>
+                            <div class="case-desc">
+                                <div class="case-desc-label">Extra Revenue Brought By AI</div>
+                                <div class="case-desc-info">97.0%</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
 </template>
 
@@ -186,7 +276,7 @@ definePageMeta({
             .case-header-title {
                 font-family: 'Poppins', sans-serif;
                 font-weight: 600;
-                font-size: fluid(16px, 80, 80);
+                font-size: fluid(16px, 54, 54);
                 position: absolute;
                 color: #FFFFFF;
                 left: 50%;
@@ -377,21 +467,122 @@ definePageMeta({
                 margin-bottom: 0;
             }
         }
+
+
     }
+
+    .case-mobile {
+        padding-top: 3.75rem;
+
+        .case-content {
+            padding: 1.1875rem 1rem 0 1rem;
+            width: 100%;
+            background: linear-gradient(180deg, #0C245C 0%, #5372B4 48%, #274073 100%);
+
+            .case-item {
+                box-sizing: border-box;
+
+                .case-img {
+                    width: 100%;
+                }
+
+                .case-info {
+                    padding-bottom: 2.3125rem;
+
+                    .case-title {
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 600;
+                        font-size: 1.125rem;
+                        color: #FFFFFF;
+                        line-height: 2.375rem;
+                        text-align: left;
+                        font-style: normal;
+                        padding: 0.875rem 0 0.5rem 0;
+                    }
+
+                    .case-desc-container {
+                        display: flex;
+                        flex-wrap: wrap; // ⭐ 允许换行
+                        align-items: flex-start; // 可选，看你是否需要垂直居中
+
+                        .case-desc::before {
+                            content: " ";
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            display: block;
+                            width: 0.125rem;
+                            height: 2.4375rem;
+                            background: #2FC2BF;
+                        }
+
+                        .case-desc {
+                            flex: 0 0 45%;
+                            max-width: 45%;
+                            position: relative;
+                            box-sizing: border-box;
+                            margin-bottom: 0.75rem;
+                            padding-left: 0.75rem;
+
+                            .case-desc-label {
+                                font-family: 'Poppins', sans-serif;
+                                font-weight: 300;
+                                font-size: 0.75rem;
+                                color: #FFFFFF;
+                                line-height: 1.625rem;
+                                text-align: left;
+                                font-style: normal;
+                            }
+
+                            .case-desc-info {
+                                font-family: 'Poppins', sans-serif;
+                                font-weight: 600;
+                                font-size: 1rem;
+                                color: #FFFFFF;
+                                line-height: 1.625rem;
+                                text-align: left;
+                                font-style: normal;
+                            }
+                        }
+
+                        // 右列（第2、4、6...个）
+                        .case-desc:nth-child(2n) {
+                            flex: 0 0 55%;
+                            max-width: 55%;
+                        }
+
+                        .case-desc:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .case-item:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
 }
 </style>
 <style lang="scss">
-.v-window {
+.case {
+    .case-pc {
+        .v-window {
 
-    &-x-transition,
-    &-x-reverse-transition,
-    &-y-transition,
-    &-y-reverse-transition {
+            &-x-transition,
+            &-x-reverse-transition,
+            &-y-transition,
+            &-y-reverse-transition {
 
-        &-enter-active,
-        &-leave-active {
-            transition: 0.7s cubic-bezier(.25, .8, .50, 1) !important;
-            // 原来大概是 0.3s 左右，这里全局改慢
+                &-enter-active,
+                &-leave-active {
+                    transition: 0.7s cubic-bezier(.25, .8, .50, 1) !important;
+                    // 原来大概是 0.3s 左右，这里全局改慢
+                }
+            }
         }
     }
 }
